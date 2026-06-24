@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/images/logo-flat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/_partials/custom/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/_partials/icons/AbstractIcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.svg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="127" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GuavaDealer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MineKotLang/dev.minekot.org.git&quot;,
+    &quot;accountId&quot;: &quot;ea5a7e0e-ec4d-41e4-b7e3-ea64d29eee71&quot;
+  }
+}</component>
+  <component name="HugoPluginSettings">
+    <option name="customHugoPath" value="" />
+    <option name="defaultHugoNewOptions" value="" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.039010330263377" />
+      <entry key="MS500" value="1.5382285729917717" />
+      <entry key="S2" value="2.4597918600365967" />
+      <entry key="S5" value="3.757851832767479" />
+      <entry key="S10" value="5.1647522137170725" />
+      <entry key="S30" value="7.8877412789762955" />
+      <entry key="S60" value="9.876535577982287" />
+      <entry key="M2" value="12.253352617187367" />
+      <entry key="M5" value="18.02571578009797" />
+      <entry key="M10" value="26.71361110917329" />
+      <entry key="M15" value="34.40517856042743" />
+      <entry key="M30" value="61.599113512703575" />
+      <entry key="H1" value="140.35574677324053" />
+      <entry key="H2" value="349.5791905888987" />
+      <entry key="H4" value="696.5877190639977" />
+      <entry key="D1" value="1392.4869469482596" />
+      <entry key="W1" value="1582.5208609199963" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="7.622060646246494E-220" />
+      <entry key="S2" value="1.6941008086830876E-55" />
+      <entry key="S5" value="1.4792566301917712E-22" />
+      <entry key="S10" value="1.6109277229333465E-11" />
+      <entry key="S30" value="3.95718128918031E-4" />
+      <entry key="S60" value="0.029413408218180823" />
+      <entry key="M2" value="0.3025515262806765" />
+      <entry key="M5" value="2.22644547360764" />
+      <entry key="M10" value="6.642099392102544" />
+      <entry key="M15" value="10.601322216816808" />
+      <entry key="M30" value="20.747424527694683" />
+      <entry key="H1" value="38.46290745309997" />
+      <entry key="H2" value="63.364280790307745" />
+      <entry key="H4" value="89.27077988074691" />
+      <entry key="D1" value="128.00357014056678" />
+      <entry key="W1" value="137.34072404627668" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.0108624566836786" />
+      <entry key="MS500" value="1.530445129722689" />
+      <entry key="S2" value="2.456742217782789" />
+      <entry key="S5" value="3.7559596613379314" />
+      <entry key="S10" value="5.163419114754403" />
+      <entry key="S30" value="7.887406052371891" />
+      <entry key="S60" value="9.904232834600222" />
+      <entry key="M2" value="12.548479571845318" />
+      <entry key="M5" value="20.226667377216224" />
+      <entry key="M10" value="33.313037904345784" />
+      <entry key="M15" value="44.958122319597294" />
+      <entry key="M30" value="82.28777890047313" />
+      <entry key="H1" value="178.7462993006803" />
+      <entry key="H2" value="412.872827536105" />
+      <entry key="H4" value="785.8054488951111" />
+      <entry key="D1" value="1520.477528213952" />
+      <entry key="W1" value="1719.8595933452646" />
+    </decayedShown>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3FWh1QWPUXktfbn4uINhHmYQLSy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Hugo.Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "android.gradle.sync.needed": "true",
+    "cidr.known.project.marker": "true",
+    "code.cleanup.on.save": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "kronk.content.tree.expanded.paths": "",
+    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Other File Types",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/content/tooling" />
+      <recent name="$PROJECT_DIR$/content/guidelines" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content" />
+      <recent name="$PROJECT_DIR$/layouts/_partials/icons" />
+      <recent name="$PROJECT_DIR$/layouts/partials/custom" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="" />
+      <created>1782196518620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782196518620</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.yaml" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
