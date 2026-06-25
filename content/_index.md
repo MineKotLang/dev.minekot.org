@@ -1,7 +1,6 @@
 ---
-title: Home
+title: "Home"
+type: "home"
 ---
 
-## lorem ipsum
-
-lorem ipsum dolor sit amet
+This is your new home page.

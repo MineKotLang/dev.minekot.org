@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/images/logo-flat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/_partials/custom/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/_partials/icons/AbstractIcon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.svg" afterDir="false" />
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config).">
+      <change afterPath="$PROJECT_DIR$/content/codestyle/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/custom-header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/favicon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/menu-footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archetypes/default.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/architecture/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/architecture/event-system.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyles/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyles/kotlin.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/images/logo-flat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/tooling/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/tooling/environment-setup.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/_partials/custom/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/_partials/icons/AbstractIcon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +34,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="127" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -53,61 +70,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.039010330263377" />
-      <entry key="MS500" value="1.5382285729917717" />
-      <entry key="S2" value="2.4597918600365967" />
-      <entry key="S5" value="3.757851832767479" />
-      <entry key="S10" value="5.1647522137170725" />
-      <entry key="S30" value="7.8877412789762955" />
-      <entry key="S60" value="9.876535577982287" />
-      <entry key="M2" value="12.253352617187367" />
-      <entry key="M5" value="18.02571578009797" />
-      <entry key="M10" value="26.71361110917329" />
-      <entry key="M15" value="34.40517856042743" />
-      <entry key="M30" value="61.599113512703575" />
-      <entry key="H1" value="140.35574677324053" />
-      <entry key="H2" value="349.5791905888987" />
-      <entry key="H4" value="696.5877190639977" />
-      <entry key="D1" value="1392.4869469482596" />
-      <entry key="W1" value="1582.5208609199963" />
+      <entry key="MS100" value="1.2268801734661188" />
+      <entry key="MS500" value="1.7977124222779954" />
+      <entry key="S2" value="2.625323465872076" />
+      <entry key="S5" value="3.259713492642009" />
+      <entry key="S10" value="3.586012548078385" />
+      <entry key="S30" value="3.85073992077111" />
+      <entry key="S60" value="3.927833996256916" />
+      <entry key="M2" value="4.114276007688414" />
+      <entry key="M5" value="6.892957339032296" />
+      <entry key="M10" value="16.70334660671203" />
+      <entry key="M15" value="27.56629374079301" />
+      <entry key="M30" value="53.841066973384564" />
+      <entry key="H1" value="93.3377279600361" />
+      <entry key="H2" value="202.6217977305703" />
+      <entry key="H4" value="488.54213036069865" />
+      <entry key="D1" value="1414.5892969743857" />
+      <entry key="W1" value="1739.0859758334211" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="7.622060646246494E-220" />
-      <entry key="S2" value="1.6941008086830876E-55" />
-      <entry key="S5" value="1.4792566301917712E-22" />
-      <entry key="S10" value="1.6109277229333465E-11" />
-      <entry key="S30" value="3.95718128918031E-4" />
-      <entry key="S60" value="0.029413408218180823" />
-      <entry key="M2" value="0.3025515262806765" />
-      <entry key="M5" value="2.22644547360764" />
-      <entry key="M10" value="6.642099392102544" />
-      <entry key="M15" value="10.601322216816808" />
-      <entry key="M30" value="20.747424527694683" />
-      <entry key="H1" value="38.46290745309997" />
-      <entry key="H2" value="63.364280790307745" />
-      <entry key="H4" value="89.27077988074691" />
-      <entry key="D1" value="128.00357014056678" />
-      <entry key="W1" value="137.34072404627668" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.1725306611404947E-186" />
+      <entry key="S5" value="4.242771894243183E-75" />
+      <entry key="S10" value="6.513656342057958E-38" />
+      <entry key="S30" value="4.0235396103051855E-13" />
+      <entry key="S60" value="6.343380471527269E-7" />
+      <entry key="M2" value="8.02551007490706E-4" />
+      <entry key="M5" value="0.07493645519363062" />
+      <entry key="M10" value="0.525175902738259" />
+      <entry key="M15" value="1.1285715740266158" />
+      <entry key="M30" value="2.699022924145528" />
+      <entry key="H1" value="6.559214416190238" />
+      <entry key="H2" value="21.181853416989444" />
+      <entry key="H4" value="50.861787511378786" />
+      <entry key="D1" value="121.60443188997613" />
+      <entry key="W1" value="143.02526498153708" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0108624566836786" />
-      <entry key="MS500" value="1.530445129722689" />
-      <entry key="S2" value="2.456742217782789" />
-      <entry key="S5" value="3.7559596613379314" />
-      <entry key="S10" value="5.163419114754403" />
-      <entry key="S30" value="7.887406052371891" />
-      <entry key="S60" value="9.904232834600222" />
-      <entry key="M2" value="12.548479571845318" />
-      <entry key="M5" value="20.226667377216224" />
-      <entry key="M10" value="33.313037904345784" />
-      <entry key="M15" value="44.958122319597294" />
-      <entry key="M30" value="82.28777890047313" />
-      <entry key="H1" value="178.7462993006803" />
-      <entry key="H2" value="412.872827536105" />
-      <entry key="H4" value="785.8054488951111" />
-      <entry key="D1" value="1520.477528213952" />
-      <entry key="W1" value="1719.8595933452646" />
+      <entry key="MS100" value="0.23981749178233827" />
+      <entry key="MS500" value="0.8438454770411906" />
+      <entry key="S2" value="2.020161186457029" />
+      <entry key="S5" value="2.9354464774851827" />
+      <entry key="S10" value="3.404797206930221" />
+      <entry key="S30" value="3.7853915977745776" />
+      <entry key="S60" value="3.894489421553492" />
+      <entry key="M2" value="4.097733832131533" />
+      <entry key="M5" value="6.951786255464009" />
+      <entry key="M10" value="17.207060276056925" />
+      <entry key="M15" value="28.673086857292326" />
+      <entry key="M30" value="56.52224072138811" />
+      <entry key="H1" value="99.88083748890533" />
+      <entry key="H2" value="223.77929903386706" />
+      <entry key="H4" value="539.3737272611327" />
+      <entry key="D1" value="1536.1814504779104" />
+      <entry key="W1" value="1882.1091766738302" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -144,29 +161,48 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "kronk.content.tree.expanded.paths": "",
-    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org/static",
+    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org/content/codestyle/kotlin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.46642685",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Other File Types",
+    "settings.editor.selected.configurable": "com.codeium.AppSettingsConfigurable",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/content/tooling" />
-      <recent name="$PROJECT_DIR$/content/guidelines" />
+      <recent name="$PROJECT_DIR$/content/codestyle/kotlin" />
+      <recent name="$PROJECT_DIR$/content/codestyle" />
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/layouts/partials" />
+      <recent name="$PROJECT_DIR$/layouts/_partials" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/BAK" />
       <recent name="$PROJECT_DIR$/content" />
-      <recent name="$PROJECT_DIR$/layouts/_partials/icons" />
-      <recent name="$PROJECT_DIR$/layouts/partials/custom" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="dev.minekot.org" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="dev.minekot.org" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -184,12 +220,22 @@
       <option name="presentableId" value="Default" />
       <updated>1782196518620</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config).">
+      <option name="closed" value="true" />
+      <created>1782301784069</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782301784069</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.toml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.yaml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +248,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config)." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

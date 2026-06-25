@@ -1,16 +1,80 @@
-# $schema: https://json.schemastore.org/hugo.json
+# $schema: ./schemas/hugo.json
+
 baseURL: https://dev.minekot.org/
 locale: en-us
-title: MineKot Developer Docs
+title: "MineKot Dev Docs"
 
-enableGitInfo: true
+# noinspection SpellCheckingInspection
+params:
+  linkTitle: "MineKot Dev Docs"
+  logo:
+    src: "/images/minekot-flat.svg"
+  disableLandingPageButton: true
+  author: "MineKot Team"
+  themeVariant:
+    - identifier: catppuccin-auto
+      name: "Catppuccin Latte/Mocha"
+      auto: [ ]
+    - identifier: catppuccin-latte
+      name: "Catppuccin Latte"
+    - identifier: catppuccin-mocha
+      name: "Catppuccin Mocha"
 
-module:
-  imports:
-    - path: github.com/imfing/hextra
+  hideAuthorEmail: true
+
+  titleSeparator: " - "
+  breadcrumbSeparator: "/"
+  disableRootBreadcrumb: true
+  disableTermBreadcrumbs: true
+
+
+  # Header menu
+  sidebarheadermenus:
+    - type: divider
+    - disableTitle: true
+      identifier: homelinks
+      type: menu
+    - type: divider
+    - identifier: home
+      type: menu
+      main: true
+      disableTitle: true
+    - elements:
+        - type: versionswitcher
+      identifier: headercontrols
+      type: custom
+    - type: divider
+
+  # Page list
+  sidebarmenus:
+    - identifier: main
+      type: page
+    - disableTitle: false
+      identifier: shortcuts
+      type: menu
+
+  # Footer menu
+  sidebarfootermenus:
+    - type: divider
+    - elements:
+        - type: historyclearer
+        - type: variantswitcher
+        - type: languageswitcher
+      identifier: footercontrols
+      type: custom
+
+menus:
+  home:
+    - identifier: home
+      weight: 1
+      url: "/"
+      name: "<div style=\"text-align: center;\" ><i class=\"fa-fw fas fa-home\"></i> Home</div>"
 
 markup:
   goldmark:
+    parser:
+      attribute:
+        block: true
     renderer:
       unsafe: true
 
@@ -24,68 +88,9 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: false
-    style: catppuccin-mocha
     tabWidth: 4
     wrapperClass: highlight
 
-menu:
-  main:
-    - name: Architecture
-      pageRef: /architecture
-      weight: 10
-    - name: Codestyle
-      pageRef: /codestyles
-      weight: 20
-    - name: Tooling
-      pageRef: /tooling
-      weight: 30
-    - name: Search
-      weight: 40
-      params:
-        type: search
-    - name: GitHub
-      weight: 50
-      url: "https://github.com/MineKotLang/"
-      params:
-        icon: github
-    - name: Theme Toggle
-      weight: 100
-      params:
-        type: theme-toggle
-
-  sidebar:
-    - name: Resources
-      params:
-        type: separator
-      weight: 1
-    - name: "Hugo Docs ↗"
-      url: "https://gohugo.io/documentation/"
-      weight: 2
-
-params:
-  description: "Developer documentation, and Codestyle, for MineKot."
-  displayUpdatedDate: true
-  dateFormat: "January 2, 2006"
-  displayUpdatedAuthor: true
-  theme:
-    default: system
-    displayToggle: false
-  editURL:
-    enable: true
-    base: "https://github.com/minekot/dev.minekot.org/edit/master"
-  navbar:
-    displayTitle: true
-    displayLogo: true
-    logo:
-      path: images/logo-flat.svg
-      dark: images/logo-flat.svg
-      link: /
-      width: 40
-      height: 20
-  page:
-    displayPagination: true
-    contextMenu:
-      enable: true
-  blog:
-    article:
-      displayPagination: true
+module:
+  imports:
+    - path: github.com/McShelby/hugo-theme-relearn

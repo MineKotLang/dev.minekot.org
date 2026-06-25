@@ -1,8 +1,7 @@
 ---
-title: Kotlin Style Guide
-description: "The complete definition of MineKot's coding standards for source code in the Kotlin Programming Language."
-sidebar:
-  hide: false
+title: "Kotlin Style Guide"
+type: "default"
+weight: 1
 ---
 
 ## 1 Introduction

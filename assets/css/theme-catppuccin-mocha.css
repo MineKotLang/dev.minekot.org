@@ -1,0 +1,45 @@
+:root {
+    /* catppuccin-mocha (Dark Mode) */
+    --PRIMARY-color: rgba(166, 227, 161, 1); /* catppuccin green */
+    --PRIMARY-HOVER-color: rgba(137, 216, 139, 1); /* catppuccin bright green */
+    --SECONDARY-color: rgba(137, 180, 250, 1); /* catppuccin blue */
+    --SECONDARY-HOVER-color: rgba(116, 168, 252, 1); /* catppuccin bright blue */
+    --ACCENT-color: rgba(243, 139, 168, 1); /* catppuccin red */
+    --ACCENT-HOVER-color: rgba(243, 119, 153, 1); /* catppuccin bright red */
+
+    --MENU-HEADER-color: rgba(17, 17, 27, 1); /* crust */
+    --MENU-SEARCH-color: rgba(205, 214, 244, 1); /* text */
+    --MENU-SEARCH-BG-color: rgba(69, 71, 90, 1); /* surface1 */
+    --MENU-SEARCH-BORDER-color: rgba(88, 91, 112, 1); /* surface2 */
+    --MENU-HOME-LINK-color: rgba(166, 173, 200, 1); /* subtext0 */
+    --MENU-HOME-LINK-HOVER-color: rgba(205, 214, 244, 1); /* text */
+
+    --MENU-SECTIONS-BG-color: rgba(24, 24, 37, 1); /* mantle */
+    --MENU-SECTIONS-ACTIVE-BG-color: rgba(49, 50, 68, 1); /* surface0 */
+    --MENU-SECTIONS-LINK-color: rgba(166, 173, 200, 1); /* subtext0 */
+    --MENU-SECTIONS-LINK-HOVER-color: rgba(205, 214, 244, 1); /* text */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: rgba(166, 227, 161, 1); /* green */
+    --MENU-SECTION-SEPARATOR-color: rgba(88, 91, 112, 1); /* surface2 */
+    --MENU-VISITED-color: rgba(137, 180, 250, 1); /* blue */
+
+    --MAIN-BG-color: rgba(30, 30, 46, 1); /* base */
+    --MAIN-TEXT-color: rgba(205, 214, 244, 1); /* text */
+    --MAIN-TITLES-TEXT-color: rgba(205, 214, 244, 1); /* text */
+
+    --CODE-theme: catppuccin-mocha;
+    --CODE-BLOCK-color: rgba(205, 214, 244, 1); /* text */
+    --CODE-BLOCK-BG-color: rgba(24, 24, 37, 1); /* mantle */
+    --CODE-BLOCK-BORDER-color: rgba(69, 71, 90, 1); /* surface1 */
+    --CODE-INLINE-color: rgba(166, 227, 161, 1); /* green */
+    --CODE-INLINE-BG-color: rgba(49, 50, 68, 1); /* surface0 */
+    --CODE-INLINE-BORDER-color: rgba(69, 71, 90, 1); /* surface1 */
+
+    --BROWSER-theme: dark;
+    --MERMAID-theme: dark;
+    --OPENAPI-theme: dark;
+    --OPENAPI-CODE-theme: idea;
+
+    --BOX-CAPTION-color: rgba(30, 30, 46, 1); /* base */
+    --BOX-BG-color: rgba(30, 30, 46, 1); /* base */
+    --BOX-TEXT-color: rgba(205, 214, 244, 1); /* text */
+}

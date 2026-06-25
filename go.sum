@@ -1,2 +1,6 @@
-github.com/imfing/hextra v0.12.3 h1:DZHY2rUWYteyzjlHi9r4n7Bb5e2Q+6LXe4C1Dqn0ZjM=
-github.com/imfing/hextra v0.12.3/go.mod h1:vi+yhpq8YPp/aghvJlNKVnJKcPJ/VyAEcfC1BSV9ARo=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20241210183303-16d4de84becf h1:bMx4kwM7Q+dAzvSOWs3XWZ25o+n4mI0GPHqzbzeWb3M=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20241210183303-16d4de84becf/go.mod h1:mKQQdxZNIlLvAj8X3tMq+RzntIJSr9z7XdzuMomt0IM=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20260101125213-8bb66fa67435 h1:0ePl88JhVRosO/cZVQjv+FRkQPivXYViaV6RPSjA/Dw=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20260101125213-8bb66fa67435/go.mod h1:mKQQdxZNIlLvAj8X3tMq+RzntIJSr9z7XdzuMomt0IM=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20260310200521-93d7f257d1a3 h1:3ACeOWQ6bJSUsRl7eOKeSNjh6erVeVEy1cxhLoMzZQA=
+github.com/McShelby/hugo-theme-relearn v0.0.0-20260310200521-93d7f257d1a3/go.mod h1:mKQQdxZNIlLvAj8X3tMq+RzntIJSr9z7XdzuMomt0IM=
