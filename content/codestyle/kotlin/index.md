@@ -37,8 +37,6 @@ Import statements are managed according to the following guidelines:
 
 ## 4 Formatting
 
-Formatting rules are enforced via the project's `.editorconfig` file.
-
 ### 4.1 Column limit
 
 `Kotlin` code has a column limit of `120 characters`. Except as noted, any line that would exceed this limit is line-wrapped.
@@ -68,10 +66,6 @@ This applies to both method declarations and method calls. Parameters are aligne
 
 When embedding variables, properties, or methods within a string template, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed.
 
-### 4.7 Blank lines
-
-Two blank lines are kept before the `right braces`, in code, and in declarations. There are no blank lines after `class headers` or around `block when branches`. One blank line is kept before declarations with comments or annotations on separate lines.
-
 ```kotlin
 // Correct
 val greeting = "Hello, ${name}!"
@@ -79,6 +73,10 @@ val greeting = "Hello, ${name}!"
 // Incorrect
 val greeting = "Hello, $name!"
 ```
+
+### 4.7 Blank lines
+
+Two blank lines are kept before the `right braces`, in code, and in declarations. There are no blank lines after `class headers` or around `block when branches`. One blank line is kept before declarations with comments or annotations on separate lines.
 
 ## 5 Language features and ecosystem
 
@@ -112,14 +110,6 @@ Standard `try-catch` blocks are not used. Exception handling is managed function
 
 When operating within `nested scopes`, `lambdas`, `coroutines`, or `builder DSLs`, relying on an implicit `this` to access properties or methods of an outer class is not allowed. The receiver is explicitly qualified using labeled `this` references to prevent `shadowing`, `context leaks`, and `ambiguity`.
 
-### 6.3 Concurrency
-
-`Kotlin Coroutines` are preferred over standard `threading loops` or legacy `server schedulers` (such as `Bukkit/Paper schedulers`) for all `asynchronous` and `delayed tasks`. `Database operations` and queries are executed asynchronously to prevent `thread blocking`.
-
-### 6.4 Spacing
-
-Spaces are used around `additive`, `assignment`, `equality`, `logical`, `multiplicative`, and `relational operators`. Spaces are used around the `elvis operator`, `function type` arrows, and `when` arrows. No spaces are used around the `range operator` or `unary operators`. A space is used before the `lambda arrow`. Spaces are used after `commas`, after `extend colons`, and after `type colons`. No space is used before `commas` or before `type colons`. A space is used before `extend colons`.
-
 ```kotlin
 // Correct
 class MineKotEngine {
@@ -143,6 +133,14 @@ class MineKotEngine {
     }
 }
 ```
+
+### 6.3 Concurrency
+
+`Kotlin Coroutines` are preferred over standard `threading loops` or legacy `server schedulers` (such as `Bukkit/Paper schedulers`) for all `asynchronous` and `delayed tasks`. `Database operations` and queries are executed asynchronously to prevent `thread blocking`.
+
+### 6.4 Spacing
+
+Spaces are used around `additive`, `assignment`, `equality`, `logical`, `multiplicative`, and `relational operators`. Spaces are used around the `elvis operator`, `function type` arrows, and `when` arrows. No spaces are used around the `range operator` or `unary operators`. A space is used before the `lambda arrow`. Spaces are used after `commas`, after `extend colons`, and after `type colons`. No space is used before `commas` or before `type colons`. A space is used before `extend colons`.
 
 ## 7 Architecture and design
 
@@ -183,7 +181,6 @@ The codebase prioritizes `self-documenting logic` through expressive naming and 
 ### 8.4 Comment formatting
 
 `Block comments` are placed at the first column. No space is added after the `block comment marker`. `Line comments` are placed at the first column. No space is added after the `line comment marker` on reformat. `First column comments` are preserved.
-
 
 ## Conclusion
 

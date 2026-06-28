@@ -1,0 +1,75 @@
+@import "theme-core.css";
+
+:root {
+  /* Semantic brand + status colors */
+  --color-primary                      : var(--color-mauve);
+  --color-success                      : var(--color-green);
+  --color-warning                      : var(--color-yellow);
+  --color-info                         : var(--color-sapphire);
+  --color-danger                       : var(--color-red);
+
+  /* Optional primary ramp (approx) for hover/active states */
+  --color-primary-50                   : color-mix(in oklab, var(--color-primary), white 92%);
+  --color-primary-100                  : color-mix(in oklab, var(--color-primary), white 84%);
+  --color-primary-200                  : color-mix(in oklab, var(--color-primary), white 70%);
+  --color-primary-300                  : color-mix(in oklab, var(--color-primary), white 56%);
+  --color-primary-400                  : color-mix(in oklab, var(--color-primary), white 42%);
+  --color-primary-500                  : var(--color-primary);
+  --color-primary-600                  : color-mix(in oklab, var(--color-primary), black 12%);
+  --color-primary-700                  : color-mix(in oklab, var(--color-primary), black 24%);
+  --color-primary-800                  : color-mix(in oklab, var(--color-primary), black 36%);
+  --color-primary-900                  : color-mix(in oklab, var(--color-primary), black 48%);
+
+  /* Gray scale (using Catppuccin surface colors) */
+  --color-gray-50                      : var(--color-crust);
+  --color-gray-100                     : var(--color-mantle);
+  --color-gray-200                     : var(--color-base);
+  --color-gray-300                     : var(--color-surface0);
+  --color-gray-400                     : var(--color-surface1);
+  --color-gray-500                     : var(--color-surface2);
+  --color-gray-600                     : var(--color-overlay0);
+  --color-gray-700                     : var(--color-overlay1);
+  --color-gray-800                     : var(--color-overlay2);
+  --color-gray-900                     : var(--color-subtext0);
+  --color-gray-950                     : var(--color-subtext1);
+
+  /* Relearn Styling */
+  --PRIMARY-color                      : var(--color-primary);
+  --PRIMARY-HOVER-color                : var(--color-primary-400);
+  --SECONDARY-color                    : var(--color-blue);
+  --SECONDARY-HOVER-color              : var(--color-sky);
+  --ACCENT-color                       : var(--color-red);
+  --ACCENT-HOVER-color                 : var(--color-maroon);
+
+  --MENU-HEADER-color                  : var(--color-crust);
+  --MENU-SEARCH-color                  : var(--color-text);
+  --MENU-SEARCH-BG-color               : var(--color-surface1);
+  --MENU-SEARCH-BORDER-color           : var(--color-surface2);
+  --MENU-HOME-LINK-color               : var(--color-subtext0);
+  --MENU-HOME-LINK-HOVER-color         : var(--color-text);
+
+  --MENU-SECTIONS-BG-color             : var(--color-mantle);
+  --MENU-SECTIONS-ACTIVE-BG-color      : var(--color-surface0);
+  --MENU-SECTIONS-LINK-color           : var(--color-subtext0);
+  --MENU-SECTIONS-LINK-HOVER-color     : var(--color-text);
+  --MENU-SECTION-ACTIVE-CATEGORY-color : var(--color-green);
+  --MENU-SECTION-SEPARATOR-color       : var(--color-surface2);
+
+  --MAIN-BG-color                      : var(--color-base);
+  --MAIN-TEXT-color                    : var(--color-text);
+  --MAIN-TITLES-TEXT-color             : var(--color-text);
+
+  --CODE-theme                         : catppuccin-core;
+  --CODE-BLOCK-color                   : var(--color-text);
+  --CODE-BLOCK-BG-color                : var(--color-mantle);
+  --CODE-BLOCK-BORDER-color            : var(--color-surface1);
+  --CODE-INLINE-color                  : var(--color-mauve);
+  --CODE-INLINE-BG-color               : var(--color-surface0);
+  --CODE-INLINE-BORDER-color           : var(--color-surface1);
+
+  --OPENAPI-CODE-theme                 : idea;
+
+  --BOX-CAPTION-color                  : var(--color-base);
+  --BOX-BG-color                       : var(--color-base);
+  --BOX-TEXT-color                     : var(--color-text);
+}

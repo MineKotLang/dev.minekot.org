@@ -1,44 +1,35 @@
+@import "theme-catppuccin-core.css";
+
+/* Catppuccin Latte Mauve (Light Mode) */
 :root {
-    /* catppuccin-latte (Light Mode) */
-    --PRIMARY-color: rgba(64, 160, 43, 1); /* catppuccin green */
-    --PRIMARY-HOVER-color: rgba(73, 175, 61, 1); /* catppuccin bright green */
-    --SECONDARY-color: rgba(30, 102, 245, 1); /* catppuccin blue */
-    --SECONDARY-HOVER-color: rgba(69, 110, 255, 1); /* catppuccin bright blue */
-    --ACCENT-color: rgba(210, 15, 57, 1); /* catppuccin red */
-    --ACCENT-HOVER-color: rgba(222, 41, 62, 1); /* catppuccin bright red */
+  --color-rosewater : #dc8a78;
+  --color-flamingo  : #dd7878;
+  --color-pink      : #ea76cb;
+  --color-mauve     : #8839ef;
+  --color-red       : #d20f39;
+  --color-maroon    : #e64553;
+  --color-peach     : #fe640b;
+  --color-yellow    : #df8e1d;
+  --color-green     : #40a02b;
+  --color-teal      : #179299;
+  --color-sky       : #04a5e5;
+  --color-sapphire  : #209fb5;
+  --color-blue      : #1e66f5;
+  --color-lavender  : #7287fd;
+  --color-text      : #4c4f69;
+  --color-subtext1  : #5c5f77;
+  --color-subtext0  : #6c6f85;
+  --color-overlay2  : #7c7f93;
+  --color-overlay1  : #8c8fa1;
+  --color-overlay0  : #9ca0b0;
+  --color-surface2  : #acb0be;
+  --color-surface1  : #bcc0cc;
+  --color-surface0  : #ccd0da;
+  --color-base      : #eff1f5;
+  --color-mantle    : #e6e9ef;
+  --color-crust     : #dce0e8;
 
-    --MENU-HEADER-color: rgba(220, 224, 232, 1); /* crust */
-    --MENU-SEARCH-color: rgba(76, 79, 105, 1); /* text */
-    --MENU-SEARCH-BG-color: rgba(188, 192, 204, 1); /* surface1 */
-    --MENU-SEARCH-BORDER-color: rgba(172, 176, 190, 1); /* surface2 */
-    --MENU-HOME-LINK-color: rgba(108, 111, 133, 1); /* subtext0 */
-    --MENU-HOME-LINK-HOVER-color: rgba(76, 79, 105, 1); /* text */
-
-    --MENU-SECTIONS-BG-color: rgba(230, 233, 239, 1); /* mantle */
-    --MENU-SECTIONS-ACTIVE-BG-color: rgba(204, 208, 218, 1); /* surface0 */
-    --MENU-SECTIONS-LINK-color: rgba(108, 111, 133, 1); /* subtext0 */
-    --MENU-SECTIONS-LINK-HOVER-color: rgba(76, 79, 105, 1); /* text */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: rgba(76, 79, 105, 1); /* text */
-    --MENU-SECTION-SEPARATOR-color: rgba(172, 176, 190, 1); /* surface2 */
-
-    --MAIN-BG-color: rgba(239, 241, 245, 1); /* base */
-    --MAIN-TEXT-color: rgba(76, 79, 105, 1); /* text */
-    --MAIN-TITLES-TEXT-color: rgba(76, 79, 105, 1); /* text */
-
-    --CODE-theme: catppuccin-latte;
-    --CODE-BLOCK-color: rgba(76, 79, 105, 1); /* text */
-    --CODE-BLOCK-BG-color: rgba(230, 233, 239, 1); /* mantle */
-    --CODE-BLOCK-BORDER-color: rgba(188, 192, 204, 1); /* surface1 */
-    --CODE-INLINE-color: rgba(64, 160, 43, 1); /* green */
-    --CODE-INLINE-BG-color: rgba(204, 208, 218, 1); /* surface0 */
-    --CODE-INLINE-BORDER-color: rgba(188, 192, 204, 1); /* surface1 */
-
-    --BROWSER-theme: light;
-    --MERMAID-theme: default;
-    --OPENAPI-theme: light;
-    --OPENAPI-CODE-theme: idea;
-
-    --BOX-CAPTION-color: rgba(239, 241, 245, 1); /* base */
-    --BOX-BG-color: rgba(239, 241, 245, .833); /* base with transparency */
-    --BOX-TEXT-color: rgba(76, 79, 105, 1); /* text */
+  --BROWSER-theme   : light;
+  --MERMAID-theme   : default;
+  --OPENAPI-theme   : light;
 }

@@ -3,6 +3,7 @@
 baseURL: https://dev.minekot.org/
 locale: en-us
 title: "MineKot Dev Docs"
+enableGitInfo: true
 
 # noinspection SpellCheckingInspection
 params:
@@ -10,7 +11,8 @@ params:
   logo:
     src: "/images/minekot-flat.svg"
   disableLandingPageButton: true
-  author: "MineKot Team"
+  author:
+    name: "MineKot Team"
   themeVariant:
     - identifier: catppuccin-auto
       name: "Catppuccin Latte/Mocha"
@@ -26,6 +28,7 @@ params:
   breadcrumbSeparator: "/"
   disableRootBreadcrumb: true
   disableTermBreadcrumbs: true
+  disableInlineCopyToClipBoard: true
 
 
   # Header menu
@@ -68,7 +71,7 @@ menus:
     - identifier: home
       weight: 1
       url: "/"
-      name: "<div style=\"text-align: center;\" ><i class=\"fa-fw fas fa-home\"></i> Home</div>"
+      name: "<div class=\"minekot-docs-home-link\" style=\"text-align: center;\" ><i class=\"fa-fw fas fa-home\"></i> Home</div>"
 
 markup:
   goldmark:

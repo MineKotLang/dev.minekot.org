@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Run" type="HUGO_RUN_CONFIGURATION" factoryName="Hugo configuration factory">
-    <option name="hugo.plugin.arguments" value="--buildDrafts --disableFastRender --ignoreCache --noHTTPCache" />
+    <option name="hugo.plugin.arguments" value="--buildDrafts --disableFastRender --noHTTPCache --watch --gc --forceSyncStatic --cleanDestinationDir" />
     <option name="hugo.plugin.run.server" value="run" />
     <option name="hugo.plugin.custom.project.dir" value="" />
     <method v="2" />

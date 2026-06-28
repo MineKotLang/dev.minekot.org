@@ -1,0 +1,329 @@
+/* Defining Colors and Variables that will be overridden for IDE completion */
+/* START */
+:root {
+  --color-rosewater                    : #f5e0dc;
+  --color-flamingo                     : #f2cdcd;
+  --color-pink                         : #f5c2e7;
+  --color-mauve                        : #cba6f7;
+  --color-red                          : #f38ba8;
+  --color-maroon                       : #eba0ac;
+  --color-peach                        : #fab387;
+  --color-yellow                       : #f9e2af;
+  --color-green                        : #a6e3a1;
+  --color-teal                         : #94e2d5;
+  --color-sky                          : #89dceb;
+  --color-sapphire                     : #74c7ec;
+  --color-blue                         : #89b4fa;
+  --color-lavender                     : #b4befe;
+  --color-text                         : #cdd6f4;
+  --color-subtext1                     : #bac2de;
+  --color-subtext0                     : #a6adc8;
+  --color-overlay2                     : #9399b2;
+  --color-overlay1                     : #7f849c;
+  --color-overlay0                     : #6c7086;
+  --color-surface2                     : #585b70;
+  --color-surface1                     : #45475a;
+  --color-surface0                     : #313244;
+  --color-base                         : #1e1e2e;
+  --color-mantle                       : #181825;
+  --color-crust                        : #11111b;
+
+  /* Semantic brand + status colors */
+  --color-primary                      : var(--color-mauve);
+  --color-success                      : var(--color-green);
+  --color-warning                      : var(--color-yellow);
+  --color-info                         : var(--color-sapphire);
+  --color-danger                       : var(--color-red);
+
+  /* Optional primary ramp (approx) for hover/active states */
+  --color-primary-50                   : color-mix(in oklab, var(--color-primary), white 92%);
+  --color-primary-100                  : color-mix(in oklab, var(--color-primary), white 84%);
+  --color-primary-200                  : color-mix(in oklab, var(--color-primary), white 70%);
+  --color-primary-300                  : color-mix(in oklab, var(--color-primary), white 56%);
+  --color-primary-400                  : color-mix(in oklab, var(--color-primary), white 42%);
+  --color-primary-500                  : var(--color-primary);
+  --color-primary-600                  : color-mix(in oklab, var(--color-primary), black 12%);
+  --color-primary-700                  : color-mix(in oklab, var(--color-primary), black 24%);
+  --color-primary-800                  : color-mix(in oklab, var(--color-primary), black 36%);
+  --color-primary-900                  : color-mix(in oklab, var(--color-primary), black 48%);
+
+  /* Gray scale (using Catppuccin surface colors) */
+  --color-gray-50                      : var(--color-crust);
+  --color-gray-100                     : var(--color-mantle);
+  --color-gray-200                     : var(--color-base);
+  --color-gray-300                     : var(--color-surface0);
+  --color-gray-400                     : var(--color-surface1);
+  --color-gray-500                     : var(--color-surface2);
+  --color-gray-600                     : var(--color-overlay0);
+  --color-gray-700                     : var(--color-overlay1);
+  --color-gray-800                     : var(--color-overlay2);
+  --color-gray-900                     : var(--color-subtext0);
+  --color-gray-950                     : var(--color-subtext1);
+
+  /* Relearn Styling */
+  --PRIMARY-color                      : var(--color-primary);
+  --PRIMARY-HOVER-color                : var(--color-primary-400);
+  --SECONDARY-color                    : var(--color-blue);
+  --SECONDARY-HOVER-color              : var(--color-sky);
+  --ACCENT-color                       : var(--color-red);
+  --ACCENT-HOVER-color                 : var(--color-maroon);
+
+  --MENU-HEADER-color                  : var(--color-crust);
+  --MENU-SEARCH-color                  : var(--color-text);
+  --MENU-SEARCH-BG-color               : var(--color-surface1);
+  --MENU-SEARCH-BORDER-color           : var(--color-surface2);
+  --MENU-HOME-LINK-color               : var(--color-subtext0);
+  --MENU-HOME-LINK-HOVER-color         : var(--color-text);
+
+  --MENU-SECTIONS-BG-color             : var(--color-mantle);
+  --MENU-SECTIONS-ACTIVE-BG-color      : var(--color-surface0);
+  --MENU-SECTIONS-LINK-color           : var(--color-subtext0);
+  --MENU-SECTIONS-LINK-HOVER-color     : var(--color-text);
+  --MENU-SECTION-ACTIVE-CATEGORY-color : var(--color-green);
+  --MENU-SECTION-SEPARATOR-color       : var(--color-surface2);
+
+  --MAIN-BG-color                      : var(--color-base);
+  --MAIN-TEXT-color                    : var(--color-text);
+  --MAIN-TITLES-TEXT-color             : var(--color-text);
+
+  --CODE-theme                         : catppuccin-core;
+  --CODE-BLOCK-color                   : var(--color-text);
+  --CODE-BLOCK-BG-color                : var(--color-mantle);
+  --CODE-BLOCK-BORDER-color            : var(--color-surface1);
+  --CODE-INLINE-color                  : var(--color-mauve);
+  --CODE-INLINE-BG-color               : var(--color-surface0);
+  --CODE-INLINE-BORDER-color           : var(--color-surface1);
+
+  --OPENAPI-CODE-theme                 : idea;
+
+  --BOX-CAPTION-color                  : var(--color-base);
+  --BOX-BG-color                       : var(--color-base);
+  --BOX-TEXT-color                     : var(--color-text);
+}
+
+/* END */
+
+:root {
+  --MAIN-MAX-width    : 1000rem;
+  --CODE-font         : "JetBrains Mono";
+  --MAIN-font         : "Inter";
+  --BODY-height       : calc(100vh - var(--FOOTER-height));
+  --FOOTER-height     : 12%;
+  --DEFAULT-ANIMATION : all 0.35s ease;
+}
+
+.default-animation {
+  transition : var(--DEFAULT-ANIMATION);
+}
+
+mark {
+  background-image : linear-gradient(45deg, var(--color-mauve), var(--color-lavender));
+  border-radius    : 0.8rem 0.4rem;
+  color            : var(--color-text);
+  margin           : 0.025rem;
+  padding          : 0.1rem;
+  padding-top      : 0.025rem;
+}
+
+#R-topbar {
+  background : transparent !important;
+}
+
+#R-topbar > .topbar-wrapper {
+  backdrop-filter  : blur(8px);
+  background-color : color-mix(in srgb, var(--color-mantle), transparent 80%) !important;
+}
+
+#R-body {
+  height     : var(--BODY-height);
+  min-height : var(--BODY-height);
+}
+
+#R-sidebar {
+  height     : var(--BODY-height);
+  min-height : var(--BODY-height);
+  transition : revert-layer;
+}
+
+.minekot-docs-home-link {
+  color : var(--color-crust);
+}
+
+#minekot-docs-footer {
+  --elem-vertical-spacing : 0.5vh;
+  --elem-max-height       : calc(100% - calc(var(--elem-vertical-spacing) * 2));
+  align-items             : center;
+  background              : var(--color-mantle);
+  bottom                  : 0;
+  display                 : flex;
+  flex-basis              : 100%;
+  flex-direction          : inherit;
+  flex-grow               : 1;
+  flex-shrink             : 0;
+  height                  : var(--FOOTER-height);
+  justify-content         : center;
+  left                    : 0;
+  position                : fixed;
+  right                   : 0;
+  width                   : 100vw;
+}
+
+@media screen and (max-width : 768px) {
+  #minekot-docs-footer {
+    display : none !important;
+  }
+
+  #R-body, #R-sidebar {
+    height     : 100vh !important;
+    min-height : 100vh !important;
+  }
+}
+
+.minekot-docs-footer-content {
+  align-items     : center;
+  display         : flex;
+  flex-direction  : row;
+  height          : 100%;
+  justify-content : normal;
+  padding         : 0 2rem;
+  width           : 100%;
+  gap             : 1.5rem;
+}
+
+#minekot-docs-footer-logo-container {
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  height          : 100%;
+  min-width       : 5%;
+  max-width       : 5%;
+}
+
+#minekot-docs-footer-logo {
+  display    : block;
+  height     : 50%;
+  object-fit : contain;
+  transition : var(--DEFAULT-ANIMATION);
+}
+
+#minekot-docs-footer-logo-text {
+  color       : var(--color-primary);
+  font-family : var(--MAIN-font);
+  font-weight : bolder;
+  font-size   : clamp(0.8rem, 1.5vw, 1.2rem);
+}
+
+.minekot-docs-footer-separator {
+  padding    : 0;
+  margin     : 0;
+  height     : var(--elem-max-height);
+  width      : 0.5rem;
+  background : var(--color-surface0);
+}
+
+.minekot-docs-footer-separator:hover {
+  background : var(--color-surface1);
+}
+
+.minekot-docs-footer-text {
+  color       : var(--color-subtext0);
+  font-family : var(--MAIN-font);
+  font-size   : 0.9rem;
+}
+
+/*
+
+.minekot-docs-footer-spacer {
+  flex-grow       : 1;
+  height          : 100%;
+  min-width       : 0;
+  min-height      : 0;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  align-items     : center;
+  gap             : 1.5rem;
+}
+
+#spacer-1.minekot-docs-footer-spacer {
+  width : calc(100% - 5% - 0.5rem);
+}
+
+#spacer-2.minekot-docs-footer-spacer {
+  width : calc(100%);
+}
+
+.minekot-docs-footer-column {
+  transition      : var(--DEFAULT-ANIMATION);
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  min-height      : var(--elem-max-height);
+  max-height      : var(--elem-max-height);
+  gap             : 1.5rem;
+  padding         : 0 1rem;
+  border-left     : 0.2rem solid var(--color-surface0);
+  border-right    : 0.2rem solid var(--color-surface0);
+  flex            : 1 1 0px;
+  width           : 100%;
+}
+
+.minekot-docs-footer-column:hover {
+  border-color : var(--color-surface1);
+}
+
+.minekot-docs-footer-column-header {
+  position : relative;
+}
+
+.minekot-docs-footer-column-title {
+  font-family   : var(--MAIN-font);
+  font-weight   : bolder;
+  font-size     : 1.4rem;
+  color         : var(--color-primary);
+  margin-bottom : 0.25vh;
+  align-self    : flex-start;
+  width         : fit-content;
+  white-space   : nowrap;
+  overflow      : hidden;
+  text-overflow : ellipsis;
+}
+
+.minekot-docs-footer-column-separator {
+  height        : 0.2vh;
+  width         : 120%;
+  background    : var(--color-surface1);
+  margin-bottom : 0.5vh;
+}
+
+.minekot-docs-footer-column-links {
+  display         : flex;
+  flex-direction  : inherit;
+  gap             : 0.2rem;
+  overflow        : visible;
+  flex            : 1 1 0px;
+  justify-content : center;
+}
+
+.minekot-docs-footer-column-links a {
+  color           : var(--color-sapphire);
+  font-family     : var(--MAIN-font);
+  font-size       : clamp(0.7rem, 1.5vh, 0.9rem);
+  line-height     : 1.1;
+  text-decoration : none;
+  transition      : all 0.5s ease;
+  display         : flex;
+  align-items     : center;
+  gap             : 0.5rem;
+}
+
+.minekot-docs-footer-column-links a:hover {
+  color : var(--color-sky);
+}
+
+.minekot-docs-footer-column-links a i {
+  width      : 1.2rem;
+  text-align : center;
+}
+*/
