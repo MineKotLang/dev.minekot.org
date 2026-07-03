@@ -22,6 +22,8 @@ params:
     - identifier: catppuccin-mocha
       name: "Catppuccin Mocha"
 
+  collapsibleMenu: true
+
   hideAuthorEmail: true
 
   titleSeparator: " - "

@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/chroma-catppuccin-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/theme-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/partials/custom-footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/css/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/gradle/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/html/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/javascript/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/json/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/markdown/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/typescript/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/xml/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/intellij codestyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/_relearn/boxStyle.gotmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/custom-header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/chroma-catppuccin-latte.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/chroma-catppuccin-mocha.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/theme-catppuccin-latte.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-latte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/theme-catppuccin-mocha.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-mocha.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-core.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/codestyle/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/_index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/custom-header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/favicon.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/favicon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/custom-footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/custom-footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,65 +72,68 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000001673663288" />
-      <entry key="S5" value="1.0019673465633008" />
-      <entry key="S10" value="1.0497006767389825" />
-      <entry key="S30" value="1.6795170103757004" />
-      <entry key="S60" value="2.8670311708574534" />
-      <entry key="M2" value="5.374894130585778" />
-      <entry key="M5" value="12.399197496891558" />
-      <entry key="M10" value="26.285362497459744" />
-      <entry key="M15" value="41.05300184317566" />
-      <entry key="M30" value="79.31462889524316" />
-      <entry key="H1" value="156.94140892987377" />
-      <entry key="H2" value="320.44646359584226" />
-      <entry key="H4" value="623.9761202712151" />
-      <entry key="D1" value="1977.9005152378395" />
-      <entry key="W1" value="2645.8269071917603" />
+      <entry key="MS100" value="1.006801176275751" />
+      <entry key="MS500" value="1.3685673043227753" />
+      <entry key="S2" value="1.7791646513829493" />
+      <entry key="S5" value="1.9063940887836965" />
+      <entry key="S10" value="1.9887505539712844" />
+      <entry key="S30" value="2.374490438611859" />
+      <entry key="S60" value="2.854188439628847" />
+      <entry key="M2" value="3.8421808932310464" />
+      <entry key="M5" value="6.93920233906569" />
+      <entry key="M10" value="11.559993410684095" />
+      <entry key="M15" value="16.137309106070575" />
+      <entry key="M30" value="29.465930214267942" />
+      <entry key="H1" value="58.690165595909406" />
+      <entry key="H2" value="141.16300319204996" />
+      <entry key="H4" value="371.8907446572692" />
+      <entry key="D1" value="1886.7011471871233" />
+      <entry key="W1" value="2818.8884621628035" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="6.16739133196326E-223" />
-      <entry key="S5" value="1.9627261288987206E-89" />
-      <entry key="S10" value="6.256071718622235E-45" />
-      <entry key="S30" value="2.9239998879821946E-15" />
-      <entry key="S60" value="7.652013209647552E-8" />
-      <entry key="M2" value="4.0815255340218357E-4" />
-      <entry key="M5" value="0.10821686212053722" />
-      <entry key="M10" value="1.0583670685530093" />
-      <entry key="M15" value="2.5572338710013267" />
-      <entry key="M30" value="7.648271780509676" />
-      <entry key="H1" value="19.10021692101822" />
-      <entry key="H2" value="41.09767620948927" />
-      <entry key="H4" value="77.45937230185814" />
-      <entry key="D1" value="204.74153498227477" />
-      <entry key="W1" value="259.04920183688796" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="1.0176573540524102E-185" />
+      <entry key="S30" value="3.246193062919732E-62" />
+      <entry key="S60" value="2.5274338066260537E-31" />
+      <entry key="M2" value="7.095214252309592E-16" />
+      <entry key="M5" value="1.3289922161361652E-6" />
+      <entry key="M10" value="0.001716413196153989" />
+      <entry key="M15" value="0.019443122451167628" />
+      <entry key="M30" value="0.23370978840884912" />
+      <entry key="H1" value="1.135818145994526" />
+      <entry key="H2" value="6.824240091523548" />
+      <entry key="H4" value="29.87219476085903" />
+      <entry key="D1" value="175.34171914396958" />
+      <entry key="W1" value="255.7618797037761" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526379980439373" />
-      <entry key="MS500" value="0.9903428719330246" />
-      <entry key="S2" value="0.9975770588266057" />
-      <entry key="S5" value="1.0008287046490965" />
-      <entry key="S10" value="1.0471780447495425" />
-      <entry key="S30" value="1.672020490137874" />
-      <entry key="S60" value="2.85615165533705" />
-      <entry key="M2" value="5.360969698863797" />
-      <entry key="M5" value="12.49220855658508" />
-      <entry key="M10" value="27.322709825763035" />
-      <entry key="M15" value="43.58381853667592" />
-      <entry key="M30" value="86.93028455371416" />
-      <entry key="H1" value="176.00545008651986" />
-      <entry key="H2" value="361.5058686017859" />
-      <entry key="H4" value="701.3967751405646" />
-      <entry key="D1" value="2182.6228164423724" />
-      <entry key="W1" value="2904.8725678517676" />
+      <entry key="MS100" value="0.9522727755049313" />
+      <entry key="MS500" value="1.3509554594758213" />
+      <entry key="S2" value="1.7728933063310732" />
+      <entry key="S5" value="1.9036524996879804" />
+      <entry key="S10" value="1.987289973018805" />
+      <entry key="S30" value="2.3738268359115478" />
+      <entry key="S60" value="2.85372874119821" />
+      <entry key="M2" value="3.841799456000458" />
+      <entry key="M5" value="6.938832100284255" />
+      <entry key="M10" value="11.56122132291538" />
+      <entry key="M15" value="16.156076623206765" />
+      <entry key="M30" value="29.698506072410815" />
+      <entry key="H1" value="59.82390891833721" />
+      <entry key="H2" value="147.98081820004046" />
+      <entry key="H4" value="401.74786573156496" />
+      <entry key="D1" value="2062.0263370871526" />
+      <entry key="W1" value="3074.646835844215" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -160,7 +166,7 @@
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;kronk.content.tree.expanded.paths&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org/assets/css&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -170,17 +176,22 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.46642685&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/tmp/qodana_output/qodana.sarif.json" reportGuid="cdcfbdfb-3dcd-49f7-88f5-e890c2a98fe4" reportId="dev.minekot.org/qodana/2026-07-03" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/css" />
       <recent name="$PROJECT_DIR$/content/codestyle/kotlin" />
       <recent name="$PROJECT_DIR$/content/codestyle" />
       <recent name="$PROJECT_DIR$/assets/images" />
-      <recent name="$PROJECT_DIR$/static/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/layouts/partials" />
@@ -235,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782411537746</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: modularize Catppuccin styling and overhaul core site content&#10;&#10;- Consolidate Catppuccin color variables and Relearn theme definitions into unified `theme-core.css` and `theme-catppuccin-core.css` files.&#10;- Replace duplicated Chroma syntax styles with a single `chroma-catppuccin-core.css`, deleting the standalone Latte and Mocha variants.&#10;- Implement a new persistent site footer via `custom-footer.html` featuring MineKot branding, and remove the deprecated `custom-header.html`.&#10;- Expand the homepage (`_index.md`) and &quot;Coding Standards&quot; (`codestyle/_index.md`) pages with detailed onboarding guidelines and core architectural principles.&#10;- Update `hugo.yaml` to enable Git info, enforce a structured author mapping, and disable inline copy-to-clipboard buttons.&#10;- Reorganize section ordering in the Kotlin Style Guide (`codestyle/kotlin/index.md`) for better readability.&#10;- Correct the site favicon path to use `minekot-flat.svg` in `favicon.html`.&#10;- Upgrade the `hugo-theme-relearn` dependency module hash in `go.sum`.&#10;- Enhance JetBrains IDE configuration (`Project.xml`) with explicit code style formatting rules for CSS, HTML, JSON, and JavaScript.&#10;- Update the Hugo local run configuration (`Run.xml`) with optimized build arguments (`--watch`, `--gc`, `--cleanDestinationDir`).">
+      <option name="closed" value="true" />
+      <created>1782654042959</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782654042959</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +280,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config)." />
     <MESSAGE value="refactor: migrate documentation site to Hugo Theme Relearn&#10;&#10;- Replace the Hextra theme with Hugo Theme Relearn in `hugo.yaml`, `go.mod`, and `go.sum`.&#10;- Configure Relearn-specific site navigation, sidebar/footer menus, and Catppuccin theme variants in `hugo.yaml`.&#10;- Remove legacy `architecture` and `tooling` content sections to streamline the site structure.&#10;- Restructure the `codestyles` directory to `codestyle` and relocate the Kotlin Style Guide.&#10;- Replace monolithic custom CSS with modular Catppuccin (Latte/Mocha) CSS variables and Chroma syntax highlighting styles.&#10;- Relocate site branding assets (logo, favicon) to the `assets/images` directory.&#10;- Implement new HTML partials for custom headers and favicons (`custom-header.html`, `favicon.html`).&#10;- Update the default Markdown archetype to use YAML front matter instead of TOML.&#10;- Add a comprehensive JSON schema (`schemas/hugo.json`) for `hugo.yaml` configuration validation.&#10;- Initialize baseline internationalization support with `i18n/en.yml`." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: migrate documentation site to Hugo Theme Relearn&#10;&#10;- Replace the Hextra theme with Hugo Theme Relearn in `hugo.yaml`, `go.mod`, and `go.sum`.&#10;- Configure Relearn-specific site navigation, sidebar/footer menus, and Catppuccin theme variants in `hugo.yaml`.&#10;- Remove legacy `architecture` and `tooling` content sections to streamline the site structure.&#10;- Restructure the `codestyles` directory to `codestyle` and relocate the Kotlin Style Guide.&#10;- Replace monolithic custom CSS with modular Catppuccin (Latte/Mocha) CSS variables and Chroma syntax highlighting styles.&#10;- Relocate site branding assets (logo, favicon) to the `assets/images` directory.&#10;- Implement new HTML partials for custom headers and favicons (`custom-header.html`, `favicon.html`).&#10;- Update the default Markdown archetype to use YAML front matter instead of TOML.&#10;- Add a comprehensive JSON schema (`schemas/hugo.json`) for `hugo.yaml` configuration validation.&#10;- Initialize baseline internationalization support with `i18n/en.yml`." />
+    <MESSAGE value="refactor: modularize Catppuccin styling and overhaul core site content&#10;&#10;- Consolidate Catppuccin color variables and Relearn theme definitions into unified `theme-core.css` and `theme-catppuccin-core.css` files.&#10;- Replace duplicated Chroma syntax styles with a single `chroma-catppuccin-core.css`, deleting the standalone Latte and Mocha variants.&#10;- Implement a new persistent site footer via `custom-footer.html` featuring MineKot branding, and remove the deprecated `custom-header.html`.&#10;- Expand the homepage (`_index.md`) and &quot;Coding Standards&quot; (`codestyle/_index.md`) pages with detailed onboarding guidelines and core architectural principles.&#10;- Update `hugo.yaml` to enable Git info, enforce a structured author mapping, and disable inline copy-to-clipboard buttons.&#10;- Reorganize section ordering in the Kotlin Style Guide (`codestyle/kotlin/index.md`) for better readability.&#10;- Correct the site favicon path to use `minekot-flat.svg` in `favicon.html`.&#10;- Upgrade the `hugo-theme-relearn` dependency module hash in `go.sum`.&#10;- Enhance JetBrains IDE configuration (`Project.xml`) with explicit code style formatting rules for CSS, HTML, JSON, and JavaScript.&#10;- Update the Hugo local run configuration (`Run.xml`) with optimized build arguments (`--watch`, `--gc`, `--cleanDestinationDir`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

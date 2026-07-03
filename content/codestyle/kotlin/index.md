@@ -1,6 +1,7 @@
 ---
 title: "Kotlin Style Guide"
-type: "default"
+params:
+  menuPre: "<i class=\"devicons devicons-kotlin-icon\"></i> "
 weight: 1
 ---
 
@@ -66,13 +67,13 @@ This applies to both method declarations and method calls. Parameters are aligne
 
 When embedding variables, properties, or methods within a string template, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed.
 
-```kotlin
+`````kotlin
 // Correct
 val greeting = "Hello, ${name}!"
 
 // Incorrect
 val greeting = "Hello, $name!"
-```
+`````
 
 ### 4.7 Blank lines
 
@@ -84,7 +85,7 @@ Two blank lines are kept before the `right braces`, in code, and in declarations
 
 If a `Kotlin standard library` function, class, or data structure exists, it is used instead of its `Java` equivalent (e.g., use `Kotlin collections` over `java.util` equivalents).
 
-### 5.2 The KotlinX mandate
+### 5.2 The Kotlinx mandate
 
 The `kotlinx` suite of libraries is used for `core system functionality`:
 
@@ -110,7 +111,7 @@ Standard `try-catch` blocks are not used. Exception handling is managed function
 
 When operating within `nested scopes`, `lambdas`, `coroutines`, or `builder DSLs`, relying on an implicit `this` to access properties or methods of an outer class is not allowed. The receiver is explicitly qualified using labeled `this` references to prevent `shadowing`, `context leaks`, and `ambiguity`.
 
-```kotlin
+`````kotlin
 // Correct
 class MineKotEngine {
     val engineName = "MineKot"
@@ -132,7 +133,7 @@ class MineKotEngine {
         }
     }
 }
-```
+`````
 
 ### 6.3 Concurrency
 
