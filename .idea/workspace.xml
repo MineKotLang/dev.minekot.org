@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/css/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/gradle/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/html/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/javascript/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/json/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/markdown/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/typescript/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/xml/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/intellij codestyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/partials/_relearn/boxStyle.gotmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/partials/custom-header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/theme-core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-core.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/custom-footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/custom-footer.html" afterDir="false" />
-    </list>
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,61 +50,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.006801176275751" />
-      <entry key="MS500" value="1.3685673043227753" />
-      <entry key="S2" value="1.7791646513829493" />
-      <entry key="S5" value="1.9063940887836965" />
-      <entry key="S10" value="1.9887505539712844" />
-      <entry key="S30" value="2.374490438611859" />
-      <entry key="S60" value="2.854188439628847" />
-      <entry key="M2" value="3.8421808932310464" />
-      <entry key="M5" value="6.93920233906569" />
-      <entry key="M10" value="11.559993410684095" />
-      <entry key="M15" value="16.137309106070575" />
-      <entry key="M30" value="29.465930214267942" />
-      <entry key="H1" value="58.690165595909406" />
-      <entry key="H2" value="141.16300319204996" />
-      <entry key="H4" value="371.8907446572692" />
-      <entry key="D1" value="1886.7011471871233" />
-      <entry key="W1" value="2818.8884621628035" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000883496707" />
+      <entry key="S10" value="1.0002972367253478" />
+      <entry key="S30" value="1.0670857201452675" />
+      <entry key="S60" value="1.334984963909116" />
+      <entry key="M2" value="2.6705994269091984" />
+      <entry key="M5" value="8.42652549579438" />
+      <entry key="M10" value="15.933799906003618" />
+      <entry key="M15" value="21.9343107473494" />
+      <entry key="M30" value="37.113263246559264" />
+      <entry key="H1" value="67.01398988864624" />
+      <entry key="H2" value="147.88235584618621" />
+      <entry key="H4" value="375.0085139311226" />
+      <entry key="D1" value="1892.2989149298558" />
+      <entry key="W1" value="2835.0237710621527" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="1.0176573540524102E-185" />
-      <entry key="S30" value="3.246193062919732E-62" />
-      <entry key="S60" value="2.5274338066260537E-31" />
-      <entry key="M2" value="7.095214252309592E-16" />
-      <entry key="M5" value="1.3289922161361652E-6" />
-      <entry key="M10" value="0.001716413196153989" />
-      <entry key="M15" value="0.019443122451167628" />
-      <entry key="M30" value="0.23370978840884912" />
-      <entry key="H1" value="1.135818145994526" />
-      <entry key="H2" value="6.824240091523548" />
-      <entry key="H4" value="29.87219476085903" />
-      <entry key="D1" value="175.34171914396958" />
-      <entry key="W1" value="255.7618797037761" />
+      <entry key="MS100" value="9.347033244404647E-132" />
+      <entry key="MS500" value="6.224934355887774E-27" />
+      <entry key="S2" value="2.85374228766901E-7" />
+      <entry key="S5" value="0.0030168621206097183" />
+      <entry key="S10" value="0.08339820030449797" />
+      <entry key="S30" value="0.8795941727980383" />
+      <entry key="S60" value="1.6178371896818662" />
+      <entry key="M2" value="2.200852351207429" />
+      <entry key="M5" value="2.6497505340493044" />
+      <entry key="M10" value="2.819947330864871" />
+      <entry key="M15" value="2.888124791988157" />
+      <entry key="M30" value="3.1047591262467282" />
+      <entry key="H1" value="3.9270835961199344" />
+      <entry key="H2" value="9.251822258685555" />
+      <entry key="H4" value="31.619574871166343" />
+      <entry key="D1" value="177.10089050457552" />
+      <entry key="W1" value="258.50261673014853" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9522727755049313" />
-      <entry key="MS500" value="1.3509554594758213" />
-      <entry key="S2" value="1.7728933063310732" />
-      <entry key="S5" value="1.9036524996879804" />
-      <entry key="S10" value="1.987289973018805" />
-      <entry key="S30" value="2.3738268359115478" />
-      <entry key="S60" value="2.85372874119821" />
-      <entry key="M2" value="3.841799456000458" />
-      <entry key="M5" value="6.938832100284255" />
-      <entry key="M10" value="11.56122132291538" />
-      <entry key="M15" value="16.156076623206765" />
-      <entry key="M30" value="29.698506072410815" />
-      <entry key="H1" value="59.82390891833721" />
-      <entry key="H2" value="147.98081820004046" />
-      <entry key="H4" value="401.74786573156496" />
-      <entry key="D1" value="2062.0263370871526" />
-      <entry key="W1" value="3074.646835844215" />
+      <entry key="MS100" value="9.060812809015183E-5" />
+      <entry key="MS500" value="0.15539370861299243" />
+      <entry key="S2" value="0.6278535665406195" />
+      <entry key="S5" value="0.8311322226526501" />
+      <entry key="S10" value="0.9630593339925928" />
+      <entry key="S30" value="1.797172229767688" />
+      <entry key="S60" value="2.8252440991380117" />
+      <entry key="M2" value="4.786009404958147" />
+      <entry key="M5" value="11.035150240684848" />
+      <entry key="M10" value="18.73169304692393" />
+      <entry key="M15" value="24.807193683447263" />
+      <entry key="M30" value="40.209603984157745" />
+      <entry key="H1" value="70.93547630492145" />
+      <entry key="H2" value="157.12634332617534" />
+      <entry key="H4" value="406.6126736330241" />
+      <entry key="D1" value="2069.3832310659395" />
+      <entry key="W1" value="3093.5228621733127" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -254,13 +232,22 @@
       <option name="project" value="LOCAL" />
       <updated>1782654042959</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry.">
+      <option name="closed" value="true" />
+      <created>1783084323403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783084323403</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.yml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.toml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="hugo.yaml" />
   </component>
@@ -281,7 +268,8 @@
     <MESSAGE value="feat: initialize MineKot developer documentation site&#10;&#10;- Initialize Hugo project using the Hextra theme with Go modules.&#10;- Configure site navigation, global settings, and Markdown formatting in `hugo.yaml`.&#10;- Add custom CSS applying the Catppuccin color palette (Latte/Mocha) and customized syntax highlighting.&#10;- Establish foundational content structure for Architecture, Code Styles, and Tooling sections.&#10;- Publish a comprehensive Kotlin Style Guide defining the project's coding standards.&#10;- Implement custom HTML partials for a global site footer and dynamic abstract icons.&#10;- Add project branding assets including `favicon.svg` and `logo-flat.svg`.&#10;- Set up standard repository management files (`README.md`, `LICENSE`, `NOTICE`, `.gitignore`, `.gitattributes`).&#10;- Include comprehensive JetBrains IDE settings configurations (Kotlin code style, run configurations, Tailwind config)." />
     <MESSAGE value="refactor: migrate documentation site to Hugo Theme Relearn&#10;&#10;- Replace the Hextra theme with Hugo Theme Relearn in `hugo.yaml`, `go.mod`, and `go.sum`.&#10;- Configure Relearn-specific site navigation, sidebar/footer menus, and Catppuccin theme variants in `hugo.yaml`.&#10;- Remove legacy `architecture` and `tooling` content sections to streamline the site structure.&#10;- Restructure the `codestyles` directory to `codestyle` and relocate the Kotlin Style Guide.&#10;- Replace monolithic custom CSS with modular Catppuccin (Latte/Mocha) CSS variables and Chroma syntax highlighting styles.&#10;- Relocate site branding assets (logo, favicon) to the `assets/images` directory.&#10;- Implement new HTML partials for custom headers and favicons (`custom-header.html`, `favicon.html`).&#10;- Update the default Markdown archetype to use YAML front matter instead of TOML.&#10;- Add a comprehensive JSON schema (`schemas/hugo.json`) for `hugo.yaml` configuration validation.&#10;- Initialize baseline internationalization support with `i18n/en.yml`." />
     <MESSAGE value="refactor: modularize Catppuccin styling and overhaul core site content&#10;&#10;- Consolidate Catppuccin color variables and Relearn theme definitions into unified `theme-core.css` and `theme-catppuccin-core.css` files.&#10;- Replace duplicated Chroma syntax styles with a single `chroma-catppuccin-core.css`, deleting the standalone Latte and Mocha variants.&#10;- Implement a new persistent site footer via `custom-footer.html` featuring MineKot branding, and remove the deprecated `custom-header.html`.&#10;- Expand the homepage (`_index.md`) and &quot;Coding Standards&quot; (`codestyle/_index.md`) pages with detailed onboarding guidelines and core architectural principles.&#10;- Update `hugo.yaml` to enable Git info, enforce a structured author mapping, and disable inline copy-to-clipboard buttons.&#10;- Reorganize section ordering in the Kotlin Style Guide (`codestyle/kotlin/index.md`) for better readability.&#10;- Correct the site favicon path to use `minekot-flat.svg` in `favicon.html`.&#10;- Upgrade the `hugo-theme-relearn` dependency module hash in `go.sum`.&#10;- Enhance JetBrains IDE configuration (`Project.xml`) with explicit code style formatting rules for CSS, HTML, JSON, and JavaScript.&#10;- Update the Hugo local run configuration (`Run.xml`) with optimized build arguments (`--watch`, `--gc`, `--cleanDestinationDir`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
