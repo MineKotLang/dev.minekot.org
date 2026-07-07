@@ -415,7 +415,7 @@ Date formats are consistent within a single JSON file or across related files:
 
 ### 8.1 Data-driven foundation
 
-JSON configuration templates represent the core blueprint of MineKot's data-driven architecture. Files must explicitly define configurations, options, and operational constants. Code logic must read from these files rather than evaluating inline conditions.
+JSON configuration templates represent the core blueprint of MineKot's data-driven architecture. Files must explicitly define configurations, options, and operational constants. Code logic must be read from these files rather than evaluating inline conditions.
 
 ### 8.2 Schema integrity
 

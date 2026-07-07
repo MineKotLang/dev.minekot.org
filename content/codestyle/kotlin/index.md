@@ -52,7 +52,7 @@ The global default indent size is four spaces, and the tab width is four spaces.
 
 ### 4.4 Trailing commas
 
-`Trailing commas` are allowed and encouraged in multiple contexts, including `collections`, `parameter lists`, and `type arguments`. Trailing commas are enabled for `collection literals`, `context receiver lists`, `destructuring declarations`, `function literals`, `indices`, `type argument lists`, `type parameter lists`, `value argument lists`, `value parameter lists`, and `when entries`. Trailing commas are not enabled on `call sites`.
+`Trailing commas` are allowed and enforced in multiple contexts, including `collections`, `parameter lists`, and `type arguments`. Trailing commas are enabled for `collection literals`, `context receiver lists`, `destructuring declarations`, `function literals`, `indices`, `type argument lists`, `type parameter lists`, `value argument lists`, `value parameter lists`, and `when entries`.
 
 ### 4.5 Parameter wrapping
 
@@ -77,7 +77,7 @@ val greeting = "Hello, $name!"
 
 ### 4.7 Blank lines
 
-Two blank lines are kept before the `right braces`, in code, and in declarations. There are no blank lines after `class headers` or around `block when branches`. One blank line is kept before declarations with comments or annotations on separate lines.
+No blank lines are kept before the `right braces` in code and declarations. There are no blank lines after `class headers` or around `block when branches`. One blank line is kept before declarations with comments or annotations on separate lines.
 
 ## 5 Language features and ecosystem
 
@@ -99,7 +99,7 @@ Projects target the latest stable releases of the `Kotlin compiler`, the `standa
 
 ### 5.4 Code style defaults
 
-Kotlin code follows the official Kotlin code style defaults with MineKot-specific overrides as defined in this guide.
+Kotlin code follows the official Kotlin code style defaults (`KOTLIN_OFFICIAL`) with MineKot-specific overrides as defined in this guide.
 
 ## 6 Programming practices
 

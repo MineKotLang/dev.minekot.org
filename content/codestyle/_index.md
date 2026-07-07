@@ -138,15 +138,6 @@ A [Prettier configuration](/.prettierrc) is provided for JavaScript, TypeScript,
 - LF line endings
 - No trailing commas in standard JSON
 
-### EditorConfig
-
-An [EditorConfig](/.editorconfig) file is provided to maintain consistent coding styles across different editors and IDEs. The configuration enforces:
-
-- UTF-8 encoding
-- LF line endings
-- Consistent indentation per file type
-- Trailing newline
-
 ## Cross-Language Principles
 
 ### Data-Driven Design

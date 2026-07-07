@@ -103,7 +103,7 @@ Next paragraph.
 
 ### 4.3 Heading case
 
-Headings use sentence case (first letter capitalized, rest lowercase except proper nouns):
+Headings use sentence casing (first letter capitalized, rest lowercase except proper nouns):
 
 `````markdown
 # Correct

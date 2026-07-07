@@ -133,15 +133,20 @@ All attribute values must be enclosed in double quotes. Single quotes are forbid
 
 ### 4.6 Self-closing tags
 
-Self-closing tags must include a trailing slash before the closing angle bracket:
+Self-closing tags must include a space before the trailing slash:
 
 `````html
 <!-- Correct -->
-<img src="image.jpg" alt="Description"/>
-<br/>
-<input type="text"/>
+<img src="image.jpg" alt="Description" />
+<br />
+<input type="text" />
 
 <!-- Incorrect -->
+<img src="image.jpg" alt="Description" />
+<br />
+<input type="text" />
+
+<!-- Incorrect - No slash -->
 <img src="image.jpg" alt="Description">
 <br>
 <input type="text">
@@ -166,15 +171,15 @@ Attributes are ordered in the following sequence:
 
 ### 4.8 Line wrapping
 
-Attributes are wrapped to multiple lines when the line would exceed 120 characters:
+Attributes are wrapped to multiple lines when the line exceeds 120 characters:
 
 `````html
 <!-- Correct -->
 <button
-    type="submit"
-    class="btn btn-primary"
-    data-loading="false"
-    disabled
+  type="submit"
+  class="btn btn-primary"
+  data-loading="false"
+  disabled
 >
   Submit
 </button>
@@ -289,14 +294,14 @@ All images must include descriptive `alt` text. Decorative images use empty `alt
 
 `````html
 <!-- Correct - Descriptive image -->
-<img src="logo.png" alt="MineKot Logo"/>
+<img src="logo.png" alt="MineKot Logo" />
 
 <!-- Correct - Decorative image -->
-<img src="divider.png" alt="" role="presentation"/>
+<img src="divider.png" alt="" role="presentation" />
 
 <!-- Incorrect -->
-<img src="logo.png"/>
-<img src="logo.png" alt="logo"/>
+<img src="logo.png" />
+<img src="logo.png" alt="logo" />
 `````
 
 ### 6.2 Form labels
@@ -306,13 +311,13 @@ All form inputs must have associated labels using the `for` attribute matching t
 `````html
 <!-- Correct -->
 <label for="username">Username</label>
-<input type="text" id="username" name="username"/>
+<input type="text" id="username" name="username" />
 
 <!-- Incorrect -->
 <label>Username</label>
-<input type="text" name="username"/>
+<input type="text" name="username" />
 
-<input type="text" name="username" placeholder="Username"/>
+<input type="text" name="username" placeholder="Username" />
 `````
 
 ### 6.3 ARIA attributes
@@ -334,7 +339,7 @@ ARIA attributes are used to enhance accessibility when semantic HTML is insuffic
 
 ### 6.4 Focus management
 
-Interactive elements must be keyboard accessible. Custom interactive elements must include appropriate ARIA roles and keyboard event handlers:
+Interactive elements must be keyboard-accessible. Custom interactive elements must include appropriate ARIA roles and keyboard event handlers:
 
 `````html
 <!-- Correct - Native button with keyboard support -->
@@ -510,7 +515,7 @@ Images and iframes use lazy loading for below-the-fold content:
 
 `````html
 <!-- Correct -->
-<img src="image.jpg" alt="Description" loading="lazy"/>
+<img src="image.jpg" alt="Description" loading="lazy" />
 <iframe src="content.html" loading="lazy"></iframe>
 `````
 

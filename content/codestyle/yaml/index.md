@@ -43,13 +43,13 @@ Formatter control comments are enabled. Code regions can be excluded from format
 # Correct
 # prettier-ignore
 key1:value1 key2:value2
-```
+`````
 
 ### 3.4 Key naming
 
 Keys use `kebab-case` and are descriptive:
 
-  `````yaml
+`````yaml
 # Correct
 database:
   host: localhost

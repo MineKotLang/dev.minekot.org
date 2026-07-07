@@ -56,7 +56,7 @@ Source files are organized in the following sequence:
 
 1. **Explicit returns:** Function return types are explicitly declared. Implicit return types are forbidden.
 2. **Parameters:** Function parameters are explicitly typed unless the type is immediately obvious from context.
-3. **No any:** The `any` type is strictly forbidden. Use `unknown` for truly unknown types.
+3. **No `any`:** The `any` type is strictly forbidden. Use `unknown` for truly unknown types.
 4. **Explicit generics:** Generic type parameters are explicitly specified when not inferred by the compiler.
 
 `````typescript
@@ -173,15 +173,31 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 ### 5.4 Spacing
 
-Spaces are used around binary operators, after commas, after colons in type annotations, and before and after arrow function arrows. No spaces are used before commas, before colons in type annotations, or around unary operators.
+Spaces are used around binary operators, after commas, after colons in type annotations, and before and after arrow function arrows. No spaces are used before commas, before colons in type annotations, or around unary operators. Spaces are used within object literal braces and within imports. No space is used before the function left parenthesis:
+
+`````typescript
+// Correct
+const user = { name: "John", age: 30 };
+import { foo, bar } from "module";
+
+function foo() {
+}
+
+// Incorrect
+const user = { name: "John", age: 30 };
+import { foo, bar } from "module";
+
+function foo() {
+}
+`````
 
 ### 5.5 Semicolons
 
-Semicolons are mandatory at the end of every executable statement. Relying on Automatic Semicolon Insertion (ASI) is forbidden.
+Semicolons are mandatory at the end of every executable statement. Relying on Automatic Semicolon Insertion (ASI) is forbidden. Semicolon style is enforced by the formatter.
 
 ### 5.6 Quotes
 
-Single quotes are used for string literals unless the string contains single quotes, in which case double quotes are used. Template literals (backticks) are used for string interpolation or multi-line strings.
+Single quotes are used for string literals unless the string contains single quotes, in which case double quotes are used. Template literals (backticks) are used for string interpolation or multi-line strings. Quote style is enforced by the formatter.
 
 ### 5.7 Blank lines
 
@@ -189,21 +205,21 @@ One blank line is kept between top-level declarations. No blank lines are kept a
 
 ### 5.8 Trailing commas
 
-Trailing commas are required in multiline arrays, objects, function calls, and type definitions to improve diff readability and match Kotlin style:
+Trailing commas are enforced in multiline arrays, objects, function calls, and type definitions to improve diff readability and match Kotlin style:
 
 `````typescript
 // Correct
 const users: User[] = [
-  {id: 1, name: "Alice"},
-  {id: 2, name: "Bob"},
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
 ];
 
 function createUser(
-    name: string,
-    email: string,
-    role: string,
+  name: string,
+  email: string,
+  role: string,
 ): User {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 type UserConfig = {
@@ -214,16 +230,16 @@ type UserConfig = {
 
 // Incorrect
 const users: User[] = [
-  {id: 1, name: "Alice"},
-  {id: 2, name: "Bob"}
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" }
 ];
 
 function createUser(
-    name: string,
-    email: string,
-    role: string
+  name: string,
+  email: string,
+  role: string
 ): User {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 type UserConfig = {
@@ -243,22 +259,22 @@ Function declarations and function call parameters are wrapped such that every i
 `````typescript
 // Correct
 function createUser(
-    name: string,
-    email: string,
-    role: string,
+  name: string,
+  email: string,
+  role: string,
 ): User {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 createUser(
-    "John Doe",
-    "john@example.com",
-    "admin",
+  "John Doe",
+  "john@example.com",
+  "admin",
 );
 
 // Incorrect
 function createUser(name: string, email: string, role: string): User {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 createUser("John Doe", "john@example.com", "admin");
@@ -312,7 +328,7 @@ Built-in utility types are preferred over manual type transformations:
 `````typescript
 // Correct
 function merge<T extends object, U extends object>(obj1: T, obj2: U): T & U {
-  return {...obj1, ...obj2};
+  return { ...obj1, ...obj2 };
 }
 
 interface Repository<T = User> {
@@ -321,7 +337,7 @@ interface Repository<T = User> {
 
 // Incorrect
 function merge(obj1: any, obj2: any): any {
-  return {...obj1, ...obj2};
+  return { ...obj1, ...obj2 };
 }
 `````
 

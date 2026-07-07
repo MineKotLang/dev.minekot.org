@@ -77,15 +77,25 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 ### 4.4 Spacing
 
-Spaces are used around binary operators, after commas, after colons in object literals, and before and after arrow function arrows. No spaces are used before commas, before colons in object literals, or around unary operators.
+Spaces are used around binary operators, after commas, after colons in object literals, and before and after arrow function arrows. No spaces are used before commas, before colons in object literals, or around unary operators. Spaces are used within object literal braces and within imports:
+
+`````javascript
+// Correct
+const user = { name: "John", age: 30 };
+import { foo, bar } from "module";
+
+// Incorrect
+const user = { name: "John", age: 30 };
+import { foo, bar } from "module";
+`````
 
 ### 4.5 Semicolons
 
-Semicolons are mandatory at the end of every executable statement. Relying on Automatic Semicolon Insertion (ASI) is forbidden.
+Semicolons are mandatory at the end of every executable statement. Relying on Automatic Semicolon Insertion (ASI) is forbidden. Semicolon style is enforced by the formatter.
 
 ### 4.6 Quotes
 
-Single quotes are used for string literals unless the string contains single quotes, in which case double quotes are used. Template literals (backticks) are used for string interpolation or multi-line strings.
+Single quotes are used for string literals unless the string contains single quotes, in which case double quotes are used. Template literals (backticks) are used for string interpolation or multi-line strings. Quote style is enforced by the formatter.
 
 ### 4.7 Blank lines
 
@@ -93,35 +103,35 @@ One blank line is kept between top-level declarations. No blank lines are kept a
 
 ### 4.8 Trailing commas
 
-Trailing commas are required in multiline arrays, objects, and function calls to improve diff readability and match Kotlin style:
+Trailing commas are enforced in multiline arrays, objects, and function calls to improve diff readability and match Kotlin style:
 
 `````javascript
 // Correct
 const users = [
-  {id: 1, name: "Alice"},
-  {id: 2, name: "Bob"},
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
 ];
 
 function createUser(
-    name,
-    email,
-    role,
+  name,
+  email,
+  role,
 ) {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 // Incorrect
 const users = [
-  {id: 1, name: "Alice"},
-  {id: 2, name: "Bob"}
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" }
 ];
 
 function createUser(
-    name,
-    email,
-    role
+  name,
+  email,
+  role
 ) {
-  return {name, email, role};
+  return { name, email, role };
 }
 `````
 
@@ -135,22 +145,22 @@ Function declarations and function call parameters are wrapped such that every i
 `````javascript
 // Correct
 function createUser(
-    name,
-    email,
-    role,
+  name,
+  email,
+  role,
 ) {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 createUser(
-    "John Doe",
-    "john@example.com",
-    "admin",
+  "John Doe",
+  "john@example.com",
+  "admin",
 );
 
 // Incorrect
 function createUser(name, email, role) {
-  return {name, email, role};
+  return { name, email, role };
 }
 
 createUser("John Doe", "john@example.com", "admin");

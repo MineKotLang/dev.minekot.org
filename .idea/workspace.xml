@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="286" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -50,68 +51,68 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000883496707" />
-      <entry key="S10" value="1.0002972367253478" />
-      <entry key="S30" value="1.0670857201452675" />
-      <entry key="S60" value="1.334984963909116" />
-      <entry key="M2" value="2.6705994269091984" />
-      <entry key="M5" value="8.42652549579438" />
-      <entry key="M10" value="15.933799906003618" />
-      <entry key="M15" value="21.9343107473494" />
-      <entry key="M30" value="37.113263246559264" />
-      <entry key="H1" value="67.01398988864624" />
-      <entry key="H2" value="147.88235584618621" />
-      <entry key="H4" value="375.0085139311226" />
-      <entry key="D1" value="1892.2989149298558" />
-      <entry key="W1" value="2835.0237710621527" />
+      <entry key="MS100" value="1.6736167884328452" />
+      <entry key="MS500" value="1.9240225724468234" />
+      <entry key="S2" value="1.9804391507833423" />
+      <entry key="S5" value="1.9921293475631652" />
+      <entry key="S10" value="1.9963529204392585" />
+      <entry key="S30" value="2.065681314963937" />
+      <entry key="S60" value="2.3341061792656093" />
+      <entry key="M2" value="3.669720290372751" />
+      <entry key="M5" value="9.425415812613519" />
+      <entry key="M10" value="16.9327507160424" />
+      <entry key="M15" value="22.933347867126486" />
+      <entry key="M30" value="38.11244863196316" />
+      <entry key="H1" value="68.01325442551133" />
+      <entry key="H2" value="148.88154435652845" />
+      <entry key="H4" value="376.0074850188282" />
+      <entry key="D1" value="1893.2980496109044" />
+      <entry key="W1" value="2836.0235858603432" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.347033244404647E-132" />
-      <entry key="MS500" value="6.224934355887774E-27" />
-      <entry key="S2" value="2.85374228766901E-7" />
-      <entry key="S5" value="0.0030168621206097183" />
-      <entry key="S10" value="0.08339820030449797" />
-      <entry key="S30" value="0.8795941727980383" />
-      <entry key="S60" value="1.6178371896818662" />
-      <entry key="M2" value="2.200852351207429" />
-      <entry key="M5" value="2.6497505340493044" />
-      <entry key="M10" value="2.819947330864871" />
-      <entry key="M15" value="2.888124791988157" />
-      <entry key="M30" value="3.1047591262467282" />
-      <entry key="H1" value="3.9270835961199344" />
-      <entry key="H2" value="9.251822258685555" />
-      <entry key="H4" value="31.619574871166343" />
-      <entry key="D1" value="177.10089050457552" />
-      <entry key="W1" value="258.50261673014853" />
+      <entry key="MS100" value="6.296318515470895E-132" />
+      <entry key="MS500" value="5.751979856840031E-27" />
+      <entry key="S2" value="2.7979206650767165E-7" />
+      <entry key="S5" value="0.0029931171829676293" />
+      <entry key="S10" value="0.08306934917144032" />
+      <entry key="S30" value="0.8784365276431788" />
+      <entry key="S60" value="1.6167722110368457" />
+      <entry key="M2" value="2.200127851046987" />
+      <entry key="M5" value="2.649401590276147" />
+      <entry key="M10" value="2.8197616463170445" />
+      <entry key="M15" value="2.887998008052453" />
+      <entry key="M30" value="3.1046909785852086" />
+      <entry key="H1" value="3.9270404972801636" />
+      <entry key="H2" value="9.25177149023495" />
+      <entry key="H4" value="31.6194881164178" />
+      <entry key="D1" value="177.10080951908446" />
+      <entry key="W1" value="258.50259984311117" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.060812809015183E-5" />
-      <entry key="MS500" value="0.15539370861299243" />
-      <entry key="S2" value="0.6278535665406195" />
-      <entry key="S5" value="0.8311322226526501" />
-      <entry key="S10" value="0.9630593339925928" />
-      <entry key="S30" value="1.797172229767688" />
-      <entry key="S60" value="2.8252440991380117" />
-      <entry key="M2" value="4.786009404958147" />
-      <entry key="M5" value="11.035150240684848" />
-      <entry key="M10" value="18.73169304692393" />
-      <entry key="M15" value="24.807193683447263" />
-      <entry key="M30" value="40.209603984157745" />
-      <entry key="H1" value="70.93547630492145" />
-      <entry key="H2" value="157.12634332617534" />
-      <entry key="H4" value="406.6126736330241" />
-      <entry key="D1" value="2069.3832310659395" />
-      <entry key="W1" value="3093.5228621733127" />
+      <entry key="MS100" value="0.6736778235890952" />
+      <entry key="MS500" value="1.0676098668214526" />
+      <entry key="S2" value="1.5960113683787198" />
+      <entry key="S5" value="1.816719856855661" />
+      <entry key="S10" value="1.9553187078893213" />
+      <entry key="S30" value="2.79349083557564" />
+      <entry key="S60" value="3.8227260439816866" />
+      <entry key="M2" value="5.784104704381612" />
+      <entry key="M5" value="12.0335653402644" />
+      <entry key="M10" value="19.730393777798874" />
+      <entry key="M15" value="25.806060790023214" />
+      <entry key="M30" value="41.208699457259044" />
+      <entry key="H1" value="71.9346868296044" />
+      <entry key="H2" value="158.12547562365944" />
+      <entry key="H4" value="407.611555264572" />
+      <entry key="D1" value="2070.382284311792" />
+      <entry key="W1" value="3094.52266001937" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -125,44 +126,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Hugo.Run.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;kronk.content.tree.expanded.paths&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.46642685&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Hugo.Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "android.gradle.sync.needed": "true",
+    "cidr.known.project.marker": "true",
+    "code.cleanup.on.save": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "kronk.content.tree.expanded.paths": "",
+    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.46642685",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.sourceCode.yaml",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="/tmp/qodana_output/qodana.sarif.json" reportGuid="cdcfbdfb-3dcd-49f7-88f5-e890c2a98fe4" reportId="dev.minekot.org/qodana/2026-07-03" />
-    </option>
-  </component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -179,24 +176,11 @@
       <recent name="$PROJECT_DIR$/content" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="dev.minekot.org" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="dev.minekot.org" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -240,7 +224,39 @@
       <option name="project" value="LOCAL" />
       <updated>1783084323403</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ci: automate Hugo site deployment to GitHub Pages&#10;&#10;- Implement a GitHub Actions workflow (`.github/workflows/hugo.yml`) to automatically build and deploy the site upon pushes to the `master` branch.&#10;- Configure the automated build step to use the extended version of Hugo, applying garbage collection and minification (`--gc --minify`).&#10;- Add a `CNAME` file to the `static` directory to establish custom domain mapping for `dev.minekot.org`.">
+      <option name="closed" value="true" />
+      <created>1783085285107</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783085285107</updated>
+    </task>
+    <task id="LOCAL-00006" summary="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).">
+      <option name="closed" value="true" />
+      <created>1783440579118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1783440579118</updated>
+    </task>
+    <task id="LOCAL-00007" summary="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1783440761614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783440761614</updated>
+    </task>
+    <task id="LOCAL-00008" summary="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1783440785747</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1783440785747</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +285,10 @@
     <MESSAGE value="refactor: migrate documentation site to Hugo Theme Relearn&#10;&#10;- Replace the Hextra theme with Hugo Theme Relearn in `hugo.yaml`, `go.mod`, and `go.sum`.&#10;- Configure Relearn-specific site navigation, sidebar/footer menus, and Catppuccin theme variants in `hugo.yaml`.&#10;- Remove legacy `architecture` and `tooling` content sections to streamline the site structure.&#10;- Restructure the `codestyles` directory to `codestyle` and relocate the Kotlin Style Guide.&#10;- Replace monolithic custom CSS with modular Catppuccin (Latte/Mocha) CSS variables and Chroma syntax highlighting styles.&#10;- Relocate site branding assets (logo, favicon) to the `assets/images` directory.&#10;- Implement new HTML partials for custom headers and favicons (`custom-header.html`, `favicon.html`).&#10;- Update the default Markdown archetype to use YAML front matter instead of TOML.&#10;- Add a comprehensive JSON schema (`schemas/hugo.json`) for `hugo.yaml` configuration validation.&#10;- Initialize baseline internationalization support with `i18n/en.yml`." />
     <MESSAGE value="refactor: modularize Catppuccin styling and overhaul core site content&#10;&#10;- Consolidate Catppuccin color variables and Relearn theme definitions into unified `theme-core.css` and `theme-catppuccin-core.css` files.&#10;- Replace duplicated Chroma syntax styles with a single `chroma-catppuccin-core.css`, deleting the standalone Latte and Mocha variants.&#10;- Implement a new persistent site footer via `custom-footer.html` featuring MineKot branding, and remove the deprecated `custom-header.html`.&#10;- Expand the homepage (`_index.md`) and &quot;Coding Standards&quot; (`codestyle/_index.md`) pages with detailed onboarding guidelines and core architectural principles.&#10;- Update `hugo.yaml` to enable Git info, enforce a structured author mapping, and disable inline copy-to-clipboard buttons.&#10;- Reorganize section ordering in the Kotlin Style Guide (`codestyle/kotlin/index.md`) for better readability.&#10;- Correct the site favicon path to use `minekot-flat.svg` in `favicon.html`.&#10;- Upgrade the `hugo-theme-relearn` dependency module hash in `go.sum`.&#10;- Enhance JetBrains IDE configuration (`Project.xml`) with explicit code style formatting rules for CSS, HTML, JSON, and JavaScript.&#10;- Update the Hugo local run configuration (`Run.xml`) with optimized build arguments (`--watch`, `--gc`, `--cleanDestinationDir`)." />
     <MESSAGE value="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: introduce comprehensive multi-language style guides and Devicons integration&#10;&#10;- Publish comprehensive coding style guides for CSS, Gradle, HTML, JavaScript, JSON, Markdown, TypeScript, XML, and YAML under the `content/codestyle/` directory.&#10;- Expand the &quot;Coding Standards&quot; overview (`codestyle/_index.md`) to summarize the new language-specific guidelines, CI enforcement policies, and global tooling configurations.&#10;- Integrate the Devicons library via CDN in `custom-header.html` and `theme-core.css` to support technology-specific menu icons.&#10;- Override the Relearn theme's `boxStyle.gotmpl` partial to properly handle custom Devicons and manage folder icon color variables.&#10;- Add a root `.prettierrc` configuration file to enforce standard formatting rules for Markdown, CSS, HTML, and JSON files.&#10;- Introduce an exported `intellij codestyle.xml` and update internal JetBrains IDE code style configurations (`Project.xml`, `codeStyleConfig.xml`).&#10;- Enable collapsible sidebar menus in `hugo.yaml` and temporarily comment out the custom site footer (`custom-footer.html`).&#10;- Correct a capitalization typo (&quot;Kotlinx&quot;) and fix Markdown code block escaping in the Kotlin Style Guide (`codestyle/kotlin/index.md`).&#10;- Removed the temporary `Log` category/entry." />
+    <MESSAGE value="ci: automate Hugo site deployment to GitHub Pages&#10;&#10;- Implement a GitHub Actions workflow (`.github/workflows/hugo.yml`) to automatically build and deploy the site upon pushes to the `master` branch.&#10;- Configure the automated build step to use the extended version of Hugo, applying garbage collection and minification (`--gc --minify`).&#10;- Add a `CNAME` file to the `static` directory to establish custom domain mapping for `dev.minekot.org`." />
+    <MESSAGE value="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`)." />
+    <MESSAGE value="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

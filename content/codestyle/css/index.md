@@ -47,7 +47,7 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 ### 3.4 Selector and declaration formatting
 
-Selectors and declarations follow these formatting rules:
+Selectors and declarations follow these formatting rules. Property values are aligned:
 
 `````css
 /* Correct */
@@ -71,7 +71,7 @@ Selectors and declarations follow these formatting rules:
 
 ### 3.4 Single-line blocks
 
-Single-line blocks are allowed only for simple, non-nested rulesets with a single declaration:
+Single-line blocks are allowed for simple rulesets:
 
 `````css
 /* Correct */
@@ -101,7 +101,7 @@ Spaces are used after colons in property declarations, after commas in value lis
 
 ### 3.6 Quotes
 
-Double quotes are used for string values (font names, URLs, etc.):
+Double quotes are enforced for string values (font names, URLs, etc.):
 
 [//]: # (@formatter:off)
 `````css
@@ -271,9 +271,9 @@ Hexadecimal color values must be written in lowercase and use the long format:
   border-color     : #ff0000;
 
 /* Incorrect */
-  color            : #ffffff;
-  background-color : #000000;
-  border-color     : #ff0000;
+  color            : #FFF;
+  background-color : #000;
+  border-color     : #F00;
 `````
 [//]: # (@formatter:on)
 
