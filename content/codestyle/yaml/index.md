@@ -39,16 +39,19 @@ YAML code has a column limit of `120 characters`. Except as noted, any line that
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using YAML comments:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 # prettier-ignore
 key1:value1 key2:value2
 `````
+[//]: # (@formatter:on)
 
 ### 3.4 Key naming
 
 Keys use `kebab-case` and are descriptive:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 database:
@@ -62,11 +65,13 @@ database:
   port: 5432
   connectionTimeout: 30
 `````
+[//]: # (@formatter:on)
 
 ### 3.5 Quoting
 
 Double quotes are used for strings that contain special characters or require escaping. Single quotes are forbidden:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 message: "Hello, World!"
@@ -77,11 +82,13 @@ special: "This contains \"quotes\""
 message: 'Hello, World!'
 path: '/path/to/file'
 `````
+[//]: # (@formatter:on)
 
 ### 3.6 Comments
 
 Comments are placed on their own lines and use the `#` character:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 # Database configuration
@@ -93,6 +100,7 @@ database:
 database: # Database configuration
   host: localhost
 `````
+[//]: # (@formatter:on)
 
 ## 4 Data types
 
@@ -100,6 +108,7 @@ database: # Database configuration
 
 Boolean values use lowercase `true` and `false`:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 enabled: true
@@ -111,11 +120,13 @@ debug: False
 enabled: yes
 debug: no
 `````
+[//]: # (@formatter:on)
 
 ### 4.2 Null values
 
 Null values are represented as `null` or `~`:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 timeout: null
@@ -125,11 +136,13 @@ retry-count: ~
 timeout: Null
 retry-count: NULL
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Numbers
 
 Numbers are written without quotes. Floating-point numbers use decimal notation:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 port: 5432
@@ -140,11 +153,13 @@ percentage: 0.75
 port: "5432"
 timeout: "30.5"
 `````
+[//]: # (@formatter:on)
 
 ### 4.4 Strings
 
 Strings are unquoted unless they contain special characters or could be mistaken for other data types:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 name: John Doe
@@ -155,6 +170,7 @@ path: "/path/to/file"
 name: "John Doe"
 message: Hello, World!
 `````
+[//]: # (@formatter:on)
 
 ## 5 Multi-line strings
 
@@ -162,6 +178,7 @@ message: Hello, World!
 
 Literal block scalars (`|`) preserve newlines and are used for multi-line strings where formatting matters:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 description: |
@@ -172,11 +189,13 @@ description: |
 # Incorrect
 description: "This is a multi-line\nstring that preserves\nline breaks."
 `````
+[//]: # (@formatter:on)
 
 ### 5.2 Folded block scalar
 
 Folded block scalars (`>`) fold newlines into spaces and are used for long text:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 message: >
@@ -187,11 +206,13 @@ message: >
 # Incorrect
 message: "This is a long message that will be folded into a single line when parsed."
 `````
+[//]: # (@formatter:on)
 
 ### 5.3 Chomping indicators
 
 Chomping indicators control trailing newlines:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct - Strip trailing newlines (default)
 description: |-
@@ -206,6 +227,7 @@ description: |+
 description: |
   Multiple lines
 `````
+[//]: # (@formatter:on)
 
 ## 6 Anchors and aliases
 
@@ -213,6 +235,7 @@ description: |
 
 Anchors are defined using `&` and referenced using `*`:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 defaults: &defaults
@@ -227,11 +250,13 @@ development:
   <<: *defaults
   host: dev.example.com
 `````
+[//]: # (@formatter:on)
 
 ### 6.2 Alias usage
 
 Aliases are used to avoid duplication. Anchors are defined at the top level or within logical sections:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 database-config: &db-config
@@ -257,11 +282,13 @@ secondary-database:
   port: 5432
   name: secondary
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 Merge keys
 
 Merge keys (`<<`) are used to include anchor contents:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 base: &base
@@ -272,6 +299,7 @@ extended:
   <<: *base
   custom-field: value
 `````
+[//]: # (@formatter:on)
 
 ## 7 Lists and arrays
 
@@ -279,6 +307,7 @@ extended:
 
 Lists use hyphen notation with consistent indentation:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 servers:
@@ -289,16 +318,16 @@ servers:
 
 # Incorrect
 servers:
-  - host: server1.example.com
-    port: 8080
-  - host: server2.example.com
-    port: 8080
+  - {host: server1.example.com, port: 8080}
+  - {host: server2.example.com, port: 8080}
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Inline lists
 
 Inline lists are used only for simple, short lists:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 tags: [ production, web, api ]
@@ -307,11 +336,13 @@ tags: [ production, web, api ]
 servers:
   - [ server1, server2, server3 ]
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 List ordering
 
 Lists are ordered logically (alphabetical, priority, or sequence):
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct - Alphabetical
 servers:
@@ -331,6 +362,7 @@ servers:
   - alpha.example.com
   - beta.example.com
 `````
+[//]: # (@formatter:on)
 
 ## 8 Architecture and design
 
@@ -346,6 +378,7 @@ Hardcoding user-facing messages, console responses, or system pathways within en
 
 YAML files maintain a clear hierarchical structure. Deep nesting is avoided when possible:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 database:
@@ -363,11 +396,13 @@ config:
         host: localhost
         port: 5432
 `````
+[//]: # (@formatter:on)
 
 ### 8.4 Grouping
 
 Related configuration items are grouped together:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct
 database:
@@ -387,6 +422,7 @@ cache:
 database:
   port: 5432
 `````
+[//]: # (@formatter:on)
 
 ## 9 Documentation
 
@@ -394,6 +430,7 @@ database:
 
 YAML files include a header comment describing their purpose:
 
+[//]: # (@formatter:off)
 `````yaml
 # ===================================
 # Application Configuration
@@ -401,26 +438,31 @@ YAML files include a header comment describing their purpose:
 # the application server.
 # ===================================
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Section documentation
 
 Major sections are documented with comments:
 
+[//]: # (@formatter:off)
 `````yaml
 # Database connection settings
 database:
   host: localhost
   port: 5432
 `````
+[//]: # (@formatter:on)
 
 ### 9.3 Value documentation
 
 Complex or non-obvious values are documented:
 
+[//]: # (@formatter:off)
 `````yaml
 # Timeout in seconds for database connections
 timeout: 30
 `````
+[//]: # (@formatter:on)
 
 ## 10 Security
 
@@ -428,6 +470,7 @@ timeout: 30
 
 Sensitive data (passwords, API keys) is not stored in plain text YAML files. Environment variables or secret management systems are used:
 
+[//]: # (@formatter:off)
 `````yaml
 # Correct - Reference environment variable
 database:
@@ -437,6 +480,7 @@ database:
 database:
   password: mysecretpassword
 `````
+[//]: # (@formatter:on)
 
 ### 10.2 File permissions
 

@@ -57,6 +57,7 @@ JavaScript code has a column limit of `120 characters`. Except as noted, any lin
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using `// prettier-ignore` for single lines or `/* prettier-ignore-start */` and `/* prettier-ignore-end */` for multi-line blocks:
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 // prettier-ignore
@@ -70,6 +71,7 @@ const complexObject = {
 };
 /* prettier-ignore-end */
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Indentation
 
@@ -79,15 +81,17 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 Spaces are used around binary operators, after commas, after colons in object literals, and before and after arrow function arrows. No spaces are used before commas, before colons in object literals, or around unary operators. Spaces are used within object literal braces and within imports:
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 const user = { name: "John", age: 30 };
 import { foo, bar } from "module";
 
 // Incorrect
-const user = { name: "John", age: 30 };
-import { foo, bar } from "module";
+const user={name:"John",age:30};
+import{foo,bar}from"module";
 `````
+[//]: # (@formatter:on)
 
 ### 4.5 Semicolons
 
@@ -105,6 +109,7 @@ One blank line is kept between top-level declarations. No blank lines are kept a
 
 Trailing commas are enforced in multiline arrays, objects, and function calls to improve diff readability and match Kotlin style:
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 const users = [
@@ -134,6 +139,7 @@ function createUser(
   return { name, email, role };
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.9 Parameter wrapping
 
@@ -142,6 +148,7 @@ Function declarations and function call parameters are wrapped such that every i
 1. A new line is required immediately after the opening left parenthesis `(`.
 2. The closing right parenthesis `)` is placed on a new line following the final parameter.
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 function createUser(
@@ -165,11 +172,13 @@ function createUser(name, email, role) {
 
 createUser("John Doe", "john@example.com", "admin");
 `````
+[//]: # (@formatter:on)
 
 ### 4.10 Template literals
 
 When embedding variables, properties, or methods within a template literal, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed:
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 const greeting = `Hello, ${name}!`;
@@ -179,6 +188,7 @@ const message = `User ${user.id} has ${user.points} points.`;
 const greeting = `Hello, $name!`;
 const message = `User $user.id has $user.points points.`;
 `````
+[//]: # (@formatter:on)
 
 ## 5 Language features and ecosystem
 
@@ -238,6 +248,7 @@ Explicit type coercion is used instead of implicit coercion. Functions like `Str
 
 Variables and functions use `camelCase` naming. Names are descriptive and indicate purpose or content.
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 const userAccountCount = 42;
@@ -251,11 +262,13 @@ const UserAccountCount = 42;
 function get_user_by_id(id) {
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Constants
 
 Constants that are never reassigned use `UPPER_SNAKE_CASE` naming.
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 const MAX_CONNECTIONS = 100;
@@ -265,11 +278,13 @@ const API_BASE_URL = "https://api.example.com";
 const maxConnections = 100;
 const apiBaseUrl = "https://api.example.com";
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Classes
 
 Classes use `PascalCase` naming. Class instances use `camelCase`.
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 class UserService {
@@ -283,11 +298,13 @@ class userService {
 
 const UserService = new UserService();
 `````
+[//]: # (@formatter:on)
 
 ### 7.4 Private members
 
 Private members are prefixed with an underscore (`_`) to indicate internal use.
 
+[//]: # (@formatter:off)
 `````javascript
 // Correct
 class Database {
@@ -309,6 +326,7 @@ class Database {
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 8 Architecture and design
 
@@ -338,6 +356,7 @@ Functions are preferred to be pure (no side effects) when possible. State mutati
 
 Every public-facing function, utility module, and custom class constructor **must** feature a comprehensive JSDoc block outlining its core objective, expected parameters (`@param`), return types (`@return` or `@returns`), and thrown exceptions (`@throws`).
 
+[//]: # (@formatter:off)
 `````javascript
 /**
  * Retrieves a user by their unique identifier.
@@ -349,6 +368,7 @@ async function getUserById(id) {
   // Implementation
 }
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Variable documentation
 

@@ -39,6 +39,7 @@ XML code has a column limit of `120 characters`. Except as noted, any line that 
 
 All element and attribute names must be written in lowercase:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <user id="123" name="John Doe">
@@ -49,12 +50,14 @@ All element and attribute names must be written in lowercase:
 <User ID="123" NAME="John Doe">
     <EMAIL>john@example.com</EMAIL>
 </User>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 3.4 Self-closing tags
 
 Self-closing tags must include a space before the closing slash:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <item />
@@ -65,19 +68,22 @@ Self-closing tags must include a space before the closing slash:
 <item/>
 <br/>
 <input type="text"/>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 3.5 Attribute quoting
 
 All attribute values must be enclosed in double quotes. Single quotes are forbidden:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <user id="123" name="John Doe" />
 
 <!-- Incorrect -->
 <user id='123' name='John Doe' />
-````
+`````
+[//]: # (@formatter:on)
 
 ### 3.6 Line breaks
 
@@ -87,6 +93,7 @@ The automatic preservation of arbitrary line breaks is disabled. Elements must r
 
 The alignment of attributes in dense vertical columns is disabled. Attributes are placed on the same line or wrapped based on column limit:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <user id="123" name="John Doe" email="john@example.com" />
@@ -100,7 +107,8 @@ The alignment of attributes in dense vertical columns is disabled. Attributes ar
 
 <!-- Incorrect - Vertical alignment -->
 <user id="123"    name="John Doe"    email="john@example.com" />
-````
+`````
+[//]: # (@formatter:on)
 
 ## 4 Attribute arrangement
 
@@ -118,6 +126,7 @@ To ensure absolute structural predictability, XML attributes are arranged using 
 8. System namespaced attributes matching standard namespace scopes
 9. Remaining namespaced properties (alphabetical order)
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <LinearLayout
@@ -140,7 +149,8 @@ To ensure absolute structural predictability, XML attributes are arranged using 
     android:id="@+id/container"
     style="@style/ContainerStyle"
 />
-````
+`````
+[//]: # (@formatter:on)
 
 ## 5 Namespaces
 
@@ -148,6 +158,7 @@ To ensure absolute structural predictability, XML attributes are arranged using 
 
 Namespace declarations are placed on the root element whenever possible:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <root xmlns="http://example.com/ns" xmlns:custom="http://example.com/custom">
@@ -158,12 +169,14 @@ Namespace declarations are placed on the root element whenever possible:
 <root xmlns="http://example.com/ns">
     <child xmlns:custom="http://example.com/custom" />
 </root>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 5.2 Namespace prefixes
 
 Namespace prefixes are descriptive and consistent across the document:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <root xmlns:minekot="http://minekot.org/ns" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -174,12 +187,14 @@ Namespace prefixes are descriptive and consistent across the document:
 <root xmlns:ns1="http://minekot.org/ns" xmlns:ns2="http://schemas.android.com/apk/res/android">
     <ns1:component />
 </root>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 5.3 Default namespace
 
 A default namespace is used for the primary schema to reduce prefix usage:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <root xmlns="http://example.com/ns">
@@ -191,7 +206,8 @@ A default namespace is used for the primary schema to reduce prefix usage:
     <child />
     <other:element />
 </root>
-````
+`````
+[//]: # (@formatter:on)
 
 ## 6 Schema validation
 
@@ -199,6 +215,7 @@ A default namespace is used for the primary schema to reduce prefix usage:
 
 XML documents include schema references (DTD, XSD, or RelaxNG) for validation:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct - XSD -->
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -211,7 +228,8 @@ XML documents include schema references (DTD, XSD, or RelaxNG) for validation:
 <root>
     <!-- Content -->
 </root>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 6.2 Validation
 
@@ -221,6 +239,7 @@ All XML documents must validate against their declared schemas. Invalid document
 
 Schema versions are included in namespace URIs or schema locations:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <root xmlns="http://example.com/ns/2024/01">
@@ -231,7 +250,8 @@ Schema versions are included in namespace URIs or schema locations:
 <root xmlns="http://example.com/ns">
     <!-- Content -->
 </root>
-````
+`````
+[//]: # (@formatter:on)
 
 ## 7 CDATA sections
 
@@ -239,6 +259,7 @@ Schema versions are included in namespace URIs or schema locations:
 
 CDATA sections are used for text content that contains characters that would otherwise require escaping:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <description>
@@ -251,19 +272,22 @@ CDATA sections are used for text content that contains characters that would oth
 <description>
     This text contains &lt;special&gt; characters &amp; symbols.
 </description>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 7.2 CDATA limitations
 
 CDATA sections are not used for attribute values. Attribute values must use entity references:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <code text="if (x &lt; 10) { return true; }" />
 
 <!-- Incorrect -->
 <code text="<![CDATA[if (x < 10) { return true; }]]>" />
-````
+`````
+[//]: # (@formatter:on)
 
 ## 8 Comments
 
@@ -271,6 +295,7 @@ CDATA sections are not used for attribute values. Attribute values must use enti
 
 Comments are placed on their own lines and use the standard XML comment syntax:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <!-- Main configuration section -->
@@ -287,12 +312,14 @@ Comments are placed on their own lines and use the standard XML comment syntax:
         <host>localhost</host>
     </database>
 </config>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 8.2 Comment content
 
 Comments are descriptive and do not duplicate information evident from the element names:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <!-- Maximum number of concurrent connections -->
@@ -301,7 +328,8 @@ Comments are descriptive and do not duplicate information evident from the eleme
 <!-- Incorrect -->
 <!-- The maxConnections element sets the maximum connections -->
 <maxConnections>100</maxConnections>
-````
+`````
+[//]: # (@formatter:on)
 
 ## 9 Architecture and design
 
@@ -313,6 +341,7 @@ XML configurations must strictly focus on structural layout representation and d
 
 XML documents maintain a clear hierarchical structure. Deep nesting is avoided when possible:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <config>
@@ -338,12 +367,14 @@ XML documents maintain a clear hierarchical structure. Deep nesting is avoided w
         </database>
     </settings>
 </config>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 9.3 Element naming
 
 Element names use `kebab-case` and are descriptive:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <user-profile>
@@ -356,12 +387,14 @@ Element names use `kebab-case` and are descriptive:
     <firstName>John</firstName>
     <lastName>Doe</lastName>
 </userProfile>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 9.4 Attribute vs element
 
 Attributes are used for metadata and simple values. Elements are used for complex content:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- Correct -->
 <user id="123" active="true">
@@ -375,7 +408,8 @@ Attributes are used for metadata and simple values. Elements are used for comple
     <active>true</active>
     <name>John Doe</name>
 </user>
-````
+`````
+[//]: # (@formatter:on)
 
 ## 10 Documentation
 
@@ -383,6 +417,7 @@ Attributes are used for metadata and simple values. Elements are used for comple
 
 Complex XML structures are documented with comments explaining purpose and relationships:
 
+[//]: # (@formatter:off)
 `````xml
 <!-- ===================================
      Database Configuration
@@ -393,12 +428,14 @@ Complex XML structures are documented with comments explaining purpose and relat
     <host>localhost</host>
     <port>5432</port>
 </database>
-````
+`````
+[//]: # (@formatter:on)
 
 ### 10.2 Schema documentation
 
 XSD schemas include documentation elements:
 
+[//]: # (@formatter:off)
 `````xml
 <xs:element name="user">
     <xs:annotation>
@@ -410,7 +447,8 @@ XSD schemas include documentation elements:
         <!-- Content -->
     </xs:complexType>
 </xs:element>
-````
+`````
+[//]: # (@formatter:on)
 
 ## 11 Performance and optimization
 

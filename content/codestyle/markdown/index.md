@@ -39,11 +39,13 @@ Markdown code has a column limit of `999 characters` to preserve the fluidity of
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using HTML comments:
 
+[//]: # (@formatter:off)
 `````markdown
 <!-- Correct -->
 <!-- prettier-ignore -->
 <div>Content</div>
-```
+`````
+[//]: # (@formatter:on)
 
 ### 3.4 Hard line breaks
 
@@ -59,6 +61,7 @@ One space is used after list markers, after headings, and around emphasis marker
 
 Headings follow a logical hierarchy without skipping levels:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -78,11 +81,13 @@ Headings follow a logical hierarchy without skipping levels:
 
 ##### Sub-sub-subsection Title
 `````
+[//]: # (@formatter:on)
 
 ### 4.2 Heading spacing
 
 One blank line is placed before and after headings:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -95,16 +100,16 @@ Next paragraph.
 # Incorrect
 
 Previous paragraph.
-
 # Heading
-
 Next paragraph.
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Heading case
 
 Headings use sentence casing (first letter capitalized, rest lowercase except proper nouns):
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -122,11 +127,13 @@ Headings use sentence casing (first letter capitalized, rest lowercase except pr
 
 # API Reference
 `````
+[//]: # (@formatter:on)
 
 ### 4.4 ATX-style headings
 
 ATX-style headings (`#`) are preferred over Setext-style headings (`===` or `---`):
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -142,6 +149,7 @@ Heading
 Subheading
 -------
 `````
+[//]: # (@formatter:on)
 
 ## 5 Lists
 
@@ -149,6 +157,7 @@ Subheading
 
 Unordered lists use hyphens (`-`) as markers:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -166,11 +175,13 @@ Unordered lists use hyphens (`-`) as markers:
 + Item 2
 + Item 3
 `````
+[//]: # (@formatter:on)
 
 ### 5.2 Ordered lists
 
 Ordered lists use numbers followed by periods:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -184,11 +195,13 @@ Ordered lists use numbers followed by periods:
 2) Second item
 3) Third item
 `````
+[//]: # (@formatter:on)
 
 ### 5.3 List indentation
 
 Nested lists are indented by two spaces:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -204,11 +217,13 @@ Nested lists are indented by two spaces:
   - Nested item 2
 - Item 2
 `````
+[//]: # (@formatter:on)
 
 ### 5.4 List spacing
 
 One blank line is placed between list items when they contain multiple paragraphs:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -224,6 +239,7 @@ One blank line is placed between list items when they contain multiple paragraph
   Additional paragraph for item 1.
 - Item 2
 `````
+[//]: # (@formatter:on)
 
 ## 6 Links
 
@@ -231,6 +247,7 @@ One blank line is placed between list items when they contain multiple paragraph
 
 Inline links are used for short links. Reference-style links are used for repeated links or long URLs:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct - Inline link
 
@@ -248,11 +265,13 @@ See the [documentation](https://example.com/docs) for details.
 
 [documentation]: https://example.com/docs
 `````
+[//]: # (@formatter:on)
 
 ### 6.2 Link text
 
 Link text is descriptive and indicates the destination:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -264,11 +283,13 @@ Link text is descriptive and indicates the destination:
 [click here](https://example.com/install)
 [link](https://example.com/api)
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 URL formatting
 
 URLs are not enclosed in angle brackets unless necessary:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -278,6 +299,7 @@ https://example.com/docs
 
 <https://example.com/docs>
 `````
+[//]: # (@formatter:on)
 
 ## 7 Images
 
@@ -285,6 +307,7 @@ https://example.com/docs
 
 Images use the standard Markdown image syntax with descriptive alt text:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -295,11 +318,13 @@ Images use the standard Markdown image syntax with descriptive alt text:
 ![screenshot](./screenshots/app.png)
 ![app.png](./screenshots/app.png)
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Alt text
 
 Alt text is descriptive and conveys the image's purpose:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -310,11 +335,13 @@ Alt text is descriptive and conveys the image's purpose:
 ![diagram](./architecture.png)
 ![architecture.png](./architecture.png)
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Image paths
 
 Relative paths are used for images within the repository. Absolute URLs are used for external images:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -325,6 +352,7 @@ Relative paths are used for images within the repository. Absolute URLs are used
 
 ![Logo](/absolute/path/to/logo.png)
 `````
+[//]: # (@formatter:on)
 
 ## 8 Code blocks
 
@@ -332,6 +360,7 @@ Relative paths are used for images within the repository. Absolute URLs are used
 
 Fenced code blocks with language identifiers are used for code:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -355,11 +384,13 @@ fun main() {
         println("Hello, World!")
     }
 `````
+[//]: # (@formatter:on)
 
 ### 8.2 Language identifiers
 
 Language identifiers are specified for all code blocks:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -381,11 +412,13 @@ Language identifiers are specified for all code blocks:
 // Code without language identifier
 ```
 `````
+[//]: # (@formatter:on)
 
 ### 8.3 Inline code
 
 Inline code uses backticks for short code snippets:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -396,6 +429,7 @@ Use the `main()` function to start the application.
 Use the main() function to start the application.
 Use "main()" function to start the application.
 `````
+[//]: # (@formatter:on)
 
 ### 8.4 Code escaping
 
@@ -407,6 +441,7 @@ When embedding raw illustrative source snippets or configurations inside Markdow
 
 Bold is used for strong emphasis. Italic is used for mild emphasis:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -418,11 +453,13 @@ Bold is used for strong emphasis. Italic is used for mild emphasis:
 __Important note__: This is critical.
 _Note_: This is additional information.
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Emphasis consistency
 
 Emphasis markers are used consistently throughout the document:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -434,6 +471,7 @@ Emphasis markers are used consistently throughout the document:
 **Bold text**
 _Italic text_
 `````
+[//]: # (@formatter:on)
 
 ### 9.3 Overuse
 
@@ -445,6 +483,7 @@ Emphasis is used sparingly. Overuse reduces readability.
 
 Blockquotes use the `>` character:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -456,11 +495,13 @@ Blockquotes use the `>` character:
 This is a blockquote.
 It can span multiple lines.
 `````
+[//]: # (@formatter:on)
 
 ### 10.2 Nested blockquotes
 
 Nested blockquotes use multiple `>` characters:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -468,11 +509,13 @@ Nested blockquotes use multiple `>` characters:
 >
 > > This is a nested blockquote.
 `````
+[//]: # (@formatter:on)
 
 ### 10.3 Blockquote spacing
 
 One blank line is placed before and after blockquotes:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -488,6 +531,7 @@ Previous paragraph.
 > This is a blockquote.
 Next paragraph.
 `````
+[//]: # (@formatter:on)
 
 ## 11 Tables
 
@@ -495,6 +539,7 @@ Next paragraph.
 
 Tables use the standard Markdown table syntax:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -509,11 +554,13 @@ Header 1 | Header 2 | Header 3
 Cell 1 | Cell 2 | Cell 3
 Cell 4 | Cell 5 | Cell 6
 `````
+[//]: # (@formatter:on)
 
 ### 11.2 Table alignment
 
 Table alignment is specified in the separator row:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -527,6 +574,7 @@ Table alignment is specified in the separator row:
 |------|--------|-------|
 | Cell |  Cell  |  Cell |
 `````
+[//]: # (@formatter:on)
 
 ### 11.3 Table readability
 
@@ -538,6 +586,7 @@ Tables are kept simple. Complex tables are split into multiple tables or present
 
 Horizontal rules use three or more hyphens:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 ---
@@ -547,11 +596,13 @@ Horizontal rules use three or more hyphens:
 ___
 ***
 `````
+[//]: # (@formatter:on)
 
 ### 12.2 Horizontal rule spacing
 
 One blank line is placed before and after horizontal rules:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -567,6 +618,7 @@ Previous section.
 ---
 Next section.
 `````
+[//]: # (@formatter:on)
 
 ## 13 Technical documentation standards
 
@@ -582,6 +634,7 @@ Code examples are complete and runnable. Explanations accompany complex examples
 
 Command examples use code blocks with appropriate language identifiers:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
@@ -593,6 +646,7 @@ Command examples use code blocks with appropriate language identifiers:
 ./gradlew build
 ```
 `````
+[//]: # (@formatter:on)
 
 ## 14 Architecture and design
 
@@ -614,12 +668,14 @@ Related content is grouped under appropriate headings. Sections are logically or
 
 Cross-references use links to other sections or documents:
 
+[//]: # (@formatter:off)
 `````markdown
 # Correct
 
 See the [Installation](#installation) section for details.
 See the [API documentation](./api.md) for more information.
 `````
+[//]: # (@formatter:on)
 
 ## 15 Documentation and comments
 
@@ -627,14 +683,17 @@ See the [API documentation](./api.md) for more information.
 
 HTML comments are used for notes that should not appear in the rendered output:
 
+[//]: # (@formatter:off)
 `````markdown
 <!-- This is a comment that will not be rendered -->
 `````
+[//]: # (@formatter:on)
 
 ### 15.2 Front matter
 
 Front matter is used for metadata in documents that support it:
 
+[//]: # (@formatter:off)
 `````markdown
 ---
 title: "Document Title"
@@ -642,6 +701,7 @@ date: 2024-01-15
 author: "John Doe"
 ---
 `````
+[//]: # (@formatter:on)
 
 ## 16 Performance and optimization
 

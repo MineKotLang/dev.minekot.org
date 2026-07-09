@@ -59,6 +59,7 @@ Source files are organized in the following sequence:
 3. **No `any`:** The `any` type is strictly forbidden. Use `unknown` for truly unknown types.
 4. **Explicit generics:** Generic type parameters are explicitly specified when not inferred by the compiler.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 function getUserById(id: string): Promise<User> {
@@ -74,6 +75,7 @@ function getUserById(id: string) {
 
 const users = await fetchUsers();
 `````
+[//]: # (@formatter:on)
 
 ### 4.2 Interfaces vs. types
 
@@ -81,6 +83,7 @@ const users = await fetchUsers();
 2. **Type aliases:** Type aliases are used for unions, intersections, primitives, and utility types.
 3. **Consistency:** Within a module, be consistent in using either interfaces or type aliases for similar constructs.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct - Interface for extensible object shape
 interface User {
@@ -94,11 +97,13 @@ type Status = 'active' | 'inactive' | 'pending';
 // Correct - Type alias for utility type
 type PartialUser = Partial<User>;
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Strict mode
 
 All projects must enable TypeScript's strict mode in `tsconfig.json`:
 
+[//]: # (@formatter:off)
 ```json
 {
   "compilerOptions": {
@@ -113,6 +118,7 @@ All projects must enable TypeScript's strict mode in `tsconfig.json`:
   }
 }
 ```
+[//]: # (@formatter:on)
 
 ### 4.4 Null and undefined
 
@@ -127,6 +133,7 @@ All projects must enable TypeScript's strict mode in `tsconfig.json`:
 2. **String enums:** String enums are preferred over numeric enums for readability.
 3. **Enum usage:** Enums are used only when the set of values is fixed and known at compile time.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const enum Status {
@@ -142,6 +149,7 @@ enum Status {
   Pending = 2
 }
 `````
+[//]: # (@formatter:on)
 
 ## 5 Formatting
 
@@ -153,6 +161,7 @@ TypeScript code has a column limit of `120 characters`. Except as noted, any lin
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using `// prettier-ignore` for single lines or `/* prettier-ignore-start */` and `/* prettier-ignore-end */` for multi-line blocks:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 // prettier-ignore
@@ -166,6 +175,7 @@ const complexObject: Config = {
 };
 /* prettier-ignore-end */
 `````
+[//]: # (@formatter:on)
 
 ### 5.3 Indentation
 
@@ -175,6 +185,7 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 Spaces are used around binary operators, after commas, after colons in type annotations, and before and after arrow function arrows. No spaces are used before commas, before colons in type annotations, or around unary operators. Spaces are used within object literal braces and within imports. No space is used before the function left parenthesis:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const user = { name: "John", age: 30 };
@@ -184,12 +195,12 @@ function foo() {
 }
 
 // Incorrect
-const user = { name: "John", age: 30 };
-import { foo, bar } from "module";
+const user={name:"John",age:30};
+import{foo,bar}from"module";
 
-function foo() {
-}
+function foo(){}
 `````
+[//]: # (@formatter:on)
 
 ### 5.5 Semicolons
 
@@ -207,6 +218,7 @@ One blank line is kept between top-level declarations. No blank lines are kept a
 
 Trailing commas are enforced in multiline arrays, objects, function calls, and type definitions to improve diff readability and match Kotlin style:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const users: User[] = [
@@ -248,6 +260,7 @@ type UserConfig = {
   role: string
 };
 `````
+[//]: # (@formatter:on)
 
 ### 5.9 Parameter wrapping
 
@@ -256,6 +269,7 @@ Function declarations and function call parameters are wrapped such that every i
 1. A new line is required immediately after the opening left parenthesis `(`.
 2. The closing right parenthesis `)` is placed on a new line following the final parameter.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 function createUser(
@@ -279,11 +293,13 @@ function createUser(name: string, email: string, role: string): User {
 
 createUser("John Doe", "john@example.com", "admin");
 `````
+[//]: # (@formatter:on)
 
 ### 5.10 Template literals
 
 When embedding variables, properties, or methods within a template literal, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const greeting = `Hello, ${name}!`;
@@ -293,6 +309,7 @@ const message = `User ${user.id} has ${user.points} points.`;
 const greeting = `Hello, $name!`;
 const message = `User $user.id has $user.points points.`;
 `````
+[//]: # (@formatter:on)
 
 ## 6 Language features and ecosystem
 
@@ -325,6 +342,7 @@ Built-in utility types are preferred over manual type transformations:
 2. **Constraints:** Generic constraints are used when type parameters have requirements.
 3. **Defaults:** Default type parameters are provided when appropriate.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 function merge<T extends object, U extends object>(obj1: T, obj2: U): T & U {
@@ -340,6 +358,7 @@ function merge(obj1: any, obj2: any): any {
   return { ...obj1, ...obj2 };
 }
 `````
+[//]: # (@formatter:on)
 
 ## 7 Programming practices
 
@@ -347,6 +366,7 @@ function merge(obj1: any, obj2: any): any {
 
 Type guards are used to narrow types at runtime:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 function isString(value: unknown): value is string {
@@ -362,11 +382,13 @@ if (typeof input === 'string') {
   // type not narrowed without explicit guard
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Discriminated unions
 
 Discriminated unions are used for type-safe state management:
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 interface LoadingState {
@@ -401,6 +423,7 @@ function handleState(state: State) {
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Asynchronous operations
 
@@ -420,6 +443,7 @@ Strict equality (`===` and `!==`) is mandatory. Loose equality (`==` and `!=`) i
 
 Variables and functions use `camelCase` naming. Names are descriptive and indicate purpose or content.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const userAccountCount = 42;
@@ -433,11 +457,13 @@ const UserAccountCount = 42;
 function get_user_by_id(id: string): Promise<User> {
 }
 `````
+[//]: # (@formatter:on)
 
 ### 8.2 Constants
 
 Constants that are never reassigned use `UPPER_SNAKE_CASE` naming.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 const MAX_CONNECTIONS = 100;
@@ -447,11 +473,13 @@ const API_BASE_URL = "https://api.example.com";
 const maxConnections = 100;
 const apiBaseUrl = "https://api.example.com";
 `````
+[//]: # (@formatter:on)
 
 ### 8.3 Classes and interfaces
 
 Classes and interfaces use `PascalCase` naming. Class instances use `camelCase`.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 interface UserService {
@@ -471,11 +499,13 @@ class userServiceImpl implements userService {
 
 const UserService = new userServiceImpl();
 `````
+[//]: # (@formatter:on)
 
 ### 8.4 Type parameters
 
 Generic type parameters use descriptive single-letter names (`T`, `U`, `V`) or descriptive names (`TUser`, `TResponse`).
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 function identity<T>(value: T): T {
@@ -491,11 +521,13 @@ function identity<Value>(value: Value): Value {
   return value;
 }
 `````
+[//]: # (@formatter:on)
 
 ### 8.5 Private members
 
 Private members use the `private` keyword. Underscore prefix is not used for private members.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 class Database {
@@ -515,6 +547,7 @@ class Database {
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 9 Architecture and design
 
@@ -542,6 +575,7 @@ Functions are preferred to be pure (no side effects) when possible. State mutati
 
 Dependency injection is used for testability and modularity. Classes receive dependencies through constructors rather than creating them internally.
 
+[//]: # (@formatter:off)
 `````typescript
 // Correct
 class UserService {
@@ -562,6 +596,7 @@ class UserService {
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 10 Documentation and comments
 
@@ -569,6 +604,7 @@ class UserService {
 
 Every public-facing function, utility module, and custom class constructor **must** feature a comprehensive TSDoc block outlining its core objective, expected parameters (`@param`), return types (`@returns`), and thrown exceptions (`@throws`).
 
+[//]: # (@formatter:off)
 `````typescript
 /**
  * Retrieves a user by their unique identifier.
@@ -580,6 +616,7 @@ async function getUserById(id: string): Promise<User | null> {
   // Implementation
 }
 `````
+[//]: # (@formatter:on)
 
 ### 10.2 Variable documentation
 

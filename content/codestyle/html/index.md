@@ -31,6 +31,7 @@ Code identifiers, documentation, and user-facing strings are written in American
 
 All HTML documents must begin with the HTML5 doctype declaration:
 
+[//]: # (@formatter:off)
 `````html
 <!DOCTYPE html>
 <html lang="en">
@@ -43,15 +44,18 @@ All HTML documents must begin with the HTML5 doctype declaration:
 </body>
 </html>
 `````
+[//]: # (@formatter:on)
 
 ### 3.2 HTML element
 
 The root `<html>` element must include a `lang` attribute specifying the document language:
 
+[//]: # (@formatter:off)
 `````html
 
 <html lang="en">
 `````
+[//]: # (@formatter:on)
 
 ### 3.3 Head section
 
@@ -64,6 +68,7 @@ The `<head>` section must include the following elements in order:
 5. Stylesheets
 6. Scripts (if needed in head)
 
+[//]: # (@formatter:off)
 `````html
 
 <head>
@@ -74,6 +79,7 @@ The `<head>` section must include the following elements in order:
   <link rel="stylesheet" href="styles.css">
 </head>
 `````
+[//]: # (@formatter:on)
 
 ### 3.4 Body section
 
@@ -89,11 +95,13 @@ HTML code has a column limit of `120 characters`. Except as noted, any line that
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using `<!-- prettier-ignore -->`:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <!-- prettier-ignore -->
 <div class="special"><span>Content</span></div>
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Indentation
 
@@ -103,6 +111,7 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 All HTML element tags and attribute names must be written in lowercase:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <div class="container">
@@ -114,11 +123,13 @@ All HTML element tags and attribute names must be written in lowercase:
   <INPUT TYPE="text" NAME="username">
 </DIV>
 `````
+[//]: # (@formatter:on)
 
 ### 4.5 Attribute quoting
 
 All attribute values must be enclosed in double quotes. Single quotes are forbidden:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <div class="container">
@@ -130,11 +141,13 @@ All attribute values must be enclosed in double quotes. Single quotes are forbid
   <a href='https://example.com'>Link</a>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 4.6 Self-closing tags
 
 Self-closing tags must include a space before the trailing slash:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <img src="image.jpg" alt="Description" />
@@ -142,15 +155,11 @@ Self-closing tags must include a space before the trailing slash:
 <input type="text" />
 
 <!-- Incorrect -->
-<img src="image.jpg" alt="Description" />
-<br />
-<input type="text" />
-
-<!-- Incorrect - No slash -->
 <img src="image.jpg" alt="Description">
 <br>
 <input type="text">
 `````
+[//]: # (@formatter:on)
 
 ### 4.7 Attribute ordering
 
@@ -162,17 +171,20 @@ Attributes are ordered in the following sequence:
 4. `src`, `href`, `for`, `type`, `value`
 5. Other attributes (alphabetical)
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <div class="container" id="main" data-role="navigation" data-theme="dark">
   <a href="https://example.com" class="link">Link</a>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 4.8 Line wrapping
 
 Attributes are wrapped to multiple lines when the line exceeds 120 characters:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <button
@@ -187,6 +199,7 @@ Attributes are wrapped to multiple lines when the line exceeds 120 characters:
 <!-- Incorrect -->
 <button type="submit" class="btn btn-primary" data-loading="false" disabled>Submit</button>
 `````
+[//]: # (@formatter:on)
 
 ## 5 Semantic HTML
 
@@ -194,6 +207,7 @@ Attributes are wrapped to multiple lines when the line exceeds 120 characters:
 
 Semantic HTML5 elements must be used instead of generic `<div>` elements when appropriate:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <header>
@@ -241,11 +255,13 @@ Semantic HTML5 elements must be used instead of generic `<div>` elements when ap
   <p>&copy; 2024 MineKot</p>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 5.2 Heading hierarchy
 
 Heading elements must follow a logical hierarchy without skipping levels:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <h1>Main Title</h1>
@@ -257,11 +273,13 @@ Heading elements must follow a logical hierarchy without skipping levels:
 <h3>Subsection Title</h3>
 <h4>Sub-subsection Title</h4>
 `````
+[//]: # (@formatter:on)
 
 ### 5.3 Lists
 
 Lists must use appropriate list elements (`<ul>`, `<ol>`, `<dl>`):
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <ul>
@@ -285,6 +303,7 @@ Lists must use appropriate list elements (`<ul>`, `<ol>`, `<dl>`):
   <div class="item">Item 2</div>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ## 6 Accessibility
 
@@ -292,6 +311,7 @@ Lists must use appropriate list elements (`<ul>`, `<ol>`, `<dl>`):
 
 All images must include descriptive `alt` text. Decorative images use empty `alt` attributes:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct - Descriptive image -->
 <img src="logo.png" alt="MineKot Logo" />
@@ -303,11 +323,13 @@ All images must include descriptive `alt` text. Decorative images use empty `alt
 <img src="logo.png" />
 <img src="logo.png" alt="logo" />
 `````
+[//]: # (@formatter:on)
 
 ### 6.2 Form labels
 
 All form inputs must have associated labels using the `for` attribute matching the input's `id`:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <label for="username">Username</label>
@@ -319,11 +341,13 @@ All form inputs must have associated labels using the `for` attribute matching t
 
 <input type="text" name="username" placeholder="Username" />
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 ARIA attributes
 
 ARIA attributes are used to enhance accessibility when semantic HTML is insufficient:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct - ARIA for interactive elements -->
 <button aria-expanded="false" aria-controls="menu">Toggle Menu</button>
@@ -336,11 +360,13 @@ ARIA attributes are used to enhance accessibility when semantic HTML is insuffic
   Status message
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 6.4 Focus management
 
 Interactive elements must be keyboard-accessible. Custom interactive elements must include appropriate ARIA roles and keyboard event handlers:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct - Native button with keyboard support -->
 <button type="button" onclick="handleClick()">Click me</button>
@@ -350,6 +376,7 @@ Interactive elements must be keyboard-accessible. Custom interactive elements mu
   Click me
 </div>
 `````
+[//]: # (@formatter:on)
 
 ## 7 Script loading
 
@@ -357,6 +384,7 @@ Interactive elements must be keyboard-accessible. Custom interactive elements mu
 
 Scripts are placed at the end of the `<body>` element unless they need to execute before content rendering:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <body>
@@ -372,11 +400,13 @@ Scripts are placed at the end of the `<body>` element unless they need to execut
 <div class="content">Content</div>
 </body>
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Async and defer
 
 The `async` or `defer` attributes are used for script loading optimization:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct - Async for independent scripts -->
 <script src="analytics.js" async></script>
@@ -389,6 +419,7 @@ The `async` or `defer` attributes are used for script loading optimization:
   // Inline script
 </script>
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Inline scripts
 
@@ -404,6 +435,7 @@ Hardcoding raw user-facing textual values directly inside HTML element structure
 
 Markup templates must cleanly isolate structural presentation from style configurations and behavioral logic. Inline style specifications (`style="..."`) and embedded inline scripting blocks (`onclick="..."`) are strictly banned across all repositories.
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <div class="container">
@@ -415,11 +447,13 @@ Markup templates must cleanly isolate structural presentation from style configu
   <button onclick="handleSubmit()" style="background: blue;">Submit</button>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 8.3 Data attributes
 
 Data attributes are used for storing custom data for JavaScript access:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <div class="user-card" data-user-id="123" data-role="admin">
@@ -431,11 +465,13 @@ Data attributes are used for storing custom data for JavaScript access:
   <span class="username">John Doe</span>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 8.4 Template systems
 
 HTML templates use server-side or client-side template systems for dynamic content. Logic is not embedded in HTML:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct - Template syntax -->
 <div class="user-card">
@@ -449,6 +485,7 @@ HTML templates use server-side or client-side template systems for dynamic conte
   <p><?php echo $user['email']; ?></p>
 </div>
 `````
+[//]: # (@formatter:on)
 
 ## 9 Documentation and comments
 
@@ -456,6 +493,7 @@ HTML templates use server-side or client-side template systems for dynamic conte
 
 Complex blocks, template injection areas, and non-intuitive layout containers must be clearly denoted using explicit comment wrappers:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <!-- Main content area -->
@@ -472,11 +510,13 @@ Complex blocks, template injection areas, and non-intuitive layout containers mu
   <!-- content -->
 </div>
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Comment formatting
 
 Comments are placed on their own lines. Inline comments are forbidden:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <!-- Navigation menu -->
@@ -493,6 +533,7 @@ Comments are placed on their own lines. Inline comments are forbidden:
   </ul>
 </nav>
 `````
+[//]: # (@formatter:on)
 
 ## 10 Performance and optimization
 
@@ -513,11 +554,13 @@ Critical CSS is inlined for above-the-fold content to improve perceived performa
 
 Images and iframes use lazy loading for below-the-fold content:
 
+[//]: # (@formatter:off)
 `````html
 <!-- Correct -->
 <img src="image.jpg" alt="Description" loading="lazy" />
 <iframe src="content.html" loading="lazy"></iframe>
 `````
+[//]: # (@formatter:on)
 
 ## Conclusion
 

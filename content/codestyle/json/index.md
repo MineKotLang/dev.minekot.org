@@ -39,6 +39,7 @@ JSON code has a column limit of `120 characters`. Except as noted, any line that
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using JSONC comments:
 
+[//]: # (@formatter:off)
 `````jsonc
 // Correct
 // prettier-ignore
@@ -64,11 +65,13 @@ Keys use `kebab-case` and are descriptive:
   "maxConnections": 100
 }
 `````
+[//]: # (@formatter:on)
 
 ### 3.5 Quoting
 
 All keys and string values must be enclosed in double quotes. Single quotes are forbidden:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -82,11 +85,13 @@ All keys and string values must be enclosed in double quotes. Single quotes are 
   'email': 'john@example.com'
 }
 `````
+[//]: # (@formatter:on)
 
 ### 3.6 Trailing commas
 
 Trailing commas are forbidden in standard JSON. JSON5 or JSONC may allow trailing commas when explicitly supported:
 
+[//]: # (@formatter:off)
 `````json
 // Correct - Standard JSON
 {
@@ -97,14 +102,16 @@ Trailing commas are forbidden in standard JSON. JSON5 or JSONC may allow trailin
 // Incorrect - Trailing comma in standard JSON
 {
   "name": "John Doe",
-  "email": "john@example.com"
+  "email": "john@example.com",
 }
 `````
+[//]: # (@formatter:on)
 
 ### 3.7 Whitespace
 
 Spaces are used after colons in key-value pairs and after commas. No spaces are used before colons or commas:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -113,11 +120,9 @@ Spaces are used after colons in key-value pairs and after commas. No spaces are 
 }
 
 // Incorrect
-{
-  "name": "John Doe",
-  "email": "john@example.com"
-}
+{"name":"John Doe","email":"john@example.com"}
 `````
+[//]: # (@formatter:on)
 
 ## 4 Data types
 
@@ -125,6 +130,7 @@ Spaces are used after colons in key-value pairs and after commas. No spaces are 
 
 Strings are enclosed in double quotes. Special characters are escaped as needed:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -139,11 +145,13 @@ Strings are enclosed in double quotes. Special characters are escaped as needed:
   "path": '/path/to/file'
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.2 Numbers
 
 Numbers are written without quotes. Floating-point numbers use decimal notation:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -158,11 +166,13 @@ Numbers are written without quotes. Floating-point numbers use decimal notation:
   "timeout": "30.5"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Booleans
 
 Boolean values use lowercase `true` and `false`:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -178,11 +188,13 @@ Boolean values use lowercase `true` and `false`:
   "debug": no
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.4 Null values
 
 Null values are represented as `null`:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -197,11 +209,13 @@ Null values are represented as `null`:
   "timeout": undefined
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.5 Arrays
 
 Arrays use square brackets with consistent indentation:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -231,11 +245,13 @@ Arrays use square brackets with consistent indentation:
   ]
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.6 Objects
 
 Objects use curly braces with consistent indentation:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -255,6 +271,7 @@ Objects use curly braces with consistent indentation:
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 5 Key ordering
 
@@ -262,6 +279,7 @@ Objects use curly braces with consistent indentation:
 
 Object keys are ordered alphabetically for consistency:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -279,11 +297,13 @@ Object keys are ordered alphabetically for consistency:
   "database-name": "mydb"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 5.2 Logical grouping
 
 Related keys are grouped together when alphabetical ordering would separate them:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -302,6 +322,7 @@ Related keys are grouped together when alphabetical ordering would separate them
   "database-name": "mydb"
 }
 `````
+[//]: # (@formatter:on)
 
 ## 6 Number precision
 
@@ -309,6 +330,7 @@ Related keys are grouped together when alphabetical ordering would separate them
 
 Integer values are used for whole numbers:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -322,11 +344,13 @@ Integer values are used for whole numbers:
   "count": 100.0
 }
 `````
+[//]: # (@formatter:on)
 
 ### 6.2 Floating-point values
 
 Floating-point values are used for decimal numbers. Precision is appropriate to the use case:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -340,11 +364,13 @@ Floating-point values are used for decimal numbers. Precision is appropriate to 
   "ratio": 1.618033988749895
 }
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 Scientific notation
 
 Scientific notation is avoided unless necessary for very large or very small numbers:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -356,6 +382,7 @@ Scientific notation is avoided unless necessary for very large or very small num
   "timeout": 3e9
 }
 `````
+[//]: # (@formatter:on)
 
 ## 7 Date and time formats
 
@@ -363,6 +390,7 @@ Scientific notation is avoided unless necessary for very large or very small num
 
 Dates and times use ISO 8601 format:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -376,11 +404,13 @@ Dates and times use ISO 8601 format:
   "updated-at": "2024-01-15 10:30:00"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Unix timestamps
 
 Unix timestamps are used when numeric representation is preferred:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -392,11 +422,13 @@ Unix timestamps are used when numeric representation is preferred:
   "created-at": "1705317000000"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Consistency
 
 Date formats are consistent within a single JSON file or across related files:
 
+[//]: # (@formatter:off)
 `````json
 // Correct - Consistent ISO 8601
 {
@@ -410,6 +442,7 @@ Date formats are consistent within a single JSON file or across related files:
   "updated-at": 1705403100
 }
 `````
+[//]: # (@formatter:on)
 
 ## 8 Architecture and design
 
@@ -425,6 +458,7 @@ All active JSON configuration sets must maintain a clear, self-describing layout
 
 JSON files maintain a clear hierarchical structure. Deep nesting is avoided when possible:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -452,11 +486,13 @@ JSON files maintain a clear hierarchical structure. Deep nesting is avoided when
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 8.4 Grouping
 
 Related configuration items are grouped together:
 
+[//]: # (@formatter:off)
 `````json
 // Correct
 {
@@ -484,6 +520,7 @@ Related configuration items are grouped together:
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 9 Documentation
 
@@ -491,6 +528,7 @@ Related configuration items are grouped together:
 
 JSONC (JSON with Comments) files use `//` for single-line comments and `/* */` for multi-line comments:
 
+[//]: # (@formatter:off)
 `````jsonc
 // Correct - JSONC
 {
@@ -504,6 +542,7 @@ JSONC (JSON with Comments) files use `//` for single-line comments and `/* */` f
 /* Multi-line comment
    describing the configuration */
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Standard JSON
 
@@ -513,6 +552,7 @@ Standard JSON files do not include comments. Documentation is provided through e
 
 JSON schemas are used to document and validate JSON structure:
 
+[//]: # (@formatter:off)
 `````json
 // Schema example
 {
@@ -535,6 +575,7 @@ JSON schemas are used to document and validate JSON structure:
   ]
 }
 `````
+[//]: # (@formatter:on)
 
 ## 10 Security
 
@@ -542,6 +583,7 @@ JSON schemas are used to document and validate JSON structure:
 
 Sensitive data (passwords, API keys) is not stored in plain text JSON files. Environment variables or secret management systems are used:
 
+[//]: # (@formatter:off)
 `````json
 // Correct - Reference environment variable (when supported by parser)
 {
@@ -553,6 +595,7 @@ Sensitive data (passwords, API keys) is not stored in plain text JSON files. Env
   "database-password": "mysecretpassword"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 10.2 File permissions
 
@@ -572,6 +615,7 @@ JSON structures are designed for efficient parsing. Deep nesting and complex nes
 
 JSON files are minified in production to reduce file size:
 
+[//]: # (@formatter:off)
 `````json
 // Minified
 {
@@ -579,6 +623,7 @@ JSON files are minified in production to reduce file size:
   "email": "john@example.com"
 }
 `````
+[//]: # (@formatter:on)
 
 ## 12 JSON5 and JSONC
 
@@ -586,6 +631,7 @@ JSON files are minified in production to reduce file size:
 
 JSON5 extends JSON with features like trailing commas, single quotes, and unquoted keys. These features are used only when explicitly supported by the parser:
 
+[//]: # (@formatter:off)
 `````json5
 // JSON5 example
 {
@@ -594,11 +640,13 @@ JSON5 extends JSON with features like trailing commas, single quotes, and unquot
   email: 'john@example.com',
 }
 `````
+[//]: # (@formatter:on)
 
 ### 12.2 JSONC
 
 JSONC adds comment support to JSON. Comments are used for documentation in configuration files:
 
+[//]: # (@formatter:off)
 `````jsonc
 // JSONC example
 {
@@ -607,6 +655,7 @@ JSONC adds comment support to JSON. Comments are used for documentation in confi
   "email": "john@example.com"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 12.3 Standard JSON preference
 

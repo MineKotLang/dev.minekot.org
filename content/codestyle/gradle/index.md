@@ -33,6 +33,7 @@ Code identifiers, documentation, and user-facing strings are written in American
 
 Plugins are applied using the plugins block with type-safe accessors:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 plugins {
@@ -45,6 +46,7 @@ plugins {
 apply(plugin = "kotlin")
 apply(plugin = "org.jetbrains.kotlinx.kover")
 `````
+[//]: # (@formatter:on)
 
 ### 3.2 Build script organization
 
@@ -69,12 +71,14 @@ Gradle Kotlin DSL code has a column limit of `120 characters`. Except as noted, 
 
 Formatter control tags are enabled. Code regions can be excluded from formatting using `@formatter:off` and `@formatter:on` tags:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 // @formatter:off
 val matrix = intArrayOf(1,2,3,4,5,6,7,8,9)
 // @formatter:on
 `````
+[//]: # (@formatter:on)
 
 ### 4.3 Indentation
 
@@ -84,6 +88,7 @@ The global default indent size is four spaces, and the tab width is four spaces.
 
 Blocks (plugins, dependencies, repositories, tasks) use the following formatting:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 plugins {
@@ -101,11 +106,13 @@ plugins { kotlin("jvm") version "2.4.0" }
 
 dependencies { implementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0") }
 `````
+[//]: # (@formatter:on)
 
 ### 4.4 Dependency declarations
 
 Dependency declarations use the string notation with explicit version numbers or version catalogs:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct - Version catalog
 dependencies {
@@ -124,6 +131,7 @@ dependencies {
     implementation(kotlin("stdlib"))
 }
 `````
+[//]: # (@formatter:on)
 
 ## 5 Dependency management
 
@@ -131,6 +139,7 @@ dependencies {
 
 Version catalogs are used for dependency management. The `libs.versions.toml` file defines all library versions:
 
+[//]: # (@formatter:off)
 `````toml
 [versions]
 kotlin = "2.4.0"
@@ -143,6 +152,7 @@ junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jun
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 `````
+[//]: # (@formatter:on)
 
 ### 5.2 Dependency scopes
 
@@ -159,12 +169,14 @@ Dependencies are declared with appropriate scopes:
 
 Transitive dependencies are explicitly excluded when necessary:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 implementation("com.example:library:1.0.0") {
     exclude(group = "org.unwanted", module = "unwanted-module")
 }
 `````
+[//]: # (@formatter:on)
 
 ## 6 Task configuration
 
@@ -172,6 +184,7 @@ implementation("com.example:library:1.0.0") {
 
 Task names use `camelCase` and describe the action performed:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 tasks.register("generateDocumentation") {
@@ -187,11 +200,13 @@ tasks.register("generate_documentation") {
     // Implementation
 }
 `````
+[//]: # (@formatter:on)
 
 ### 6.2 Task dependencies
 
 Task dependencies are declared explicitly using `dependsOn`:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 tasks.named("check") {
@@ -207,11 +222,13 @@ tasks.named("check") {
     // Implicit dependency through task name
 }
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 Task configuration avoidance
 
 Task configuration avoidance is used to improve build performance. Tasks are configured lazily when possible:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 tasks.named<Test>("test") {
@@ -223,6 +240,7 @@ tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
 `````
+[//]: # (@formatter:on)
 
 ## 7 Repository configuration
 
@@ -230,6 +248,7 @@ tasks.withType<Test>().configureEach {
 
 Repositories are declared in the repositories block:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 repositories {
@@ -243,6 +262,7 @@ repositories {
     maven { url = uri("https://maven.fabricmc.net/") }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Repository ordering
 
@@ -259,6 +279,7 @@ Repositories are ordered from the most specific to the most general:
 
 Type-safe accessors are used for plugin extensions:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 tasks.withType<KotlinCompile>().configureEach {
@@ -272,11 +293,13 @@ tasks.withType(KotlinCompile::class.java).configureEach {
     (kotlinOptions as KotlinJvmOptions).jvmTarget = "17"
 }
 `````
+[//]: # (@formatter:on)
 
 ### 8.2 Extension blocks
 
 Extension blocks are used for plugin configuration:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 configure<KotlinJvmProjectExtension> {
@@ -286,6 +309,7 @@ configure<KotlinJvmProjectExtension> {
 // Incorrect
 the<JavaPluginExtension>().sourceCompatibility = JavaVersion.VERSION_17
 `````
+[//]: # (@formatter:on)
 
 ## 9 Multi-project builds
 
@@ -293,6 +317,7 @@ the<JavaPluginExtension>().sourceCompatibility = JavaVersion.VERSION_17
 
 Multi-project builds use a clear hierarchical structure:
 
+[//]: # (@formatter:off)
 `````tree
 - root | folder
   - build.gradle.kts | devicons devicons-kotlin-icon
@@ -303,11 +328,13 @@ Multi-project builds use a clear hierarchical structure:
   - subproject-b | folder
     - build.gradle.kts | devicons devicons-kotlin-icon
 `````
+[//]: # (@formatter:on)
 
 ### 9.2 Subproject configuration
 
 Subproject configuration is done in individual build files or through convention plugins:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct-Convention plugin
 plugins {
@@ -326,11 +353,13 @@ subprojects {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 9.3 Project dependencies
 
 Project dependencies use the `project()` notation:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 dependencies {
@@ -343,6 +372,7 @@ dependencies {
     implementation(files("../core/build/libs/core.jar"))
 }
 `````
+[//]: # (@formatter:on)
 
 ## 10 Build logic
 
@@ -350,6 +380,7 @@ dependencies {
 
 Build logic is extracted to convention plugins in `build-logic`:
 
+[//]: # (@formatter:off)
 `````kotlin
 // build-logic/src/main/kotlin/minekot.library.gradle.kts
 plugins {
@@ -360,11 +391,13 @@ dependencies {
     implementation(libs.kotlin.stdlib)
 }
 `````
+[//]: # (@formatter:on)
 
 ### 10.2 Custom tasks
 
 Custom tasks are defined as classes in `buildSrc` or convention plugins:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 abstract class GenerateDocumentation : DefaultTask() {
@@ -387,6 +420,7 @@ tasks.register("generateDocumentation") {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 10.3 Build script compilation
 
@@ -398,6 +432,7 @@ Build scripts are compiled for type safety. Dynamic Groovy methods are forbidden
 
 Task names use `camelCase` and start with a verb:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 tasks.register("generateDocumentation")
@@ -408,11 +443,13 @@ tasks.register("publishToMavenLocal")
 tasks.register("documentation_generator")
 tasks.register("integration_tests")
 `````
+[//]: # (@formatter:on)
 
 ### 11.2 Extension names
 
 Extension names use `camelCase`:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 extensions.create("minekot", MineKotExtension::class)
@@ -420,11 +457,13 @@ extensions.create("minekot", MineKotExtension::class)
 // Incorrect
 extensions.create("MineKot", MineKotExtension::class)
 `````
+[//]: # (@formatter:on)
 
 ### 11.3 Configuration names
 
 Configuration names use `camelCase`:
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 configurations.create("integrationTestImplementation")
@@ -433,6 +472,7 @@ configurations.create("integrationTestRuntimeOnly")
 // Incorrect
 configurations.create("integration_test_implementation")
 `````
+[//]: # (@formatter:on)
 
 ## 12 Architecture and design
 
@@ -463,6 +503,7 @@ Builds are configured to be reproducible:
 
 Complex build logic is documented with KDoc:
 
+[//]: # (@formatter:off)
 `````kotlin
 /**
  * Configures the Kotlin compilation for the project.
@@ -476,11 +517,13 @@ fun Project.configureKotlinCompilation() {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 13.2 Task documentation
 
 Custom tasks are documented with KDoc explaining purpose, inputs, and outputs:
 
+[//]: # (@formatter:off)
 `````kotlin
 /**
  * Generates documentation from source files.
@@ -501,6 +544,7 @@ abstract class GenerateDocumentation : DefaultTask() {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 13.3 Inline comments
 
@@ -516,6 +560,7 @@ Task configuration avoidance is used to improve build performance. Tasks are con
 
 The build cache is enabled for reproducible and faster builds:
 
+[//]: # (@formatter:off)
 `````kotlin
 buildCache {
     local {
@@ -523,22 +568,26 @@ buildCache {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 14.3 Parallel execution
 
 Parallel execution is enabled for multi-project builds:
 
+[//]: # (@formatter:off)
 `````kotlin
 // gradle.properties
 org.gradle.parallel = true
 org.gradle.caching = true
 org.gradle.configureondemand = true
 `````
+[//]: # (@formatter:on)
 
 ### 14.4 Dependency resolution
 
 Dependency resolution is configured for performance:
 
+[//]: # (@formatter:off)
 `````kotlin
 configurations.all {
     resolutionStrategy {
@@ -547,6 +596,7 @@ configurations.all {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ## 15 Testing
 
@@ -554,17 +604,20 @@ configurations.all {
 
 Test tasks are configured with appropriate frameworks:
 
+[//]: # (@formatter:off)
 `````kotlin
 tasks.named<Test>("test") {
     useJUnitPlatform()
     maxParallelForks = Runtime.getRuntime().availableProcessors()
 }
 `````
+[//]: # (@formatter:on)
 
 ### 15.2 Test source sets
 
 Additional test source sets are configured when needed:
 
+[//]: # (@formatter:off)
 `````kotlin
 val integrationTest = sourceSets.create("integrationTest") {
     compileClasspath += sourceSets.main.get().output
@@ -573,6 +626,7 @@ val integrationTest = sourceSets.create("integrationTest") {
 
 configurations[integrationTest.implementationConfigurationName].extendsFrom(configurations.testImplementation.get())
 `````
+[//]: # (@formatter:on)
 
 ## Conclusion
 

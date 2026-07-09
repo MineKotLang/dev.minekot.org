@@ -67,6 +67,7 @@ This applies to both method declarations and method calls. Parameters are aligne
 
 When embedding variables, properties, or methods within a string template, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed.
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 val greeting = "Hello, ${name}!"
@@ -74,6 +75,7 @@ val greeting = "Hello, ${name}!"
 // Incorrect
 val greeting = "Hello, $name!"
 `````
+[//]: # (@formatter:on)
 
 ### 4.7 Blank lines
 
@@ -111,6 +113,7 @@ Standard `try-catch` blocks are not used. Exception handling is managed function
 
 When operating within `nested scopes`, `lambdas`, `coroutines`, or `builder DSLs`, relying on an implicit `this` to access properties or methods of an outer class is not allowed. The receiver is explicitly qualified using labeled `this` references to prevent `shadowing`, `context leaks`, and `ambiguity`.
 
+[//]: # (@formatter:off)
 `````kotlin
 // Correct
 class MineKotEngine {
@@ -134,6 +137,7 @@ class MineKotEngine {
     }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 6.3 Concurrency
 
@@ -142,6 +146,29 @@ class MineKotEngine {
 ### 6.4 Spacing
 
 Spaces are used around `additive`, `assignment`, `equality`, `logical`, `multiplicative`, and `relational operators`. Spaces are used around the `elvis operator`, `function type` arrows, and `when` arrows. No spaces are used around the `range operator` or `unary operators`. A space is used before the `lambda arrow`. Spaces are used after `commas`, after `extend colons`, and after `type colons`. No space is used before `commas` or before `type colons`. A space is used before `extend colons`.
+
+### 6.5 forEach loops
+
+`forEach` is preferred over traditional `for` loops when iterating over collections, arrays, or sequences, provided the loop body does not require early termination (`break` or `continue`). `forEach` provides a more functional and idiomatic approach to iteration.
+
+[//]: # (@formatter:off)
+`````kotlin
+// Correct
+players.forEach { player ->
+    player.sendMessage("Welcome!")
+}
+
+// Incorrect
+for (player in players) {
+    player.sendMessage("Welcome!")
+}
+`````
+[//]: # (@formatter:on)
+
+Traditional `for` loops are used when:
+- Early termination with `break` or `continue` is required
+- Index-based iteration is necessary
+- The loop body is complex and would benefit from explicit control flow
 
 ## 7 Architecture and design
 

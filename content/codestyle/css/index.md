@@ -35,11 +35,13 @@ CSS code has a column limit of `120 characters`. Except as noted, any line that 
 
 Formatter control comments are enabled. Code regions can be excluded from formatting using `/* prettier-ignore */`:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 /* prettier-ignore */
 .special-class { margin : 0;padding : 0; }
 `````
+[//]: # (@formatter:on)
 
 ### 3.3 Indentation
 
@@ -49,6 +51,7 @@ The global default indent size is two spaces, and the tab width is two spaces. C
 
 Selectors and declarations follow these formatting rules. Property values are aligned:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .container {
@@ -68,11 +71,13 @@ Selectors and declarations follow these formatting rules. Property values are al
 
 .button { background-color : #ffffff; color : #000000; padding : 10px 20px; }
 `````
+[//]: # (@formatter:on)
 
 ### 3.4 Single-line blocks
 
 Single-line blocks are allowed for simple rulesets:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .hidden { display : none; }
@@ -80,11 +85,13 @@ Single-line blocks are allowed for simple rulesets:
 /* Incorrect */
 .container { display : flex; justify-content : center; align-items : center; }
 `````
+[//]: # (@formatter:on)
 
 ### 3.5 Spacing
 
 Spaces are used after colons in property declarations, after commas in value lists, and before opening braces. No spaces are used before colons, before commas, or after opening braces.
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .selector {
@@ -93,11 +100,9 @@ Spaces are used after colons in property declarations, after commas in value lis
 }
 
 /* Incorrect */
-.selector {
-  property    : value;
-  font-family : Arial, sans-serif;
-}
+.selector{property:value;font-family:Arial,sans-serif;}
 `````
+[//]: # (@formatter:on)
 
 ### 3.6 Quotes
 
@@ -127,6 +132,7 @@ Properties are ordered in the following sequence to improve readability:
 4. **Visual:** `background`, `background-color`, `border`, `box-shadow`, `opacity`
 5. **Other:** `transition`, `transform`, `animation`
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .card {
@@ -152,6 +158,7 @@ Properties are ordered in the following sequence to improve readability:
   transition       : all 0.3s ease;
 }
 `````
+[//]: # (@formatter:on)
 
 ### 4.2 Shorthand properties
 
@@ -196,6 +203,7 @@ Class names use `kebab-case` and are descriptive:
 
 ID selectors are avoided in favor of class selectors. When IDs are necessary, they use `kebab-case`:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct - Class preferred */
 .main-header
@@ -205,11 +213,13 @@ ID selectors are avoided in favor of class selectors. When IDs are necessary, th
   /* Incorrect */
 #mainHeader
 `````
+[//]: # (@formatter:on)
 
 ### 5.3 BEM methodology
 
 BEM (Block Element Modifier) methodology is used for component styling:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .block { }
@@ -236,11 +246,13 @@ BEM (Block Element Modifier) methodology is used for component styling:
 .card-title
 .cardTitleLarge
 `````
+[//]: # (@formatter:on)
 
 ### 5.4 Custom properties
 
 CSS custom properties (variables) use `kebab-case` with a prefix:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 :root {
@@ -256,6 +268,7 @@ CSS custom properties (variables) use `kebab-case` with a prefix:
   --primaryColor : #3498db;
 }
 `````
+[//]: # (@formatter:on)
 
 ## 6 Color formatting
 
@@ -288,7 +301,7 @@ RGB and RGBA values are used when transparency is needed:
   box-shadow       : 0 2px 4px rgba(0, 0, 0, 0.1);
 
 /* Incorrect */
-  background-color : rgba(255, 255, 255, 0.5);
+  background-color : rgba(255,255,255,0.5);
 `````
 [//]: # (@formatter:on)
 
@@ -296,6 +309,7 @@ RGB and RGBA values are used when transparency is needed:
 
 Colors are defined as CSS custom properties for consistency:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 :root {
@@ -316,6 +330,7 @@ Colors are defined as CSS custom properties for consistency:
   color            : #ffffff;
 }
 `````
+[//]: # (@formatter:on)
 
 ## 7 Selector specificity
 
@@ -323,6 +338,7 @@ Colors are defined as CSS custom properties for consistency:
 
 Selectors are kept as simple as possible to avoid specificity wars:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .button { }
@@ -334,11 +350,13 @@ div.container .button { }
 
 .card h2.title { }
 `````
+[//]: # (@formatter:on)
 
 ### 7.2 Avoid !important
 
 The `!important` declaration is strictly forbidden except in specific utility classes:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct - Utility class */
 .hidden { display : none !important; }
@@ -346,11 +364,13 @@ The `!important` declaration is strictly forbidden except in specific utility cl
 /* Incorrect */
 .button { color : #ff0000 !important; }
 `````
+[//]: # (@formatter:on)
 
 ### 7.3 Qualifying selectors
 
 Element qualifiers are avoided when class selectors are sufficient:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .card { }
@@ -362,6 +382,7 @@ div.card { }
 
 a.button { }
 `````
+[//]: # (@formatter:on)
 
 ## 8 Responsive design
 
@@ -369,6 +390,7 @@ a.button { }
 
 Styles are written mobile-first, with media queries for larger screens:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .container {
@@ -396,6 +418,7 @@ Styles are written mobile-first, with media queries for larger screens:
   }
 }
 `````
+[//]: # (@formatter:on)
 
 ### 8.2 Relative units
 
@@ -421,6 +444,7 @@ Relative units (`rem`, `em`, `%`, `vw`, `vh`) are preferred over absolute units 
 
 Flexbox and Grid are used for layout instead of floats:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .container {
@@ -441,6 +465,7 @@ Flexbox and Grid are used for layout instead of floats:
   width : 50%;
 }
 `````
+[//]: # (@formatter:on)
 
 ## 9 Architecture and design
 
@@ -452,6 +477,7 @@ Stylesheets maintain absolute decoupling between general framework layouts and u
 
 Styles are organized by component, with each component having its own stylesheet:
 
+[//]: # (@formatter:off)
 `````tree
 - styles | folder
   - base | folder
@@ -466,6 +492,7 @@ Styles are organized by component, with each component having its own stylesheet
     - header.css | devicons devicons-css
     - footer.css | devicons devicons-css
 `````
+[//]: # (@formatter:on)
 
 ### 9.3 Theme compliance
 
@@ -475,6 +502,7 @@ All color choices and systemic branding properties respect the project's selecte
 
 CSS custom properties are used for theming and configuration:
 
+[//]: # (@formatter:off)
 `````css
 :root {
   /* Colors */
@@ -495,6 +523,7 @@ CSS custom properties are used for theming and configuration:
   --font-size-xl     : 24px;
 }
 `````
+[//]: # (@formatter:on)
 
 ## 10 Performance and optimization
 
@@ -510,6 +539,7 @@ Critical CSS is inlined for above-the-fold content to improve perceived performa
 
 Expensive selectors (universal selectors, descendant selectors with deep nesting) are avoided:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .button { }
@@ -521,11 +551,13 @@ Expensive selectors (universal selectors, descendant selectors with deep nesting
 
 .container div ul li a { }
 `````
+[//]: # (@formatter:on)
 
 ### 10.4 Will-change property
 
 The `will-change` property is used sparingly and only for properties that will actually change:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 .modal {
@@ -537,6 +569,7 @@ The `will-change` property is used sparingly and only for properties that will a
   will-change : transform, opacity;
 }
 `````
+[//]: # (@formatter:on)
 
 ## 11 Documentation and comments
 
@@ -544,6 +577,7 @@ The `will-change` property is used sparingly and only for properties that will a
 
 Major sections are documented with comments:
 
+[//]: # (@formatter:off)
 `````css
 /* ===================================
    Button Component
@@ -553,11 +587,13 @@ Major sections are documented with comments:
   /* Styles */
 }
 `````
+[//]: # (@formatter:on)
 
 ### 11.2 Inline comments
 
 Complex or non-obvious styles are documented with inline comments:
 
+[//]: # (@formatter:off)
 `````css
 .container {
   /* Flexbox centering with fallback for older browsers */
@@ -567,11 +603,13 @@ Complex or non-obvious styles are documented with inline comments:
   -webkit-justify-content : center;
 }
 `````
+[//]: # (@formatter:on)
 
 ### 11.3 Comment formatting
 
 Comments are placed on their own lines. Inline comments are forbidden:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 /* Primary button styles */
@@ -584,6 +622,7 @@ Comments are placed on their own lines. Inline comments are forbidden:
   background-color : var(--color-primary);
 }
 `````
+[//]: # (@formatter:on)
 
 ## 12 Browser compatibility
 
@@ -595,6 +634,7 @@ Vendor prefixes are included only when necessary for supported browsers. Autopre
 
 Feature detection (`@supports`) is used instead of browser detection:
 
+[//]: # (@formatter:off)
 `````css
 /* Correct */
 @supports (display: grid) {
@@ -609,6 +649,7 @@ Feature detection (`@supports`) is used instead of browser detection:
   display : flex;
 }
 `````
+[//]: # (@formatter:on)
 
 ### 12.3 Progressive enhancement
 
