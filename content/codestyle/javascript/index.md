@@ -91,7 +91,7 @@ import { foo, bar } from "module";
 
 ### 4.5 Semicolons
 
-Semicolons are mandatory at the end of every executable statement. Relying on Automatic Semicolon Insertion (ASI) is forbidden. Semicolon style is enforced by the formatter.
+Semicolons are avoided where possible. Automatic Semicolon Insertion (ASI) is relied upon for statement termination. Semicolons are only used when required by the language (e.g., to avoid ambiguous statements). The formatter enforces semicolon style.
 
 ### 4.6 Quotes
 
