@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: update JavaScript and TypeScript style guides to omit semicolons, what was I thinking previously?!&#10;&#10;- Revise JavaScript and TypeScript guidelines (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`) to avoid semicolons and rely on Automatic Semicolon Insertion (ASI) for statement termination.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/css/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/css/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/gradle/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/gradle/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/html/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/html/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/javascript/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/javascript/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/json/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/json/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/markdown/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/markdown/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/typescript/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/typescript/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/xml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/xml/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/yaml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/_index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="125" />
+    <option name="cachedIndexableFilesCount" value="213" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -63,68 +57,68 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0008592054523613" />
-      <entry key="MS500" value="1.4326211104823419" />
-      <entry key="S2" value="4.366128238493717" />
-      <entry key="S5" value="7.507524556848231" />
-      <entry key="S10" value="9.382778751672568" />
-      <entry key="S30" value="11.08355789123186" />
-      <entry key="S60" value="11.808561645971217" />
-      <entry key="M2" value="13.351637134696515" />
-      <entry key="M5" value="19.207272185835475" />
-      <entry key="M10" value="26.76455888633069" />
-      <entry key="M15" value="32.78974126388343" />
-      <entry key="M30" value="48.00086183571727" />
-      <entry key="H1" value="77.91830311488125" />
-      <entry key="H2" value="158.78113131484832" />
-      <entry key="H4" value="385.8829397884671" />
-      <entry key="D1" value="1903.1945183798828" />
-      <entry key="W1" value="2846.0014484044605" />
+      <entry key="MS100" value="1.5599880941770903" />
+      <entry key="MS500" value="2.866673899902934" />
+      <entry key="S2" value="5.999332505922249" />
+      <entry key="S5" value="9.26539680533774" />
+      <entry key="S10" value="11.233095126699949" />
+      <entry key="S30" value="13.02499231629742" />
+      <entry key="S60" value="13.777444578969597" />
+      <entry key="M2" value="15.334153951748299" />
+      <entry key="M5" value="21.19736824670166" />
+      <entry key="M10" value="28.7577294790948" />
+      <entry key="M15" value="34.78419054039854" />
+      <entry key="M30" value="49.99682704396925" />
+      <entry key="H1" value="79.91504723197775" />
+      <entry key="H2" value="160.77782966337068" />
+      <entry key="H4" value="387.8789386732801" />
+      <entry key="D1" value="1905.1912343988156" />
+      <entry key="W1" value="2848.0007469502457" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.1332756916044487E-152" />
-      <entry key="MS500" value="4.632435866520237E-31" />
-      <entry key="S2" value="2.6505341898991058E-8" />
-      <entry key="S5" value="0.0011660654458707966" />
-      <entry key="S10" value="0.05184900312404188" />
-      <entry key="S30" value="0.7507181586602073" />
-      <entry key="S60" value="1.4946245211321811" />
-      <entry key="M2" value="2.1153856420767565" />
-      <entry key="M5" value="2.6081012428321078" />
-      <entry key="M10" value="2.797697313359958" />
-      <entry key="M15" value="2.872912774946141" />
-      <entry key="M30" value="3.096571806240236" />
-      <entry key="H1" value="3.921902273937042" />
-      <entry key="H2" value="9.245716901763728" />
-      <entry key="H4" value="31.60914013495668" />
-      <entry key="D1" value="177.09114835781682" />
-      <entry key="W1" value="258.50058525709863" />
+      <entry key="MS100" value="4.806539259837371E-153" />
+      <entry key="MS500" value="3.4384801166383484E-31" />
+      <entry key="S2" value="2.4602128703599934E-8" />
+      <entry key="S5" value="0.0011318233157693906" />
+      <entry key="S10" value="0.05108204389434585" />
+      <entry key="S30" value="0.7469981723398569" />
+      <entry key="S60" value="1.4909168129965293" />
+      <entry key="M2" value="2.11276019914627" />
+      <entry key="M5" value="2.606805975990983" />
+      <entry key="M10" value="2.797002513914829" />
+      <entry key="M15" value="2.8724371026084357" />
+      <entry key="M30" value="3.0963154436841562" />
+      <entry key="H1" value="3.921739925093697" />
+      <entry key="H2" value="9.245525534555377" />
+      <entry key="H4" value="31.60881301136687" />
+      <entry key="D1" value="177.09084290322502" />
+      <entry key="W1" value="258.5005215608852" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9802449186067818" />
-      <entry key="MS500" value="1.4252640820029554" />
-      <entry key="S2" value="4.320519276965308" />
-      <entry key="S5" value="7.430405950215519" />
-      <entry key="S10" value="9.35095100737725" />
-      <entry key="S30" value="11.702901660159963" />
-      <entry key="S60" value="13.183306214023984" />
-      <entry key="M2" value="15.383854487819558" />
-      <entry key="M5" value="21.7744678603965" />
-      <entry key="M10" value="29.54016146173922" />
-      <entry key="M15" value="35.64734909691" />
-      <entry key="M30" value="51.08896560627993" />
-      <entry key="H1" value="81.83457962961543" />
-      <entry key="H2" value="168.01900061582657" />
-      <entry key="H4" value="417.47666084257503" />
-      <entry key="D1" value="2080.269091780803" />
-      <entry key="W1" value="3104.498507855964" />
+      <entry key="MS100" value="1.4324068667376362" />
+      <entry key="MS500" value="2.797412098718775" />
+      <entry key="S2" value="5.937787061319689" />
+      <entry key="S5" value="9.182565388989936" />
+      <entry key="S10" value="11.197699368341903" />
+      <entry key="S30" value="13.639909564388036" />
+      <entry key="S60" value="15.148098647269714" />
+      <entry key="M2" value="17.363508640785735" />
+      <entry key="M5" value="23.763152707242877" />
+      <entry key="M10" value="31.532574596933546" />
+      <entry key="M15" value="37.641279801806576" />
+      <entry key="M30" value="53.08465243478969" />
+      <entry key="H1" value="83.83115027123138" />
+      <entry key="H2" value="170.01550207971218" />
+      <entry key="H4" value="419.47232992341725" />
+      <entry key="D1" value="2082.2655019004046" />
+      <entry key="W1" value="3106.497742638786" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -138,40 +132,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Hugo.Run.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;kronk.content.tree.expanded.paths&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.46642685&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.yaml&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Hugo.Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "android.gradle.sync.needed": "true",
+    "cidr.known.project.marker": "true",
+    "code.cleanup.on.save": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "kronk.content.tree.expanded.paths": "",
+    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.46642685",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -284,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783562853682</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+      <option name="closed" value="true" />
+      <created>1783567140555</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1783567140555</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +318,8 @@
     <MESSAGE value="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`)." />
     <MESSAGE value="style: refine multi-language coding standards and IDE formatting configurations&#10;&#10;- Enforce a space before the trailing slash in HTML self-closing tags (`codestyle/html/index.md`).&#10;- Update CSS guidelines to require property value alignment, enforce double quotes, and utilize shorthand hex color codes (`codestyle/css/index.md`).&#10;- Expand JavaScript and TypeScript style guides with explicit rules for object literal spacing, import spacing, and enforced trailing commas (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`).&#10;- Clarify Kotlin guidelines by removing allowed blank lines before right braces and explicitly referencing the `KOTLIN_OFFICIAL` code style defaults (`codestyle/kotlin/index.md`).&#10;- Configure the JetBrains IDE to use per-project code style settings (`codeStyleConfig.xml`).&#10;- Update JetBrains project code style settings (`Project.xml`) to enforce the newly defined formatting rules, margin limits, and indentation standards across HTML, JavaScript, TypeScript, and Kotlin.&#10;- Synchronize local JetBrains IDE workspace configuration state (`workspace.xml`).&#10;&#10;Signed-off-by: GuavaDealer (Idan Nehama) &lt;GuavaDealer@gmail.com&gt;" />
     <MESSAGE value="style: update JavaScript and TypeScript style guides to omit semicolons, what was I thinking previously?!&#10;&#10;- Revise JavaScript and TypeScript guidelines (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`) to avoid semicolons and rely on Automatic Semicolon Insertion (ASI) for statement termination.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="style: update JavaScript and TypeScript style guides to omit semicolons, what was I thinking previously?!&#10;&#10;- Revise JavaScript and TypeScript guidelines (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`) to avoid semicolons and rely on Automatic Semicolon Insertion (ASI) for statement termination.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <MESSAGE value="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
