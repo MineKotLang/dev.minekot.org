@@ -33,8 +33,7 @@ Import statements are managed according to the following guidelines:
 
 1. `Star imports`: `Wildcard (star) imports` are used when importing five or more names from a single package, or three or more members from a specific scope.
 2. `On-demand packages`: Packages such as `java.util.*`, `kotlinx.android.synthetic.**`, and `io.ktor.**` are imported on demand.
-3. `Import layout`: Imports are ordered as follows: wildcard imports, then `java.**`, then `javax.**`, then `kotlin.**`, then all other imports.
-4. `Nested classes` are not imported via `static import`.
+3. `Nested classes` are not imported via `static import`.
 
 ## 4 Formatting
 

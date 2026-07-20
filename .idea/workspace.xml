@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="feat: introduce comprehensive toolchain documentation and maintainer handbooks&#10;&#10;- Establish the primary MineKot Toolchain documentation section (`content/toolchain/_index.md`).&#10;- Publish a detailed &quot;Contributor Guide&quot; (`content/toolchain/contributions/`) covering local workspace setup, module architecture boundaries, strict coding standards (including the Kotlinx mandate and functional error handling), and testing strategies.&#10;- Introduce a &quot;Maintenance Handbook&quot; (`content/toolchain/maintenance/`) documenting CI/CD pipelines, Gradle configuration caching, release publishing workflows, and custom Detekt lint rule creation.&#10;- Revise the root homepage (`content/_index.md`) to refine the &quot;Getting started&quot; section and provide direct links to the newly added toolchain and code style resources.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="183" />
+    <option name="cachedIndexableFilesCount" value="181" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -56,61 +57,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5599880941770903" />
-      <entry key="MS500" value="2.866673899902934" />
-      <entry key="S2" value="5.999332505922249" />
-      <entry key="S5" value="9.26539680533774" />
-      <entry key="S10" value="11.233095126699949" />
-      <entry key="S30" value="13.02499231629742" />
-      <entry key="S60" value="13.777444578969597" />
-      <entry key="M2" value="15.334153951748299" />
-      <entry key="M5" value="21.19736824670166" />
-      <entry key="M10" value="28.7577294790948" />
-      <entry key="M15" value="34.78419054039854" />
-      <entry key="M30" value="49.99682704396925" />
-      <entry key="H1" value="79.91504723197775" />
-      <entry key="H2" value="160.77782966337068" />
-      <entry key="H4" value="387.8789386732801" />
-      <entry key="D1" value="1905.1912343988156" />
-      <entry key="W1" value="2848.0007469502457" />
+      <entry key="MS100" value="1.4204483023061498" />
+      <entry key="MS500" value="1.9660751138809354" />
+      <entry key="S2" value="4.922132077857285" />
+      <entry key="S5" value="9.261216147893286" />
+      <entry key="S10" value="12.291656909237753" />
+      <entry key="S30" value="15.240626391585083" />
+      <entry key="S60" value="16.358374548016204" />
+      <entry key="M2" value="18.100945688950304" />
+      <entry key="M5" value="24.07013062650932" />
+      <entry key="M10" value="31.672355308094676" />
+      <entry key="M15" value="37.715729147633716" />
+      <entry key="M30" value="52.948035419160426" />
+      <entry key="H1" value="82.87633998033701" />
+      <entry key="H2" value="163.73913885284404" />
+      <entry key="H4" value="390.8324397351107" />
+      <entry key="D1" value="1908.1532475197575" />
+      <entry key="W1" value="2850.9926361692173" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.806539259837371E-153" />
-      <entry key="MS500" value="3.4384801166383484E-31" />
-      <entry key="S2" value="2.4602128703599934E-8" />
-      <entry key="S5" value="0.0011318233157693906" />
-      <entry key="S10" value="0.05108204389434585" />
-      <entry key="S30" value="0.7469981723398569" />
-      <entry key="S60" value="1.4909168129965293" />
-      <entry key="M2" value="2.11276019914627" />
-      <entry key="M5" value="2.606805975990983" />
-      <entry key="M10" value="2.797002513914829" />
-      <entry key="M15" value="2.8724371026084357" />
-      <entry key="M30" value="3.0963154436841562" />
-      <entry key="H1" value="3.921739925093697" />
-      <entry key="H2" value="9.245525534555377" />
-      <entry key="H4" value="31.60881301136687" />
-      <entry key="D1" value="177.09084290322502" />
-      <entry key="W1" value="258.5005215608852" />
+      <entry key="MS100" value="1.60046949793561E-160" />
+      <entry key="MS500" value="1.0986250541206187E-32" />
+      <entry key="S2" value="1.0401439121129527E-8" />
+      <entry key="S5" value="8.020970783001519E-4" />
+      <entry key="S10" value="0.043002372315774064" />
+      <entry key="S30" value="0.7053330847756895" />
+      <entry key="S60" value="1.4487410648912722" />
+      <entry key="M2" value="2.082662445836372" />
+      <entry key="M5" value="2.591887693122844" />
+      <entry key="M10" value="2.7889876588034404" />
+      <entry key="M15" value="2.8669471358386476" />
+      <entry key="M30" value="3.093355100556305" />
+      <entry key="H1" value="3.919864716908151" />
+      <entry key="H2" value="9.243314862956058" />
+      <entry key="H4" value="31.605033838270852" />
+      <entry key="D1" value="177.08731387535758" />
+      <entry key="W1" value="258.4997856485619" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4324068667376362" />
-      <entry key="MS500" value="2.797412098718775" />
-      <entry key="S2" value="5.937787061319689" />
-      <entry key="S5" value="9.182565388989936" />
-      <entry key="S10" value="11.197699368341903" />
-      <entry key="S30" value="13.639909564388036" />
-      <entry key="S60" value="15.148098647269714" />
-      <entry key="M2" value="17.363508640785735" />
-      <entry key="M5" value="23.763152707242877" />
-      <entry key="M10" value="31.532574596933546" />
-      <entry key="M15" value="37.641279801806576" />
-      <entry key="M30" value="53.08465243478969" />
-      <entry key="H1" value="83.83115027123138" />
-      <entry key="H2" value="170.01550207971218" />
-      <entry key="H4" value="419.47232992341725" />
-      <entry key="D1" value="2082.2655019004046" />
-      <entry key="W1" value="3106.497742638786" />
+      <entry key="MS100" value="0.7619583528091355" />
+      <entry key="MS500" value="1.768868876732509" />
+      <entry key="S2" value="4.838501979036071" />
+      <entry key="S5" value="9.1777114785219" />
+      <entry key="S10" value="12.249070176674266" />
+      <entry key="S30" value="15.816885024287092" />
+      <entry key="S60" value="17.688061681149193" />
+      <entry key="M2" value="20.100290877173332" />
+      <entry key="M5" value="26.620790795940728" />
+      <entry key="M10" value="34.43902854568173" />
+      <entry key="M15" value="40.56721073444522" />
+      <entry key="M30" value="56.032835048393665" />
+      <entry key="H1" value="86.79053373514954" />
+      <entry key="H2" value="172.97458408860285" />
+      <entry key="H4" value="422.4220444623954" />
+      <entry key="D1" value="2085.2239847914925" />
+      <entry key="W1" value="3109.488895736571" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -131,40 +132,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Hugo.Run.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;kronk.content.tree.expanded.paths&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.46642685&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Hugo.Run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "android.gradle.sync.needed": "true",
+    "cidr.known.project.marker": "true",
+    "code.cleanup.on.save": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "kronk.content.tree.expanded.paths": "",
+    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.46642685",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -293,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783780168814</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+      <option name="closed" value="true" />
+      <created>1784576699422</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1784576699422</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +336,8 @@
     <MESSAGE value="style: update JavaScript and TypeScript style guides to omit semicolons, what was I thinking previously?!&#10;&#10;- Revise JavaScript and TypeScript guidelines (`codestyle/javascript/index.md`, `codestyle/typescript/index.md`) to avoid semicolons and rely on Automatic Semicolon Insertion (ASI) for statement termination.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="feat: introduce comprehensive toolchain documentation and maintainer handbooks&#10;&#10;- Establish the primary MineKot Toolchain documentation section (`content/toolchain/_index.md`).&#10;- Publish a detailed &quot;Contributor Guide&quot; (`content/toolchain/contributions/`) covering local workspace setup, module architecture boundaries, strict coding standards (including the Kotlinx mandate and functional error handling), and testing strategies.&#10;- Introduce a &quot;Maintenance Handbook&quot; (`content/toolchain/maintenance/`) documenting CI/CD pipelines, Gradle configuration caching, release publishing workflows, and custom Detekt lint rule creation.&#10;- Revise the root homepage (`content/_index.md`) to refine the &quot;Getting started&quot; section and provide direct links to the newly added toolchain and code style resources.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: introduce comprehensive toolchain documentation and maintainer handbooks&#10;&#10;- Establish the primary MineKot Toolchain documentation section (`content/toolchain/_index.md`).&#10;- Publish a detailed &quot;Contributor Guide&quot; (`content/toolchain/contributions/`) covering local workspace setup, module architecture boundaries, strict coding standards (including the Kotlinx mandate and functional error handling), and testing strategies.&#10;- Introduce a &quot;Maintenance Handbook&quot; (`content/toolchain/maintenance/`) documenting CI/CD pipelines, Gradle configuration caching, release publishing workflows, and custom Detekt lint rule creation.&#10;- Revise the root homepage (`content/_index.md`) to refine the &quot;Getting started&quot; section and provide direct links to the newly added toolchain and code style resources.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <MESSAGE value="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
