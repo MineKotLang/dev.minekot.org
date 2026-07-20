@@ -54,16 +54,7 @@ The global default indent size is four spaces, and the tab width is four spaces.
 
 `Trailing commas` are allowed and enforced in multiple contexts, including `collections`, `parameter lists`, and `type arguments`. Trailing commas are enabled for `collection literals`, `context receiver lists`, `destructuring declarations`, `function literals`, `indices`, `type argument lists`, `type parameter lists`, `value argument lists`, `value parameter lists`, and `when entries`.
 
-### 4.5 Parameter wrapping
-
-`Method declarations` and `method call parameters` are wrapped such that every item is on its own line.
-
-1. A new line is required immediately after the opening left parenthesis `(`.
-2. The closing right parenthesis `)` is placed on a new line following the final parameter.
-
-This applies to both method declarations and method calls. Parameters are aligned when multiline.
-
-### 4.6 String templates
+### 4.5 String templates
 
 When embedding variables, properties, or methods within a string template, curly braces (`${}`) are required. Omission of curly braces for simple variables is not allowed.
 
@@ -77,7 +68,7 @@ val greeting = "Hello, $name!"
 `````
 [//]: # (@formatter:on)
 
-### 4.7 Blank lines
+### 4.6 Blank lines
 
 No blank lines are kept before the `right braces` in code and declarations. There are no blank lines after `class headers` or around `block when branches`. One blank line is kept before declarations with comments or annotations on separate lines.
 
@@ -166,6 +157,7 @@ for (player in players) {
 [//]: # (@formatter:on)
 
 Traditional `for` loops are used when:
+
 - Early termination with `break` or `continue` is required
 - Index-based iteration is necessary
 - The loop body is complex and would benefit from explicit control flow
