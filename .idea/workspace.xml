@@ -7,9 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTICE" beforeDir="false" afterPath="$PROJECT_DIR$/NOTICE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/yaml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="181" />
+    <option name="cachedIndexableFilesCount" value="189" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -51,67 +53,71 @@
     <option name="customHugoPath" value="" />
     <option name="defaultHugoNewOptions" value="" />
   </component>
+  <component name="KmpPackageLockUpdaterState"><![CDATA[{
+  "jsModulesKotlinGradlePluginVersion": {},
+  "wasmModulesKotlinGradlePluginVersion": {}
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4204483023061498" />
-      <entry key="MS500" value="1.9660751138809354" />
-      <entry key="S2" value="4.922132077857285" />
-      <entry key="S5" value="9.261216147893286" />
-      <entry key="S10" value="12.291656909237753" />
-      <entry key="S30" value="15.240626391585083" />
-      <entry key="S60" value="16.358374548016204" />
-      <entry key="M2" value="18.100945688950304" />
-      <entry key="M5" value="24.07013062650932" />
-      <entry key="M10" value="31.672355308094676" />
-      <entry key="M15" value="37.715729147633716" />
-      <entry key="M30" value="52.948035419160426" />
-      <entry key="H1" value="82.87633998033701" />
-      <entry key="H2" value="163.73913885284404" />
-      <entry key="H4" value="390.8324397351107" />
-      <entry key="D1" value="1908.1532475197575" />
-      <entry key="W1" value="2850.9926361692173" />
+      <entry key="MS100" value="1.8872015209715332" />
+      <entry key="MS500" value="3.138323866839334" />
+      <entry key="S2" value="4.909541107234455" />
+      <entry key="S5" value="5.520359018295839" />
+      <entry key="S10" value="5.803574785328149" />
+      <entry key="S30" value="8.465145319088464" />
+      <entry key="S60" value="12.835230729642554" />
+      <entry key="M2" value="18.00193763131971" />
+      <entry key="M5" value="26.824020649928574" />
+      <entry key="M10" value="35.77905454637022" />
+      <entry key="M15" value="42.3955711489532" />
+      <entry key="M30" value="58.30717709064052" />
+      <entry key="H1" value="88.59132505451366" />
+      <entry key="H2" value="169.47268128477867" />
+      <entry key="H4" value="396.3236412601218" />
+      <entry key="D1" value="1913.9261530045733" />
+      <entry key="W1" value="2857.7306949652" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.60046949793561E-160" />
-      <entry key="MS500" value="1.0986250541206187E-32" />
-      <entry key="S2" value="1.0401439121129527E-8" />
-      <entry key="S5" value="8.020970783001519E-4" />
-      <entry key="S10" value="0.043002372315774064" />
-      <entry key="S30" value="0.7053330847756895" />
-      <entry key="S60" value="1.4487410648912722" />
-      <entry key="M2" value="2.082662445836372" />
-      <entry key="M5" value="2.591887693122844" />
-      <entry key="M10" value="2.7889876588034404" />
-      <entry key="M15" value="2.8669471358386476" />
-      <entry key="M30" value="3.093355100556305" />
-      <entry key="H1" value="3.919864716908151" />
-      <entry key="H2" value="9.243314862956058" />
-      <entry key="H4" value="31.605033838270852" />
-      <entry key="D1" value="177.08731387535758" />
-      <entry key="W1" value="258.4997856485619" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.182437488752192E-81" />
+      <entry key="S2" value="9.008883903906926E-21" />
+      <entry key="S5" value="1.2002119813768344E-8" />
+      <entry key="S10" value="1.6634430112930822E-4" />
+      <entry key="S30" value="0.11072170363976042" />
+      <entry key="S60" value="0.5739975284954876" />
+      <entry key="M2" value="1.3109270109638678" />
+      <entry key="M5" value="2.15377350421014" />
+      <entry key="M10" value="2.542368609738302" />
+      <entry key="M15" value="2.6953446256273352" />
+      <entry key="M30" value="2.9993495756214545" />
+      <entry key="H1" value="3.859843826762768" />
+      <entry key="H2" value="9.172275148097672" />
+      <entry key="H4" value="31.48334896702572" />
+      <entry key="D1" value="176.97349499152094" />
+      <entry key="W1" value="258.476044119897" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7619583528091355" />
-      <entry key="MS500" value="1.768868876732509" />
-      <entry key="S2" value="4.838501979036071" />
-      <entry key="S5" value="9.1777114785219" />
-      <entry key="S10" value="12.249070176674266" />
-      <entry key="S30" value="15.816885024287092" />
-      <entry key="S60" value="17.688061681149193" />
-      <entry key="M2" value="20.100290877173332" />
-      <entry key="M5" value="26.620790795940728" />
-      <entry key="M10" value="34.43902854568173" />
-      <entry key="M15" value="40.56721073444522" />
-      <entry key="M30" value="56.032835048393665" />
-      <entry key="H1" value="86.79053373514954" />
-      <entry key="H2" value="172.97458408860285" />
-      <entry key="H4" value="422.4220444623954" />
-      <entry key="D1" value="2085.2239847914925" />
-      <entry key="W1" value="3109.488895736571" />
+      <entry key="MS100" value="1.8669216321128226" />
+      <entry key="MS500" value="3.1233581514462516" />
+      <entry key="S2" value="4.902842601027015" />
+      <entry key="S5" value="5.517310383542237" />
+      <entry key="S10" value="5.801804885107924" />
+      <entry key="S30" value="8.554877338635224" />
+      <entry key="S60" value="13.361554429163832" />
+      <entry key="M2" value="19.260100852865627" />
+      <entry key="M5" value="28.943384064145334" />
+      <entry key="M10" value="38.30100154860518" />
+      <entry key="M15" value="45.07632124471519" />
+      <entry key="M30" value="61.29820328263035" />
+      <entry key="H1" value="92.44557065274617" />
+      <entry key="H2" value="178.63714020099752" />
+      <entry key="H4" value="427.791616968212" />
+      <entry key="D1" value="2090.883081453302" />
+      <entry key="W1" value="3116.2032132429317" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -134,6 +140,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "CidrDebugProfileConversion": "true",
     "Hugo.Run.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
@@ -162,7 +169,7 @@
     "project.structure.side.proportion": "0.46642685",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
+    "settings.editor.selected.configurable": "preferences.sourceCode.yaml",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
@@ -185,8 +192,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
       </set>
     </attachedChunks>
   </component>
@@ -302,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784576699422</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+      <option name="closed" value="true" />
+      <created>1784582512667</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1784582512667</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +352,8 @@
     <MESSAGE value="style: enforce IDE formatter exclusion tags and update Kotlin iteration guidelines&#10;&#10;- Wrap code examples across all multi-language style guides (CSS, Gradle, HTML, JavaScript, JSON, Kotlin, Markdown, TypeScript, XML, YAML) with `[//]: # (@formatter:off)` and `@formatter:on` tags to prevent IDE auto-formatting of intentionally incorrect snippets.&#10;- Expand the Kotlin Style Guide (`content/codestyle/kotlin/index.md`) to establish a new rule preferring `forEach` over traditional `for` loops for collection iteration.&#10;- Refine the &quot;incorrect&quot; code examples in the CSS, JSON, YAML, JavaScript, and TypeScript guides to more accurately demonstrate spacing, syntax, and structural rule violations.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="feat: introduce comprehensive toolchain documentation and maintainer handbooks&#10;&#10;- Establish the primary MineKot Toolchain documentation section (`content/toolchain/_index.md`).&#10;- Publish a detailed &quot;Contributor Guide&quot; (`content/toolchain/contributions/`) covering local workspace setup, module architecture boundaries, strict coding standards (including the Kotlinx mandate and functional error handling), and testing strategies.&#10;- Introduce a &quot;Maintenance Handbook&quot; (`content/toolchain/maintenance/`) documenting CI/CD pipelines, Gradle configuration caching, release publishing workflows, and custom Detekt lint rule creation.&#10;- Revise the root homepage (`content/_index.md`) to refine the &quot;Getting started&quot; section and provide direct links to the newly added toolchain and code style resources.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <MESSAGE value="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

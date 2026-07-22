@@ -199,7 +199,7 @@ The codebase prioritizes `self-documenting logic` through expressive naming and 
 
 ### 8.4 Comment formatting
 
-`Block comments` are placed at the first column. No space is added after the `block comment marker`. `Line comments` are placed at the first column. No space is added after the `line comment marker` on reformat. `First column comments` are preserved.
+`Block comments` are indented to the same level as the surrounding code. A space is added after the opening `/*` marker and before the closing `*/` marker. `Line comments` are indented to the same level as the surrounding code. A space is added after the `//` marker.
 
 ## Conclusion
 

@@ -29,7 +29,7 @@ Code identifiers, documentation, and user-facing strings are written in American
 
 ### 3.1 Indentation
 
-The global default indent size is four spaces, and the tab width is four spaces. The use of literal tab characters (`\t`) is structurally prohibited by the language standard and this guide; indentation must consist purely of spaces.
+The global default indent size is two spaces. The use of literal tab characters (`\t`) is structurally prohibited by the language standard and this guide; indentation must consist purely of spaces.
 
 ### 3.2 Column limit
 
