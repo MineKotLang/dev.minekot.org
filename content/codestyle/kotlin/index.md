@@ -77,17 +77,20 @@ No blank lines are kept before the `right braces` in code and declarations. Ther
 
 If a `Kotlin standard library` function, class, or data structure exists, it is used instead of its `Java` equivalent (e.g., use `Kotlin collections` over `java.util` equivalents).
 
-### 5.2 The Kotlinx mandate
+### 5.2 Kotlinx and MineKot APIs
 
-The `kotlinx` suite of libraries is used for `core system functionality`:
+Core system functionality uses APIs in this order:
 
-1. `kotlinx-serialization` is used for all data parsing and JSON handling.
-2. `kotlinx-io` is used for all file and stream operations.
-3. `kotlinx-coroutines` is used for all concurrent and asynchronous operations.
+1. Kotlin standard-library and `kotlinx` APIs.
+2. MineKot helper APIs when Kotlin and `kotlinx` do not provide the required capability.
+3. Platform or JDK APIs inside MineKot helper implementations and platform adapters.
+4. Documented native escape hatches when a portable abstraction would lose required behavior.
+
+`kotlinx-serialization` is used for serialization and supported data formats. `kotlinx-io` is used for portable file and stream operations. `kotlinx-coroutines` owns asynchronous lifecycles, cancellation, delays, and background concurrency. Missing portable capabilities are added to demand-driven MineKot helper libraries rather than repeatedly implemented by consumers.
 
 ### 5.3 Versioning
 
-Projects target the latest stable releases of the `Kotlin compiler`, the `standard library`, and all internal and external dependencies.
+Each MineKot release pins and tests an exact Kotlin, Java, Gradle, and toolchain dependency baseline. Projects use the baseline declared by their MineKot Toolchain release. Baseline upgrades are deliberate compatibility changes rather than an open-ended requirement to track untested latest versions.
 
 ### 5.4 Code style defaults
 
@@ -97,7 +100,9 @@ Kotlin code follows the official Kotlin code style defaults (`KOTLIN_OFFICIAL`) 
 
 ### 6.1 Error handling
 
-Standard `try-catch` blocks are not used. Exception handling is managed functionally using `Kotlin's` `runCatching` API. The resulting `Result` type is handled using `onSuccess`, `onFailure`, `getOrElse`, or `getOrNull`.
+Recoverable failures are represented with `Result`. Consumer code uses typed MineKot catching helpers that convert only declared recoverable exception types to `Result.failure`, always preserve coroutine cancellation, and rethrow unrelated or fatal failures. Results are handled explicitly with transformations or terminal operations such as `onSuccess`, `onFailure`, `recover`, `getOrElse`, and `getOrNull`.
+
+Structured `try-catch` and `try-finally` remain valid inside exception-boundary helpers, platform adapters, exception translation, and cleanup logic where Result chains cannot express the required semantics safely. Broad catches, swallowed failures, and cancellation conversion are not allowed.
 
 ### 6.2 Explicit scope resolution
 
@@ -131,15 +136,15 @@ class MineKotEngine {
 
 ### 6.3 Concurrency
 
-`Kotlin Coroutines` are preferred over standard `threading loops` or legacy `server schedulers` (such as `Bukkit/Paper schedulers`) for all `asynchronous` and `delayed tasks`. `Database operations` and queries are executed asynchronously to prevent `thread blocking`.
+Kotlin coroutines own asynchronous lifecycles, cancellation, delays, and background concurrency. Portable code uses MineKot platform dispatch abstractions when work must enter a platform-owned thread. Direct Bukkit, Paper, Fabric, NeoForge, or Velocity scheduler access is restricted to platform adapters implementing those abstractions. Blocking database and IO operations run on appropriate dispatchers and never block platform event threads.
 
 ### 6.4 Spacing
 
 Spaces are used around `additive`, `assignment`, `equality`, `logical`, `multiplicative`, and `relational operators`. Spaces are used around the `elvis operator`, `function type` arrows, and `when` arrows. No spaces are used around the `range operator` or `unary operators`. A space is used before the `lambda arrow`. Spaces are used after `commas`, after `extend colons`, and after `type colons`. No space is used before `commas` or before `type colons`. A space is used before `extend colons`.
 
-### 6.5 forEach loops
+### 6.5 Iteration
 
-`forEach` is preferred over traditional `for` loops when iterating over collections, arrays, or sequences, provided the loop body does not require early termination (`break` or `continue`). `forEach` provides a more functional and idiomatic approach to iteration.
+`for` loops and `forEach` are selected by semantics and readability; neither form is universally preferred. `forEach` suits simple side-effect iteration without non-local control flow. `for` loops suit `break` or `continue`, mutation-sensitive logic, indexed traversal, suspend/control-flow clarity, and cases where loop syntax is simpler.
 
 [//]: # (@formatter:off)
 `````kotlin
@@ -148,18 +153,14 @@ players.forEach { player ->
     player.sendMessage("Welcome!")
 }
 
-// Incorrect
+// Also correct
 for (player in players) {
     player.sendMessage("Welcome!")
 }
 `````
 [//]: # (@formatter:on)
 
-Traditional `for` loops are used when:
-
-- Early termination with `break` or `continue` is required
-- Index-based iteration is necessary
-- The loop body is complex and would benefit from explicit control flow
+Automatic conversion between these forms is allowed only when receiver evaluation, iteration order, mutation behavior, labels, and control flow are proven equivalent.
 
 ## 7 Architecture and design
 
@@ -167,9 +168,11 @@ Traditional `for` loops are used when:
 
 The codebase is `data-driven`. Behavior, `configuration parameters`, and `structural logic` are abstracted into `data structures` or `serialization formats` rather than being baked directly into the execution flow.
 
-### 7.2 Zero hardcoding
+### 7.2 Intent-based value extraction
 
-Hardcoding `user-facing strings`, `magic numbers`, or `strict logic paths` is not allowed. The implementation utilizes `configuration managers` and `data serialization`.
+Values are extracted into constants, localization, configuration, or serialized data when meaning, reuse, deployment variance, user customization, or localization requires it. Unexplained domain literals, duplicated user-facing text, credentials, environment-specific paths or endpoints, and behavior intended to vary between deployments are not embedded directly in execution flow.
+
+Local structural syntax, protocol-defined constants, one-use obvious values, generated-source templates, named algorithm constants, and stable defaults may remain in source when extraction or configuration would not improve meaning, reuse, safety, or adaptability.
 
 ### 7.3 Modular decoupling
 
@@ -181,17 +184,21 @@ To eliminate `boilerplate code`, `internal utility extension functions` are crea
 
 ### 7.5 Text and localization
 
-`MiniMessage` is used exclusively for all `UI text`, `console output`, and `logging`, regardless of whether the project is `Minecraft-related` or not. Legacy `color codes` (e.g., `&` or `§`) and standard `string concatenations` are not used for user-facing text across all repositories.
+MiniMessage is required for rich user-facing text on Adventure-capable surfaces such as chat, UI components, and interactive messages. Localizable text uses localization keys or templates with explicit placeholders. Legacy color codes such as `&` and `§` and string concatenation are not used to construct rich user-facing components.
+
+Structured logs, exceptions, build output, diagnostics, protocol values, file formats, and machine-readable output remain plain or structured text unless their destination explicitly supports Adventure components.
 
 ## 8 Documentation and comments
 
-### 8.1 Method documentation
+### 8.1 API documentation
 
-Every method requires a complete `KDoc` block explaining its purpose, parameters (`@param`), and return type (`@return`).
+Public and protected APIs require KDoc that explains their consumer-visible contract. Internal declarations require KDoc when behavior, invariants, lifecycle, ownership, failure semantics, threading, or usage constraints are not obvious from names and types. Private declarations, self-evident internal declarations, and overrides that add no contract are exempt.
 
-### 8.2 Variable documentation
+Parameter, property, and return tags are included only when their prose adds information beyond the declaration's names and types. Generated or placeholder documentation that merely restates a signature is not allowed.
 
-`KDoc` is required for "complicated" variables. This includes `collections` (`Map`, `List`, `Set`), `complex state holders`, and instances where the behavior is not immediately evident from the property name alone. Simple, self-evident primitives do not require `KDoc`.
+### 8.2 Property documentation
+
+Properties follow the same contract-based policy. Collections and state holders do not require KDoc solely because of their type; documentation is required when mutation, ownership, synchronization, lifecycle, units, bounds, or other non-obvious semantics matter.
 
 ### 8.3 Inline comments
 

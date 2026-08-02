@@ -108,7 +108,7 @@ dependencies { implementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0") }
 `````
 [//]: # (@formatter:on)
 
-### 4.4 Dependency declarations
+### 4.5 Dependency declarations
 
 Dependency declarations use the string notation with explicit version numbers or version catalogs:
 
@@ -226,19 +226,22 @@ tasks.named("check") {
 
 ### 6.3 Task configuration avoidance
 
-Task configuration avoidance is used to improve build performance. Tasks are configured lazily when possible:
+Task configuration avoidance is used to improve build performance. `register` creates tasks lazily, `named` configures a known task lazily, and `withType().configureEach` configures every realized task of a type without eagerly realizing the collection:
 
 [//]: # (@formatter:off)
 `````kotlin
-// Correct
+// Correct - Known task
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
-// Incorrect
+// Correct - Every realized task of a type
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
+
+// Incorrect - Eager lookup
+tasks.getByName<Test>("test").useJUnitPlatform()
 `````
 [//]: # (@formatter:on)
 
@@ -252,9 +255,9 @@ Repositories are declared in the repositories block:
 `````kotlin
 // Correct
 repositories {
-    mavenCentral()
-    maven("https://maven.fabricmc.net/")
     mavenLocal()
+    maven("https://maven.fabricmc.net/")
+    mavenCentral()
 }
 
 // Incorrect
@@ -282,9 +285,9 @@ Type-safe accessors are used for plugin extensions:
 [//]: # (@formatter:off)
 `````kotlin
 // Correct
-tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = "17"
+tasks.withType<KotlinJvmCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
@@ -476,19 +479,23 @@ configurations.create("integration_test_implementation")
 
 ## 12 Architecture and design
 
-### 12.1 Declarative builds
+### 12.1 Pinned compatibility baseline
+
+Each MineKot Toolchain release declares and tests exact Java, Gradle, Kotlin, and Detekt versions. Build scripts use that release baseline rather than assuming compatibility with arbitrary newer or older versions. Baseline changes are reviewed and tested as explicit compatibility work.
+
+### 12.2 Declarative builds
 
 Build scripts are declarative rather than imperative. Configuration is done through plugins and extensions rather than imperative logic.
 
-### 12.2 Convention over configuration
+### 12.3 Convention over configuration
 
 Convention plugins are used to establish project standards. Individual projects override conventions only when necessary.
 
-### 12.3 Build logic separation
+### 12.4 Build logic separation
 
 Build logic is separated from project code. Complex build logic is implemented in convention plugins or custom task classes, not inline in build scripts.
 
-### 12.4 Reproducible builds
+### 12.5 Reproducible builds
 
 Builds are configured to be reproducible:
 
@@ -507,12 +514,12 @@ Complex build logic is documented with KDoc:
 `````kotlin
 /**
  * Configures the Kotlin compilation for the project.
- * Sets the JVM target to 17 and enables explicit API mode.
+ * Sets the JVM target to 21 and enables explicit API mode.
  */
 fun Project.configureKotlinCompilation() {
-    tasks.withType<KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = "17"
+    tasks.withType<KotlinJvmCompile>().configureEach {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
 }

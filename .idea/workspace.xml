@@ -7,11 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`).">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: refine Kotlin comment formatting and YAML indentation guidelines&#10;&#10;- Revise the Kotlin Style Guide to require block and line comments to align with the surrounding code's indentation and enforce explicit spacing around comment markers (`content/codestyle/kotlin/index.md`).&#10;- Update the YAML Style Guide to reduce the global default indent size from four spaces to two spaces (`content/codestyle/yaml/index.md`).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTICE" beforeDir="false" afterPath="$PROJECT_DIR$/NOTICE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/codestyle/yaml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="189" />
+    <option name="cachedIndexableFilesCount" value="200" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -53,10 +50,10 @@
     <option name="customHugoPath" value="" />
     <option name="defaultHugoNewOptions" value="" />
   </component>
-  <component name="KmpPackageLockUpdaterState"><![CDATA[{
-  "jsModulesKotlinGradlePluginVersion": {},
-  "wasmModulesKotlinGradlePluginVersion": {}
-}]]></component>
+  <component name="KmpPackageLockUpdaterState">{
+  &quot;jsModulesKotlinGradlePluginVersion&quot;: {},
+  &quot;wasmModulesKotlinGradlePluginVersion&quot;: {}
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -138,41 +135,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CidrDebugProfileConversion": "true",
-    "Hugo.Run.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "android.gradle.sync.needed": "true",
-    "cidr.known.project.marker": "true",
-    "code.cleanup.on.save": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "kronk.content.tree.expanded.paths": "",
-    "last_opened_file_path": "/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.46642685",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.yaml",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
+    &quot;Hugo.Run.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;kronk.content.tree.expanded.paths&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/mnt/PortableSSD/Documents/code/__Minecraft/MineKot/Repositories/dev.minekot.org&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.46642685&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.yaml&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -192,8 +189,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -353,7 +350,8 @@
     <MESSAGE value="feat: introduce comprehensive toolchain documentation and maintainer handbooks&#10;&#10;- Establish the primary MineKot Toolchain documentation section (`content/toolchain/_index.md`).&#10;- Publish a detailed &quot;Contributor Guide&quot; (`content/toolchain/contributions/`) covering local workspace setup, module architecture boundaries, strict coding standards (including the Kotlinx mandate and functional error handling), and testing strategies.&#10;- Introduce a &quot;Maintenance Handbook&quot; (`content/toolchain/maintenance/`) documenting CI/CD pipelines, Gradle configuration caching, release publishing workflows, and custom Detekt lint rule creation.&#10;- Revise the root homepage (`content/_index.md`) to refine the &quot;Getting started&quot; section and provide direct links to the newly added toolchain and code style resources.&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="style: refine Kotlin style guide rules and update IDE Markdown settings&#10;&#10;- Remove the &quot;Parameter wrapping&quot; section from the Kotlin Style Guide and update subsequent heading numbers (`content/codestyle/kotlin/index.md`).&#10;- Fix Markdown formatting by adding a required blank line before the condition list for traditional `for` loop usage (`content/codestyle/kotlin/index.md`).&#10;- Enable the experimental Compose panel provider for Markdown previews in the JetBrains IDE settings (`.idea/markdown.xml`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <MESSAGE value="style: refine Kotlin comment formatting and YAML indentation guidelines&#10;&#10;- Revise the Kotlin Style Guide to require block and line comments to align with the surrounding code's indentation and enforce explicit spacing around comment markers (`content/codestyle/kotlin/index.md`).&#10;- Update the YAML Style Guide to reduce the global default indent size from four spaces to two spaces (`content/codestyle/yaml/index.md`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="style: refine Kotlin comment formatting and YAML indentation guidelines&#10;&#10;- Revise the Kotlin Style Guide to require block and line comments to align with the surrounding code's indentation and enforce explicit spacing around comment markers (`content/codestyle/kotlin/index.md`).&#10;- Update the YAML Style Guide to reduce the global default indent size from four spaces to two spaces (`content/codestyle/yaml/index.md`)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
