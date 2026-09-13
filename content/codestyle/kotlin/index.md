@@ -162,6 +162,47 @@ for (player in players) {
 
 Automatic conversion between these forms is allowed only when receiver evaluation, iteration order, mutation behavior, labels, and control flow are proven equivalent.
 
+### 6.6 Property assignment
+
+Property assignment uses the `=` operator instead of `.set()` methods. The `=` syntax is more idiomatic, concise, and consistent with Kotlin's property system.
+
+[//]: # (@formatter:off)
+`````kotlin
+// Correct
+player.displayName = "New Name"
+config.maxPlayers = 100
+
+// Incorrect
+player.setDisplayName("New Name")
+config.setMaxPlayers(100)
+`````
+[//]: # (@formatter:on)
+
+The `.set()` pattern is only used when required by a third-party API that does not provide property assignment syntax.
+
+### 6.7 No hardcoding
+
+User-facing text, messages, and labels are not hardcoded directly in source code. All localizable strings are defined in language files and referenced through localization keys. This enables internationalization, easy updates without code changes, and consistency across the codebase.
+
+[//]: # (@formatter:off)
+`````kotlin
+// Correct
+player.sendMessage(Component.text(translate("messages.welcome", player.locale)))
+
+// Incorrect
+player.sendMessage(Component.text("Welcome to the server!"))
+`````
+[//]: # (@formatter:on)
+
+Language files are organized by locale (e.g., `en_us.lang`, `de_de.lang`) and stored in the appropriate 'resources' directory. Keys follow a hierarchical naming convention (e.g., `category.subcategory.message`) to maintain organization and prevent conflicts.
+
+Exceptions to this rule include:
+
+- Technical error messages intended for developers
+- Debug or diagnostic output
+- Protocol-defined constants and identifiers
+- Generated or template-based content where localization is not applicable
+
 ## 7 Architecture and design
 
 ### 7.1 Data-driven design
