@@ -9,7 +9,7 @@ weight: 1
 
 This document serves as the complete definition of MineKot's coding standards for source code in the `Kotlin Programming Language`. A `Kotlin` source file is described as being in MineKot Style if and only if it adheres to the rules herein.
 
-All projects under the MineKot umbrella are open-source and licensed under the `Apache License 2.0`. This guide builds upon the official `Kotlin` coding conventions, enforcing architectural and stylistic overrides tailored for the MineKot ecosystem.
+All projects under the MineKot umbrella are open-source and licensed under the `Apache License 2.0`. This guide builds upon the official `Kotlin` coding conventions, enforcing architectural and stylistic overrides tailored for the MineKot ecosystem. Any aspect not explicitly covered by this guide follows the official Kotlin coding conventions.
 
 ## 2 Source file basics
 
@@ -248,6 +248,10 @@ The codebase prioritizes `self-documenting logic` through expressive naming and 
 ### 8.4 Comment formatting
 
 `Block comments` are indented to the same level as the surrounding code. A space is added after the opening `/*` marker and before the closing `*/` marker. `Line comments` are indented to the same level as the surrounding code. A space is added after the `//` marker.
+
+### 8.5 Test comments
+
+Comments are allowed and encouraged in test code. Test comments explain test intent, describe edge cases, document expected behavior, and clarify complex test scenarios. Unlike production code, test code benefits from explicit documentation of what is being tested and why.
 
 ## Conclusion
 

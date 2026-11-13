@@ -78,6 +78,7 @@ Formatter control tags are enabled. Code regions can be excluded from formatting
 val matrix = intArrayOf(1,2,3,4,5,6,7,8,9)
 // @formatter:on
 `````
+
 [//]: # (@formatter:on)
 
 ### 4.3 Indentation
@@ -110,7 +111,7 @@ dependencies { implementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0") }
 
 ### 4.5 Dependency declarations
 
-Dependency declarations use the string notation with explicit version numbers or version catalogs:
+Dependency declarations must use version catalogs. Inline version strings are not allowed:
 
 [//]: # (@formatter:off)
 `````kotlin
@@ -120,15 +121,14 @@ dependencies {
     testImplementation(libs.junit.jupiter)
 }
 
-// Correct - Explicit version
-dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
-}
-
 // Incorrect - Short notation
 dependencies {
     implementation(kotlin("stdlib"))
+}
+
+// Incorrect - Inline version
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
 }
 `````
 [//]: # (@formatter:on)
@@ -137,7 +137,7 @@ dependencies {
 
 ### 5.1 Version catalogs
 
-Version catalogs are used for dependency management. The `libs.versions.toml` file defines all library versions:
+Version catalogs are required for all dependency management. The `libs.versions.toml` file defines all library versions, and build scripts must reference dependencies through the catalog rather than using inline version strings.
 
 [//]: # (@formatter:off)
 `````toml
@@ -339,17 +339,27 @@ Subproject configuration is done in individual build files or through convention
 
 [//]: # (@formatter:off)
 `````kotlin
-// Correct-Convention plugin
+// Correct - Convention plugin
 plugins {
     id("minekot.library")
 }
 
 // Correct - Individual configuration
 dependencies {
-    implementation(project(":core"))
+    implementation(projects.core)
 }
 
-// Incorrect - Root project configuration
+// Also correct - allProjects/subProjects for cross-cutting configuration
+allprojects {
+    group = "org.minekot"
+    version = "1.0.0"
+}
+
+subprojects {
+    apply(plugin = "java")
+}
+
+// Incorrect - Overly specific configuration in subprojects
 subprojects {
     dependencies {
         implementation(project(":core"))
@@ -358,19 +368,27 @@ subprojects {
 `````
 [//]: # (@formatter:on)
 
+`allProjects` and `subProjects` are allowed for cross-cutting configuration such as group, version, repository settings, and plugin application that applies uniformly across projects. Project-specific configuration remains in individual build files or convention plugins. With `NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS` enabled, dependencies and configurations are not implicitly resolved from parent projects.
+
 ### 9.3 Project dependencies
 
-Project dependencies use the `project()` notation:
+Project dependencies use type-safe project accessors enabled by `TYPESAFE_PROJECT_ACCESSORS`:
 
 [//]: # (@formatter:off)
 `````kotlin
-// Correct
+// Correct - Type-safe project accessor
+dependencies {
+    implementation(projects.core)
+    testImplementation(projects.core.test)
+}
+
+// Incorrect - String-based project notation
 dependencies {
     implementation(project(":core"))
     testImplementation(project(":core", "test"))
 }
 
-// Incorrect
+// Incorrect - File-based dependencies
 dependencies {
     implementation(files("../core/build/libs/core.jar"))
 }
@@ -416,18 +434,27 @@ abstract class GenerateDocumentation : DefaultTask() {
     }
 }
 
-// Incorrect - Inline task logic
+// Also correct - Simple doFirst/doLast for task hooks
+tasks.named("build") {
+    doLast {
+        println("Build completed")
+    }
+}
+
+// Incorrect - Complex inline logic
 tasks.register("generateDocumentation") {
     doLast {
-        // Complex inline logic
+        // Complex inline logic that should be a task class
     }
 }
 `````
 [//]: # (@formatter:on)
 
+`doFirst` and `doLast` blocks are allowed for simple task hooks, logging, and lightweight operations. Complex logic is extracted to task classes.
+
 ### 10.3 Build script compilation
 
-Build scripts are compiled for type safety. Dynamic Groovy methods are forbidden.
+Build scripts are compiled for type safety. Dynamic Groovy methods are forbidden. `GROOVY_COMPILATION_AVOIDANCE` is enabled to avoid unnecessary Groovy compilation overhead.
 
 ## 11 Naming conventions
 
@@ -504,6 +531,27 @@ Builds are configured to be reproducible:
 3. Resolution rules for conflict resolution
 4. Build cache enabled
 
+### 12.6 Feature previews
+
+Gradle feature previews are enabled in `settings.gradle.kts` to leverage stable, performance-improving, and type-safe features:
+
+[//]: # (@formatter:off)
+`````kotlin
+// settings.gradle.kts
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+enableFeaturePreview("GROOVY_COMPILATION_AVOIDANCE")
+enableFeaturePreview("NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS")
+`````
+[//]: # (@formatter:on)
+
+The following feature previews are required:
+
+1. **TYPESAFE_PROJECT_ACCESSORS**: Enables type-safe project accessors instead of string-based project references.
+2. **STABLE_CONFIGURATION_CACHE**: Enables the configuration cache for faster builds.
+3. **GROOVY_COMPILATION_AVOIDANCE**: Avoids unnecessary Groovy compilation.
+4. **NO_IMPLICIT_LOOKUP_IN_PARENT_PROJECTS**: Prevents implicit lookups in parent projects, improving build script clarity and performance.
+
 ## 13 Documentation and comments
 
 ### 13.1 Build script documentation
@@ -565,7 +613,7 @@ Task configuration avoidance is used to improve build performance. Tasks are con
 
 ### 14.2 Build cache
 
-The build cache is enabled for reproducible and faster builds:
+The build cache is enabled for reproducible and faster builds. `STABLE_CONFIGURATION_CACHE` is enabled to cache configuration phase results:
 
 [//]: # (@formatter:off)
 `````kotlin

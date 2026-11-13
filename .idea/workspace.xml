@@ -7,17 +7,86 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: refine and clarify Gradle and Kotlin style guides&#10;&#10;- **Gradle Style Guide (`content/codestyle/gradle/index.md`):**&#10;    - Update Kotlin compilation examples to use `KotlinJvmCompile`, `compilerOptions`, and target `JvmTarget.JVM_21`.&#10;    - Clarify task configuration avoidance APIs (`register`, `named`, `withType().configureEach`) and add an example for incorrect eager lookup.&#10;    - Introduce a &quot;Pinned compatibility baseline&quot; rule, stating that toolchain releases use exact, tested versions of Java, Gradle, and Kotlin.&#10;    - Reorder repository declarations in an example to place `mavenLocal()` first.&#10;&#10;- **Kotlin Style Guide (`content/codestyle/kotlin/index.md`):**&#10;    - Revise API usage guidelines to establish a clear hierarchy: stdlib/`kotlinx`, MineKot helpers, and platform APIs.&#10;    - Replace the &quot;use latest stable&quot; versioning rule with a policy of using the pinned baseline from the current MineKot Toolchain release.&#10;    - Refine error handling rules to promote `Result` for recoverable failures via typed helpers, while clarifying valid uses for `try-catch`.&#10;    - Update the iteration rule to treat `for` loops and `forEach` as semantically distinct choices rather than preferring one form.&#10;    - Evolve the &quot;zero hardcoding&quot; rule into a more nuanced &quot;intent-based value extraction&quot; guideline.&#10;    - Clarify that `MiniMessage` is for rich text on Adventure-capable surfaces, while other outputs remain plain text.&#10;    - Adjust KDoc rules to focus on documenting non-obvious contracts for public/protected APIs and properties, discouraging redundant documentation.">
+    <list default="true" id="3223c53f-2898-49bc-8677-8bbf28139031" name="Changes" comment="style: update Kotlin style guide and synchronize IDE workspace settings&#10;&#10;- Add new sections for property assignment (`=` over `.set()`) and localization rules to the Kotlin Style Guide (`content/codestyle/kotlin/index.md`).&#10;- Remove outdated Markdown settings file (`.idea/markdown.xml`) and update IDE workspace configuration state (`.idea/workspace.xml`).">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/hugo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/hugo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FlexibleTailwindSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlexibleTailwindSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/externalDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/externalDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archetypes/default.md" beforeDir="false" afterPath="$PROJECT_DIR$/archetypes/default.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/chroma-catppuccin-core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/chroma-catppuccin-core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-catppuccin-core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-catppuccin-latte.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-latte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-catppuccin-mocha.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-catppuccin-mocha.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/theme-core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/minekot-flat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/minekot-flat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/css/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/css/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/gradle/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/gradle/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/html/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/html/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/javascript/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/javascript/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/json/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/json/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/kotlin/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/markdown/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/markdown/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/typescript/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/typescript/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/xml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/xml/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/codestyle/yaml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/codestyle/yaml/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/contributions/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/contributions/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/contributions/architecture/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/contributions/architecture/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/contributions/setup/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/contributions/setup/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/contributions/style-guide/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/contributions/style-guide/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/contributions/testing/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/contributions/testing/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/maintenance/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/maintenance/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/maintenance/ci-cd/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/maintenance/ci-cd/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/maintenance/lint-rules/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/maintenance/lint-rules/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/toolchain/maintenance/publishing/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/toolchain/maintenance/publishing/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i18n/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/_relearn/boxStyle.gotmpl" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/_relearn/boxStyle.gotmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/custom-footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/custom-footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/custom-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/custom-header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/favicon.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/favicon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/menu-footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/menu-footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schemas/hugo.json" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/hugo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/static/CNAME" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DBNavigator.Project.Workspace.Settings">
+    <assistant-settings>
+      <credential-settings>
+        <credentials />
+      </credential-settings>
+      <profile-settings>
+        <profiles />
+      </profile-settings>
+      <mcp-server-settings>
+        <workspace-integration value="false" />
+        <mcp-servers />
+        <mcp-tool-approvals />
+      </mcp-server-settings>
+    </assistant-settings>
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="210" />
+    <option name="cachedIndexableFilesCount" value="139" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -55,6 +124,9 @@
   &quot;jsModulesKotlinGradlePluginVersion&quot;: {},
   &quot;wasmModulesKotlinGradlePluginVersion&quot;: {}
 }</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="1sYlXMGu" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -62,60 +134,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000001743805" />
-      <entry key="S2" value="1.0042165991594754" />
-      <entry key="S5" value="1.1565685360504867" />
-      <entry key="S10" value="1.5506483067274697" />
-      <entry key="S30" value="2.296312462172587" />
-      <entry key="S60" value="2.6094157107012186" />
-      <entry key="M2" value="2.7939020322499886" />
-      <entry key="M5" value="2.9353558428475788" />
-      <entry key="M10" value="4.050326854711791" />
-      <entry key="M15" value="7.348145238827749" />
-      <entry key="M30" value="22.90223822819216" />
-      <entry key="H1" value="56.495620683341656" />
-      <entry key="H2" value="135.29960816531232" />
-      <entry key="H4" value="351.6026193878694" />
-      <entry key="D1" value="1878.8103271239645" />
-      <entry key="W1" value="2861.9414628789777" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000019365483666" />
+      <entry key="S60" value="1.0023963042366906" />
+      <entry key="M2" value="1.0846662871047938" />
+      <entry key="M5" value="1.7248706129161708" />
+      <entry key="M10" value="3.0127504840254313" />
+      <entry key="M15" value="5.610106700658158" />
+      <entry key="M30" value="19.14030357487596" />
+      <entry key="H1" value="51.28032725959148" />
+      <entry key="H2" value="128.64041117777964" />
+      <entry key="H4" value="342.5056786841404" />
+      <entry key="D1" value="1870.7085325785017" />
+      <entry key="W1" value="2860.956692603023" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="6.621005864291172E-194" />
-      <entry key="S10" value="2.5731334125687094E-97" />
-      <entry key="S30" value="6.475852224879855E-33" />
-      <entry key="S60" value="9.828406693954202E-17" />
-      <entry key="M2" value="1.63791269717907E-8" />
-      <entry key="M5" value="0.001686973052960114" />
-      <entry key="M10" value="0.08159162618070705" />
-      <entry key="M15" value="0.2988806298146703" />
-      <entry key="M30" value="1.1365801581527388" />
-      <entry key="H1" value="2.58897206260955" />
-      <entry key="H2" value="7.418497836622826" />
-      <entry key="H4" value="27.7331235945179" />
-      <entry key="D1" value="173.342390737228" />
-      <entry key="W1" value="258.50051160351774" />
+      <entry key="S5" value="2.381815764961436E-230" />
+      <entry key="S10" value="1.5433143725292918E-115" />
+      <entry key="S30" value="5.461278138165539E-39" />
+      <entry key="S60" value="9.025718862676549E-20" />
+      <entry key="M2" value="4.963523597864729E-10" />
+      <entry key="M5" value="4.165890802819979E-4" />
+      <entry key="M10" value="0.04054576111471029" />
+      <entry key="M15" value="0.18751284159774637" />
+      <entry key="M30" value="0.900257385354197" />
+      <entry key="H1" value="2.304149613712113" />
+      <entry key="H2" value="6.9985429154462935" />
+      <entry key="H4" value="26.936713985992963" />
+      <entry key="D1" value="172.50264294378002" />
+      <entry key="W1" value="258.32124024580327" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6029039138453802" />
-      <entry key="MS500" value="0.9037527269058574" />
-      <entry key="S2" value="0.9790951642744519" />
-      <entry key="S5" value="1.1441035933251311" />
-      <entry key="S10" value="1.5411196810402317" />
-      <entry key="S30" value="2.290960184429941" />
-      <entry key="S60" value="2.6062725578728543" />
-      <entry key="M2" value="2.7921918927377347" />
-      <entry key="M5" value="2.936298449841401" />
-      <entry key="M10" value="4.130959414009716" />
-      <entry key="M15" value="7.6453098255763985" />
-      <entry key="M30" value="24.035813014942388" />
-      <entry key="H1" value="59.08106119783653" />
-      <entry key="H2" value="142.71204046968586" />
-      <entry key="H4" value="379.32240624067873" />
-      <entry key="D1" value="2052.136542396035" />
-      <entry key="W1" value="3120.438456054296" />
+      <entry key="MS100" value="0.8293195458144417" />
+      <entry key="MS500" value="0.963261894020148" />
+      <entry key="S2" value="0.9906861581012825" />
+      <entry key="S5" value="0.9962640014981925" />
+      <entry key="S10" value="0.9981302527717475" />
+      <entry key="S30" value="0.9993782941151427" />
+      <entry key="S60" value="1.0020815501953058" />
+      <entry key="M2" value="1.0844585171557242" />
+      <entry key="M5" value="1.7250410034314438" />
+      <entry key="M10" value="3.0527884597922434" />
+      <entry key="M15" value="5.796522130572937" />
+      <entry key="M30" value="20.038170081786696" />
+      <entry key="H1" value="53.58132864534583" />
+      <entry key="H2" value="135.63322932635566" />
+      <entry key="H4" value="369.4294376187832" />
+      <entry key="D1" value="2043.1950782016777" />
+      <entry key="W1" value="3119.2744168297295" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -148,11 +220,15 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "android.gradle.sync.needed": "true",
     "cidr.known.project.marker": "true",
     "code.cleanup.on.save": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
+    "git.auto.fetch.suggestion.counter": "1",
+    "io.kotzilla.koin.inspectionDefaultResetVersion": "1",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "kronk.content.tree.expanded.paths": "",
@@ -167,7 +243,7 @@
     "project.structure.side.proportion": "0.46642685",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Settings.Markdown",
+    "settings.editor.selected.configurable": "actions.on.save",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
@@ -190,8 +266,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+        <option value="bundled-jdk-30f59d01ecdd-2df11533d9fe-intellij.indexing.shared.core-IU-262.11879.100" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.11879.100" />
       </set>
     </attachedChunks>
   </component>
@@ -353,10 +429,15 @@
     <MESSAGE value="style: remove import layout rule from the Kotlin style guide&#10;&#10;- Remove the explicit &quot;Import layout&quot; ordering rule from the Kotlin Style Guide and adjust the subsequent list numbering (`content/codestyle/kotlin/index.md`).&#10;- Synchronize local JetBrains IDE workspace configuration state (`.idea/workspace.xml`)." />
     <MESSAGE value="style: refine Kotlin comment formatting and YAML indentation guidelines&#10;&#10;- Revise the Kotlin Style Guide to require block and line comments to align with the surrounding code's indentation and enforce explicit spacing around comment markers (`content/codestyle/kotlin/index.md`).&#10;- Update the YAML Style Guide to reduce the global default indent size from four spaces to two spaces (`content/codestyle/yaml/index.md`)." />
     <MESSAGE value="style: refine and clarify Gradle and Kotlin style guides&#10;&#10;- **Gradle Style Guide (`content/codestyle/gradle/index.md`):**&#10;    - Update Kotlin compilation examples to use `KotlinJvmCompile`, `compilerOptions`, and target `JvmTarget.JVM_21`.&#10;    - Clarify task configuration avoidance APIs (`register`, `named`, `withType().configureEach`) and add an example for incorrect eager lookup.&#10;    - Introduce a &quot;Pinned compatibility baseline&quot; rule, stating that toolchain releases use exact, tested versions of Java, Gradle, and Kotlin.&#10;    - Reorder repository declarations in an example to place `mavenLocal()` first.&#10;&#10;- **Kotlin Style Guide (`content/codestyle/kotlin/index.md`):**&#10;    - Revise API usage guidelines to establish a clear hierarchy: stdlib/`kotlinx`, MineKot helpers, and platform APIs.&#10;    - Replace the &quot;use latest stable&quot; versioning rule with a policy of using the pinned baseline from the current MineKot Toolchain release.&#10;    - Refine error handling rules to promote `Result` for recoverable failures via typed helpers, while clarifying valid uses for `try-catch`.&#10;    - Update the iteration rule to treat `for` loops and `forEach` as semantically distinct choices rather than preferring one form.&#10;    - Evolve the &quot;zero hardcoding&quot; rule into a more nuanced &quot;intent-based value extraction&quot; guideline.&#10;    - Clarify that `MiniMessage` is for rich text on Adventure-capable surfaces, while other outputs remain plain text.&#10;    - Adjust KDoc rules to focus on documenting non-obvious contracts for public/protected APIs and properties, discouraging redundant documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="style: refine and clarify Gradle and Kotlin style guides&#10;&#10;- **Gradle Style Guide (`content/codestyle/gradle/index.md`):**&#10;    - Update Kotlin compilation examples to use `KotlinJvmCompile`, `compilerOptions`, and target `JvmTarget.JVM_21`.&#10;    - Clarify task configuration avoidance APIs (`register`, `named`, `withType().configureEach`) and add an example for incorrect eager lookup.&#10;    - Introduce a &quot;Pinned compatibility baseline&quot; rule, stating that toolchain releases use exact, tested versions of Java, Gradle, and Kotlin.&#10;    - Reorder repository declarations in an example to place `mavenLocal()` first.&#10;&#10;- **Kotlin Style Guide (`content/codestyle/kotlin/index.md`):**&#10;    - Revise API usage guidelines to establish a clear hierarchy: stdlib/`kotlinx`, MineKot helpers, and platform APIs.&#10;    - Replace the &quot;use latest stable&quot; versioning rule with a policy of using the pinned baseline from the current MineKot Toolchain release.&#10;    - Refine error handling rules to promote `Result` for recoverable failures via typed helpers, while clarifying valid uses for `try-catch`.&#10;    - Update the iteration rule to treat `for` loops and `forEach` as semantically distinct choices rather than preferring one form.&#10;    - Evolve the &quot;zero hardcoding&quot; rule into a more nuanced &quot;intent-based value extraction&quot; guideline.&#10;    - Clarify that `MiniMessage` is for rich text on Adventure-capable surfaces, while other outputs remain plain text.&#10;    - Adjust KDoc rules to focus on documenting non-obvious contracts for public/protected APIs and properties, discouraging redundant documentation." />
+    <MESSAGE value="style: update Kotlin style guide and synchronize IDE workspace settings&#10;&#10;- Add new sections for property assignment (`=` over `.set()`) and localization rules to the Kotlin Style Guide (`content/codestyle/kotlin/index.md`).&#10;- Remove outdated Markdown settings file (`.idea/markdown.xml`) and update IDE workspace configuration state (`.idea/workspace.xml`)." />
+    <option name="LAST_COMMIT_MESSAGE" value="style: update Kotlin style guide and synchronize IDE workspace settings&#10;&#10;- Add new sections for property assignment (`=` over `.set()`) and localization rules to the Kotlin Style Guide (`content/codestyle/kotlin/index.md`).&#10;- Remove outdated Markdown settings file (`.idea/markdown.xml`) and update IDE workspace configuration state (`.idea/workspace.xml`)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.apollographql.ijplugin.settings.ProjectSettingsState">
+    <option name="lspPassPathToSuperGraphYaml" value="false" />
+    <option name="telemetryInstanceId" value="457209e1-e0bf-495e-8593-7a66224227ef" />
   </component>
 </project>
